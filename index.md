@@ -1,6 +1,6 @@
-# Preview of Slack Helpdesk History 
- 
- ### User: U8MPCDJAY Timestamp:_2020-10-24T20:47:25.05_: 
+# Preview of Slack Helpdesk History
+
+### User: U8MPCDJAY Timestamp:_2020-10-24T20:47:25.05_: 
 ```
 I’m trying to make some highly async code interrupt-friendly with try-catches, and most of the time it works, but every so often I hit this. Is there any way to figure out what it was doing in julia code at the time?
 ^Cfatal: error thrown and no exception handler available.
@@ -17,7 +17,7 @@ jl_finish_task at /Users/ian/Documents/GitHub/julia/src/task.c:208
 start_task at /Users/ian/Documents/GitHub/julia/src/task.c:832
 ```
 
-### User: U8D9768Q6 Timestamp:_2020-10-24T20:45:30.049_: 
+### User: U8D9768Q6 Timestamp:_2020-10-24T20:45:30.049_:
 ```
 (though it's a rather big `if` about whether that's actually something we want to support)
 ```
@@ -30,18 +30,18 @@ There's a lot of things where people design `AbstractArray`  functions to suppor
 ```
 I don't see how that'd be a concern. Shouldn't it just return the same type as `getindex` on a slice would?
 ```
-### User: U01ARRMLM7E Timestamp: 2020-10-24T20:39:58.043: 
+### User: U01ARRMLM7E Timestamp: 2020-10-24T20:39:58.043:
 ```
 What's the situation where the output type of `first(x,3)` differs from the input type?
 ```
 [View Thread]()
 
-### User: U012XER8K4M Timestamp:_2020-10-24T20:38:52.042_: 
+### User: U012XER8K4M Timestamp:_2020-10-24T20:38:52.042_:
 ```
 Perhaps a combination of `[1:3]` already exists, and some questions about what the output type should be, considering the myriad of array types.
 ```
 
-### User: U8D9768Q6 Timestamp:_2020-10-24T20:38:45.042_: 
+### User: U8D9768Q6 Timestamp:_2020-10-24T20:38:45.042_:
 ```
 With `Array`s, you can just do `arr[begin:begin+3]`, but it would be nice to have a `first` method like for strings.
 ```
@@ -59,40 +59,40 @@ Stacktrace:
  [2] getindex(::String, ::UnitRange{Int64}) at ./strings/string.jl:250
  [3] top-level scope at REPL[3]:1
 ```
-### User: U01ARRMLM7E Timestamp:_2020-10-24T20:34:40.04_: 
+### User: U01ARRMLM7E Timestamp:_2020-10-24T20:34:40.04_:
 ```
 Is there some fundamental reason why this method doesn't/shouldn't exist?
 &gt; first([1,2,3], 3)
 ERROR: MethodError: no method matching first(::Array{Int64,1}, ::Int64)
 ```
 
-### User: U018S3HQGRK Timestamp:_2020-10-24T20:10:28.038_: 
+### User: U018S3HQGRK Timestamp:_2020-10-24T20:10:28.038_:
 ```
 i have a small widget with sliders in pluto.jl, i've been trying to add a "reset" button to make them go back to default values. anyone can help with this?
 ```
 
-### User: U017LQ3A59U Timestamp: 2020-10-24T19:55:10.036: 
+### User: U017LQ3A59U Timestamp: 2020-10-24T19:55:10.036:
 ```
 Is there a known way to "reparametrize" a struct in a generic way? That is given an object of type `A{T}` I would like to be able to return a new object of type `A{S}` (taking care of the conversion from `T` to `S` manually). If I have a single type it's easy enough, I can define
 reparametrize(a::A{T}) where T = A{S}( #convert internal params to S here# )
 But if I want `A` not to be more generic i.e. `A &lt;: SuperType` I can't get my head around how do it to get a function with the following signature
-reparametrize(a::A) where {T, A &lt;: SupertType{T}) 
+reparametrize(a::A) where {T, A &lt;: SupertType{T})
 ```
 [View Thread]()
 
-### User: U0176MBG29X Timestamp: 2020-10-24T19:41:47.027: 
+### User: U0176MBG29X Timestamp: 2020-10-24T19:41:47.027:
 ```
 Is there any way to limit the stacktrace from ~20 levels of depth to just the top 5 levels or something like that? The stacktrace often takes up my entire screen
 ```
 [View Thread]()
 
-### User: UGU761DU2 Timestamp: 2020-10-24T18:52:35.022: 
+### User: UGU761DU2 Timestamp: 2020-10-24T18:52:35.022:
 ```
 Note that `Gray` will be expecting numbers scaled from 0 (black) to 1 (white)
 ```
 [View Thread]()
 
-### User: UGU761DU2 Timestamp:_2020-10-24T18:51:06.022_: 
+### User: UGU761DU2 Timestamp:_2020-10-24T18:51:06.022_:
 ```
 Or view right in your terminal with ImageInTerminal.jl
 ```
@@ -112,18 +112,18 @@ using Images
 a = rand(100,100)
 img  = Gray.(a)
 ```
-### User: U018S3HQGRK Timestamp:_2020-10-24T18:24:31.017_: 
+### User: U018S3HQGRK Timestamp:_2020-10-24T18:24:31.017_:
 ```
 sorry for the beginner questions.. how do i show a grayscale image?
 ```
 
-### User: UGR3910CQ Timestamp: 2020-10-24T17:44:10.015: 
+### User: UGR3910CQ Timestamp: 2020-10-24T17:44:10.015:
 ```
 This is a test
 ```
 [View Thread]()
 
-### User: U01C2E6TYEM Timestamp: 2020-10-24T16:05:21.009: 
+### User: U01C2E6TYEM Timestamp: 2020-10-24T16:05:21.009:
 ```
 Is there any reason why inv([x]) has a missing method (i.e. 1x1 arrays do not have an inverse)? Is it at all ambiguous to just write?
 inv(x::Array{Int64,1}) = [1/x[1]]
@@ -131,7 +131,7 @@ inv(x::Array{Int64,1}) = [1/x[1]]
 ```
 [View Thread]()
 
-### User: U01C8179LB0 Timestamp: 2020-10-24T14:53:26.004: 
+### User: U01C8179LB0 Timestamp: 2020-10-24T14:53:26.004:
 ```
 A beginner’s issue with metaprogramming: Say we want to define a macro that substitutes input expression into code and the resulting expression is afterwards evaluated in the caller’s scope. like this
 macro foo(ex)
@@ -146,13 +146,13 @@ I’d like to substitute the `ex` with `length(a)` and evaluate it within the lo
 ```
 [View Thread]()
 
-### User: U018S3HQGRK Timestamp: 2020-10-24T13:37:12.494: 
+### User: U018S3HQGRK Timestamp: 2020-10-24T13:37:12.494:
 ```
 hey, trying out julia, given an RGB image? how to i get an array that only has the red channel?
 ```
 [View Thread]()
 
-### User: U01C2E6TYEM Timestamp: 2020-10-24T13:07:30.494: 
+### User: U01C2E6TYEM Timestamp: 2020-10-24T13:07:30.494:
 ```
 How should I deal with n x m matrices where I want to extract the size, but one of n or m is possibly 1, hence Julia returns a single value rather than a tuple?
 size([2, 1]) = (2,)
@@ -160,25 +160,25 @@ I need to fill in an upper triangular matrix with zeros of sizes that depend on 
 ```
 [View Thread]()
 
-### User: U010LT79LKX Timestamp: 2020-10-24T12:39:36.49: 
+### User: U010LT79LKX Timestamp: 2020-10-24T12:39:36.49:
 ```
 Is there a fast speech to text library in Julia?
 ```
 [View Thread]()
 
-### User: ULX78CTC3 Timestamp: 2020-10-24T11:52:17.488: 
+### User: ULX78CTC3 Timestamp: 2020-10-24T11:52:17.488:
 ```
 I am writing tests for a package where a method needs some user input(using readLine()). Is there any way I can get julia to automatically send the input when the readLine() method is supposed to take an input?
 ```
 [View Thread]()
 
-### User: ULX78CTC3 Timestamp: 2020-10-24T10:47:37.484: 
+### User: ULX78CTC3 Timestamp: 2020-10-24T10:47:37.484:
 ```
 What might be the fastest way to check if all tuple elements are 1? I
 ```
 [View Thread]()
 
-### User: U011V84GZ5E Timestamp: 2020-10-24T09:01:13.482: 
+### User: U011V84GZ5E Timestamp: 2020-10-24T09:01:13.482:
 ```
 Hello community, is it possible to retrieve the type and size of input &amp; output arguments of a function? E.g. input: Float64 vector of length N and output Int array of size KxL? This would be usefull for troubleshooting I guess:
 `typeof(J_AD)`
@@ -187,40 +187,40 @@ Or am I missing something? Thanks
 ```
 [View Thread]()
 
-### User: U01B0JZ4SJF Timestamp:_2020-10-24T06:19:20.471_: 
+### User: U01B0JZ4SJF Timestamp:_2020-10-24T06:19:20.471_:
 ```
 how can i send status code in genie
 ```
 
-### User: UKG4WF8PJ Timestamp:_2020-10-24T03:41:33.47_: 
+### User: UKG4WF8PJ Timestamp:_2020-10-24T03:41:33.47_:
 ```
 what is recommended, return an error or throw an error?
 ```
 
-### User: UM3GCDFGR Timestamp: 2020-10-24T03:20:27.468: 
+### User: UM3GCDFGR Timestamp: 2020-10-24T03:20:27.468:
 ```
 I have one super simple question, say we have a dataframe `df` with two columns `share` and `year`, how to create a new column `res_share` which is the residual share in each year? In R that would be: `df %&gt;% group_by(year) %&gt;% 1-sum(share)`. But somehow I can't figure out how to do this in Query (or in plain Julia without writing ugly loops)
 ```
 [View Thread]()
 
-### User: U01ACUZR8CC Timestamp: 2020-10-24T02:22:57.462: 
+### User: U01ACUZR8CC Timestamp: 2020-10-24T02:22:57.462:
 ```
 Hey folks. I’m trying to use Optim.jl for a small problem but keep running into precompile issues and the errors don’t seem to have any useful information (to my best knowledge). Any ideas what could be causing the issue (error posted in thread)?
 ```
 [View Thread]()
 
-### User: U677R5Q5A Timestamp:_2020-10-24T01:12:55.46_: 
+### User: U677R5Q5A Timestamp:_2020-10-24T01:12:55.46_:
 ```
 Thank you for bearing with me, good old XY problem I suppose – as well as not continuing in an ancient thread elsewhere. Background here: <https://julialang.slack.com/archives/CBF3Z1D7V/p1602646185191500> What I am trying to achieve is patching Pkg to include a few lines to apply necessary patches for binaries to run on NixOS – the lines themselves are ~5 and not scary. However, as Pkg is in base that would mean touching the system image. Ideally, I would like to make this work without rebuilding Julia from source (this is the “easy” way) so that one can rely on the official binaries to the largest extent possible on a wonky OS like NixOS.
 ```
 
-### User: UKG4WF8PJ Timestamp: 2020-10-23T21:30:19.457: 
+### User: UKG4WF8PJ Timestamp: 2020-10-23T21:30:19.457:
 ```
 is there a way to check if the io on where im printing results has support for unicode?
 ```
 [View Thread]()
 
-### User: UEN48T0BT Timestamp: 2020-10-23T20:55:14.453: 
+### User: UEN48T0BT Timestamp: 2020-10-23T20:55:14.453:
 ```
 Is there a way to dispatch on keys of NamedTuples? Like:
 struct Foo end
@@ -232,7 +232,7 @@ Or are there types like this defined somewhere?
 ```
 [View Thread]()
 
-### User: U8D9768Q6 Timestamp:_2020-10-23T20:12:18.449_: 
+### User: U8D9768Q6 Timestamp:_2020-10-23T20:12:18.449_:
 ```
 There's `std` from the `Statistics` standard library.
 julia&gt; using Statistics: std
@@ -241,24 +241,24 @@ julia&gt; std(randn(1000))
 0.9768968828910654
 ```
 
-### User: U019ZKQ5YQ6 Timestamp:_2020-10-23T20:07:02.448_: 
+### User: U019ZKQ5YQ6 Timestamp:_2020-10-23T20:07:02.448_:
 ```
 Eyo! what is UP. Just like "mean." can find the mean of multiple lists at once, is there then one function that can find the standard deviation or some kind of spread measure?
 ```
 
-### User: U7Y2Y04RJ Timestamp: 2020-10-23T19:26:06.443: 
+### User: U7Y2Y04RJ Timestamp: 2020-10-23T19:26:06.443:
 ```
 Hi all. I wanna know If there is a way to create a macro to represent an access _v[i]_ of an array _v_ as something like xi (math style).
 ```
 [View Thread]()
 
-### User: U019K6Q9N15 Timestamp: 2020-10-23T19:07:30.438: 
+### User: U019K6Q9N15 Timestamp: 2020-10-23T19:07:30.438:
 ```
 Is there any way to dispatch a function for a type alias? Or do I have to make a struct which minimally wraps the alias and reimplement the methods which I wanted to get from the alias? Consider the specific example of creating an alias for `Dict{Symbol, Int}` . This type has a bunch of nice methods, but one might also imagine that I'd like to distinguish between my inhabitants of it and inhabitants of my alias with, for example, `Base.show` .
 ```
 [View Thread]()
 
-### User: U01ARRMLM7E Timestamp: 2020-10-23T19:06:35.437: 
+### User: U01ARRMLM7E Timestamp: 2020-10-23T19:06:35.437:
 ```
 What's the equivalent of
 In [3]: list(itertools.product([1,2,3],repeat=2))
@@ -267,30 +267,30 @@ in Julia?
 ```
 [View Thread]()
 
-### User: UJ7DVTVQ8 Timestamp:_2020-10-23T17:30:23.431_: 
+### User: UJ7DVTVQ8 Timestamp:_2020-10-23T17:30:23.431_:
 ```
 Anyone knows what was breaking in the latest realease of `FillArrays`?
 ```
 
-### User: U012RPHRSP3 Timestamp: 2020-10-23T17:11:59.43: 
+### User: U012RPHRSP3 Timestamp: 2020-10-23T17:11:59.43:
 ```
 while trying to update `Franklin.jl` I ran into the error  `ERROR: ArgumentError: Unsupported architecture 'aarch64' for macOS`. I tried running `pkg&gt; update`and `pkg&gt; resolve` as suggested here: <https://discourse.julialang.org/t/unsupported-architecture/48786>, but that did not help. I am using julia 1.5.0 and windows 10. Any suggestions what I should do?
 ```
 [View Thread]()
 
-### User: UE6BDNM9B Timestamp: 2020-10-23T16:52:51.427: 
+### User: UE6BDNM9B Timestamp: 2020-10-23T16:52:51.427:
 ```
 how to get the dependencies of a package, such as Flux@0.10.4
 ```
 [View Thread]()
 
-### User: U019ZKQ5YQ6 Timestamp: 2020-10-23T16:37:52.423: 
+### User: U019ZKQ5YQ6 Timestamp: 2020-10-23T16:37:52.423:
 ```
 If i have a dataset with 1.000.000 obs. is there a way to select the first 1000 then skip 9000 and then select 10.000-11.000 etc?
 ```
 [View Thread]()
 
-### User: U0176MBG29X Timestamp: 2020-10-23T16:23:45.422: 
+### User: U0176MBG29X Timestamp: 2020-10-23T16:23:45.422:
 ```
 How can I log both to console as well as a file (and flush after each log line)? Basically I am trying to combine the following into the same global logger:
 logger = ConsoleLogger(io, <http://Logging.Info|Logging.Info>)
@@ -302,7 +302,7 @@ global_logger(logger)
 ```
 [View Thread]()
 
-### User: U6Z8377N2 Timestamp: 2020-10-23T16:08:46.42: 
+### User: U6Z8377N2 Timestamp: 2020-10-23T16:08:46.42:
 ```
 I was wondering what is the most Julia way to return data. I have a function that can return two different results. This is what I have so far
 function bar()
@@ -318,21 +318,21 @@ function bar(;result_type)
    # algorithm to fill in res1 and res2
    if result_type == :first
      return res1
-   else 
+   else
      return res2
    end
 end
 I like the second option because there is code downstream which assumes `bar()` returns a single array (but that's really not that big of a deal). Third option would be to use a struct?
 struct MyResults
-   res1::Array{Float64, 1} 
+   res1::Array{Float64, 1}
    res2::Array{Float64, 1}
 end
 function bar()
    res1 = zeros(Float64, 1000)
    res2 = zeros(Float64, 1000)
    # algorithm to fill in res1 and res2
-   res = MyResults() 
-   res.res1 = res1 
+   res = MyResults()
+   res.res1 = res1
    res.res2 = res2
    return res
 end
@@ -340,23 +340,23 @@ but I think this is unneccesarily making things complicated
 ```
 [View Thread]()
 
-### User: U6Z8377N2 Timestamp: 2020-10-23T15:27:59.417: 
+### User: U6Z8377N2 Timestamp: 2020-10-23T15:27:59.417:
 ```
 I guess, I could just map over integers and index in. Or use `enumerate`
 ```
 [View Thread]()
 
-### User: U6Z8377N2 Timestamp:_2020-10-23T15:27:43.416_: 
+### User: U6Z8377N2 Timestamp:_2020-10-23T15:27:43.416_:
 ```
 Is it possible to get the index of an array when using `map` I have code like this
-res = map(myarray) do x 
+res = map(myarray) do x
    do stuff with x
-   do special things if x is the first element 
+   do special things if x is the first element
 end
 but I don't really know how to do the second item there
 ```
 
-### User: U6C937ENB Timestamp: 2020-10-23T15:26:02.415: 
+### User: U6C937ENB Timestamp: 2020-10-23T15:26:02.415:
 ```
 Wat?
 julia&gt; f(;args::T...)where {T} = T
@@ -365,13 +365,13 @@ ERROR: syntax: space before "{" not allowed in "where {" at none:1
 ```
 [View Thread]()
 
-### User: U01CUQ4B67J Timestamp: 2020-10-23T14:25:09.412: 
+### User: U01CUQ4B67J Timestamp: 2020-10-23T14:25:09.412:
 ```
 maybe close it first
 ```
 [View Thread]()
 
-### User: U7HAYKY9X Timestamp: 2020-10-23T14:23:11.412: 
+### User: U7HAYKY9X Timestamp: 2020-10-23T14:23:11.412:
 ```
 I have a bewildering situation. I have generated some `Expr` , let's call it `code` . Now if I do
 function foo()
@@ -389,7 +389,7 @@ then it errors. Should these two behave the same? Edit: Figured it out, see thre
 ```
 [View Thread]()
 
-### User: UC6B1TT7B Timestamp: 2020-10-23T13:28:28.408: 
+### User: UC6B1TT7B Timestamp: 2020-10-23T13:28:28.408:
 ```
 It happens quite often (from time to time) that I have a set of elements, and want to create a dictionary mapping each unique element in the set to the number of occurrences of it in the set, like this:
 count_dict = Dict(map(element -&gt; element =&gt; count(element .== my_set), unique(my_set)))
@@ -398,13 +398,13 @@ Does there exists a function for this
 ```
 [View Thread]()
 
-### User: U019ZKQ5YQ6 Timestamp: 2020-10-23T13:26:09.405: 
+### User: U019ZKQ5YQ6 Timestamp: 2020-10-23T13:26:09.405:
 ```
 If i have a dataframe and i only want to look at each 10th observation, how do i do that?
 ```
 [View Thread]()
 
-### User: U677R5Q5A Timestamp:_2020-10-23T13:12:42.403_: 
+### User: U677R5Q5A Timestamp:_2020-10-23T13:12:42.403_:
 ```
 Thank you <@USU9FRPEU>, I ended up reading a slightly more general one (<https://julialang.github.io/PackageCompiler.jl/dev/devdocs/sysimages_part_1/>), but now I feel much more comfortable with the process.
 
@@ -413,22 +413,22 @@ Follow-up question: If I want to change definitions in the base system image (ra
 Sorry if this is “too advanced” for the help desk.
 ```
 
-### User: U012UUNBFM0 Timestamp: 2020-10-23T13:01:58.403: 
+### User: U012UUNBFM0 Timestamp: 2020-10-23T13:01:58.403:
 ```
 Can I plot a matrix like this in Julia?
 ```
 [View Thread]()
 
-### User: U017YGFQTE3 Timestamp: 2020-10-23T12:19:45.401: 
+### User: U017YGFQTE3 Timestamp: 2020-10-23T12:19:45.401:
 ```
 I'm looking for an iterator that generates the same output as
-Base.Iterators.product([0:1 for i in 1:n]...) 
+Base.Iterators.product([0:1 for i in 1:n]...)
 but where the output is ordered in the total number of 1s. So, the first element should be all zeros, then the next block are all the `(0,...,0,1,0,...0)`, before the elements with two 1s, and so on.
 Another option that would work for me would be something akin to `Itertools.subsets` but where the output is ordered in the size of the subsets.
 ```
 [View Thread]()
 
-### User: U01D75CD203 Timestamp: 2020-10-23T12:17:06.4: 
+### User: U01D75CD203 Timestamp: 2020-10-23T12:17:06.4:
 ```
 Hello, in matlab language, we can use figure(1) and figure(2) to creat two independent plots. How should I do in Julia language? It shows that in Julia,
 x = plot( 1:10, rand(10, 1 ) )  # x-plot
@@ -440,12 +440,12 @@ the screen will show only the second plot, and one has to use display function t
 ```
 [View Thread]()
 
-### User: U73KENNG4 Timestamp:_2020-10-23T11:19:59.393_: 
+### User: U73KENNG4 Timestamp:_2020-10-23T11:19:59.393_:
 ```
 Is there some easy way to make the `MethodError: no method matching keymap(::Vector{Dict})` on master go away?
 ```
 
-### User: UN45LV5K6 Timestamp:_2020-10-23T10:25:03.391_: 
+### User: UN45LV5K6 Timestamp:_2020-10-23T10:25:03.391_:
 ```
 How do I make sure that channels are closed properly when a producer or consumer fails, without the following to deadlock:
 producer(c1, c2) = foreach(x -&gt; (put!(c1, x); put!(c2, x)), 1:3)
@@ -455,7 +455,7 @@ consumer2(c) = foreach(x -&gt; println("Two: ", x), c)
 @sync begin
     c1 = Channel()
     c2 = Channel()
-    
+
     t = @async producer(c1, c2)
     bind(c1, t)
     bind(c2, t)
@@ -466,7 +466,7 @@ end
 The `bind` only works for errors in `producer`, but not `consumer`.
 ```
 
-### User: U7GQE9JP9 Timestamp: 2020-10-23T10:18:35.388: 
+### User: U7GQE9JP9 Timestamp: 2020-10-23T10:18:35.388:
 ```
 Hello,
 
@@ -474,13 +474,13 @@ I hope this is not a very dump question. I would like to associate a manifest.to
 ```
 [View Thread]()
 
-### User: U014LRLJXRP Timestamp: 2020-10-23T07:53:14.386: 
+### User: U014LRLJXRP Timestamp: 2020-10-23T07:53:14.386:
 ```
 I am trying to implement `rref` in a modulo field, but I am having trouble with all-zero rows.  I wonder if someone could take a look at my code (in thread) and see where I am going wrong, because I’m at a loss…
 ```
 [View Thread]()
 
-### User: U014LRLJXRP Timestamp: 2020-10-23T05:11:28.379: 
+### User: U014LRLJXRP Timestamp: 2020-10-23T05:11:28.379:
 ```
 How might I go about writing a function that takes in a matrix `G` and a number `m` (which is the modulus of the field), and outputs all unique linear combinations?
 
@@ -498,18 +498,18 @@ But this is not quite what I want.  Any ideas?  I am a little new to the Linear 
 ```
 [View Thread]()
 
-### User: U677R5Q5A Timestamp:_2020-10-23T03:39:25.372_: 
+### User: U677R5Q5A Timestamp:_2020-10-23T03:39:25.372_:
 ```
 Apologies, this is stuff I should know by experience. But apparently I am getting old.
 ```
 
-### User: U677R5Q5A Timestamp: 2020-10-23T03:39:07.372: 
+### User: U677R5Q5A Timestamp: 2020-10-23T03:39:07.372:
 ```
 I somehow seem to have failed to wrap my head around the docs. But is there any way to rebuild/build a system image without needing a complete checkout of the Julia source tree?
 ```
 [View Thread]()
 
-### User: UM3GCDFGR Timestamp: 2020-10-23T03:17:25.371: 
+### User: UM3GCDFGR Timestamp: 2020-10-23T03:17:25.371:
 ```
 100: dist = 940031.0555043541
 200: dist = 841554.7489537231
@@ -528,12 +528,12 @@ I got something like above
 ```
 [View Thread]()
 
-### User: UM3GCDFGR Timestamp:_2020-10-23T03:17:02.37_: 
+### User: UM3GCDFGR Timestamp:_2020-10-23T03:17:02.37_:
 ```
 Would anyone tell me how to interrupt `Optim.optimize`? I tried `cntr+c` but it doesn't work.. It will just continue to optimize unless I kill the whole Julia session
 ```
 
-### User: US64J0NPQ Timestamp: 2020-10-23T03:03:44.369: 
+### User: US64J0NPQ Timestamp: 2020-10-23T03:03:44.369:
 ```
 Would anyone with expertise in GTK be willing to help me with this issue here: <https://github.com/JuliaGraphics/Gtk.jl/issues/529>
 
@@ -541,31 +541,31 @@ In short, what I am trying to do is grab a previously created GTK window that is
 ```
 [View Thread]()
 
-### User: U014LRLJXRP Timestamp: 2020-10-23T01:52:12.365: 
+### User: U014LRLJXRP Timestamp: 2020-10-23T01:52:12.365:
 ```
 Why is `\endash` and `\emdash` listed in the <https://docs.julialang.org/en/v1.5/manual/unicode-input/|unicode support> but when I use it I get `syntax: invalid character "–" near column 1`?…
 ```
 [View Thread]()
 
-### User: U014LRLJXRP Timestamp: 2020-10-23T01:21:53.361: 
+### User: U014LRLJXRP Timestamp: 2020-10-23T01:21:53.361:
 ```
 If I have an identity matrix followed by some other stuff (e.g., `[1 0 0 2 3 0; 0 1 0 1 2 2; 0 0 1 4 3 0]`), is there a way in Julia to return only the part of the matrix that isn’t the identity?  E.g., return `[2 3 0; 1 2 2; 4 3 0]`?
 ```
 [View Thread]()
 
-### User: U01724Q3PGW Timestamp: 2020-10-23T00:47:22.359: 
+### User: U01724Q3PGW Timestamp: 2020-10-23T00:47:22.359:
 ```
 Is there a way to plot with a second y axis (say, on the right) on a single plot? I didn't see anything in the Plots.jl examples or tutorial and stackoverflow wasn't much use either... I tried `axis=:right`, but it must be an unknown symbol
 ```
 [View Thread]()
 
-### User: U01C5HUV05U Timestamp: 2020-10-22T21:55:24.349: 
+### User: U01C5HUV05U Timestamp: 2020-10-22T21:55:24.349:
 ```
 How can I cube an entire array?
 ```
 [View Thread]()
 
-### User: U01BA7WDYB1 Timestamp: 2020-10-22T21:04:45.348: 
+### User: U01BA7WDYB1 Timestamp: 2020-10-22T21:04:45.348:
 ```
 I encountered some strange behaviour while testing the speed of sampling 1 out of 3 values with specified sampling weights. One of the values is null so I mistakenly used `Nothing` to represent it (instead of `nothing`, whose type is actually Nothing). The code is something like this:
 M = M_trans(params...)
@@ -577,7 +577,7 @@ Ultimately I'll just use an integer to encode the null value which is faster tha
 ```
 [View Thread]()
 
-### User: U01C2P6BKSR Timestamp: 2020-10-22T20:10:06.342: 
+### User: U01C2P6BKSR Timestamp: 2020-10-22T20:10:06.342:
 ```
 Has anyone run into an issue with `using Flux` inside of a package lately? As of a couple hours ago, I get a bunch of errors about methods being overwritten and `incremental compilation may be fatally broken for this module`
 
@@ -585,29 +585,29 @@ I made an issue about it, but I'm really not sure what's going on at all: <https
 ```
 [View Thread]()
 
-### User: UKG4WF8PJ Timestamp:_2020-10-22T19:09:50.337_: 
+### User: UKG4WF8PJ Timestamp:_2020-10-22T19:09:50.337_:
 ```
 Optim.jl,JuMP.jl
 ```
 
-### User: U015EGHQZP0 Timestamp:_2020-10-22T19:08:31.336_: 
+### User: U015EGHQZP0 Timestamp:_2020-10-22T19:08:31.336_:
 ```
 Is there a package that lets you optimize nonlinear user-defined functions?
 ```
 
-### User: UP4U6AKNZ Timestamp: 2020-10-22T18:24:19.334: 
+### User: UP4U6AKNZ Timestamp: 2020-10-22T18:24:19.334:
 ```
 The Julia Artifacts string macro `artifact"blabla"` appears to be dispatched on REPL behavior (only then it will look for the `toml` file  in `pwd()`): <https://github.com/JuliaLang/Pkg.jl/blob/aaf4e6e8ab784f7435c1bdc56832bc03e014dedb/src/Artifacts.jl#L1046> It fails for me when using it in a `notebook` environment (Basically doesn't find `Artifacts.toml`). Are there simple work-around solutions?
 ```
 [View Thread]()
 
-### User: U01D211HB0V Timestamp: 2020-10-22T17:54:22.327: 
+### User: U01D211HB0V Timestamp: 2020-10-22T17:54:22.327:
 ```
 I have a 2d array I create like `a = [rand(4) for i in [0]]` (simplified for clarity) and I want to broadcast `cos()` over it. However `cos.(a)` yields `MethodError: no method matching cos(::Array{Float64,1})` . What am I missing?
 ```
 [View Thread]()
 
-### User: UAREE2NMD Timestamp:_2020-10-22T17:41:52.324_: 
+### User: UAREE2NMD Timestamp:_2020-10-22T17:41:52.324_:
 ```
 The following works fine:
 julia&gt; using Dates
@@ -632,25 +632,25 @@ Stacktrace:
 Looks like it is a bug and I reported it <https://github.com/JuliaTime/TimeZones.jl/issues/303|here>. But in the meantime, how can I work around this? (given that I do need to use both `Dates` and `TimeZones`)
 ```
 
-### User: U018PBPUQBD Timestamp: 2020-10-22T17:31:11.321: 
+### User: U018PBPUQBD Timestamp: 2020-10-22T17:31:11.321:
 ```
 Hello, for this code
 #lower power flow limit
-        @constraint(wildfire_model, 
-                -ref[:branch][l]["rate_a"] &lt;= 
-                sum(SF[l_index,j]*p[j] for j in 1:length(ref[:bus])) 
+        @constraint(wildfire_model,
+                -ref[:branch][l]["rate_a"] &lt;=
+                sum(SF[l_index,j]*p[j] for j in 1:length(ref[:bus]))
                     + sum(PSDF[l_index,j]*alpha[j] for j in 1:length(ref[:branch])))
 
         #upper power flow limit
-        @constraint(wildfire_model, 
-                sum(SF[l_index,j]*p[j] for j in 1:length(ref[:bus])) 
+        @constraint(wildfire_model,
+                sum(SF[l_index,j]*p[j] for j in 1:length(ref[:bus]))
                     + sum(PSDF[l_index,j]*alpha[j] for j in 1:length(ref[:branch])))
                 &lt;= ref[:branch][l]["rate_a"])
 I am getting this error `syntax: "&lt;=" is not a unary operator` . This is in JuMP. I am not sure what I did wrong
 ```
 [View Thread]()
 
-### User: US64J0NPQ Timestamp: 2020-10-22T17:00:42.31: 
+### User: US64J0NPQ Timestamp: 2020-10-22T17:00:42.31:
 ```
 I am struggling on a data structure dilemma. I have a time series data set spread out across five different file formats. File 1 contains the time series, File 2 and 3 contains about how the data collection instrument was set up for that particular time series, File 4 contains additional time series information, and File 5 contains further information on the data collection instrument. These files exist for nearly 30 separate data recording sessions and each file could contain differing information that would be important for analysis. In total, this comes to about 3 billion data entries spread across these files.
 
@@ -658,7 +658,7 @@ How best could I structure this data? I have looked at RecursiveArrayTools.jl an
 ```
 [View Thread]()
 
-### User: ULKHN71K3 Timestamp: 2020-10-22T16:41:37.305: 
+### User: ULKHN71K3 Timestamp: 2020-10-22T16:41:37.305:
 ```
 I am discovering the joys and headaches of Named Tuples. How can I make this work?
 
@@ -700,25 +700,25 @@ What am I missing? Do I need to implement new methods for `convert` ?
 ```
 [View Thread]()
 
-### User: U019ZKQ5YQ6 Timestamp: 2020-10-22T16:06:58.297: 
+### User: U019ZKQ5YQ6 Timestamp: 2020-10-22T16:06:58.297:
 ```
 What is going on :sob: I am pressing enter
 ```
 [View Thread]()
 
-### User: U6C937ENB Timestamp: 2020-10-22T15:31:53.295: 
+### User: U6C937ENB Timestamp: 2020-10-22T15:31:53.295:
 ```
 I have a `t=(;a=f, b=g)` named tuple of functions and I want to transform this in a named tuple of return values, such  `ev(t, x)`  gives `(;a=f(x), b=g(x))`  The tricky part is reading the key names from the argument type of `t` of the function `ev` and use this somehow to create a new named tuple...
 ```
 [View Thread]()
 
-### User: U018Y8S0PK9 Timestamp: 2020-10-22T14:49:57.292: 
+### User: U018Y8S0PK9 Timestamp: 2020-10-22T14:49:57.292:
 ```
-Is there a simple way to batch together a dataset of 3D images? I know flux has a flux.batch but I’m not sure if that works for 3D images 
+Is there a simple way to batch together a dataset of 3D images? I know flux has a flux.batch but I’m not sure if that works for 3D images
 ```
 [View Thread]()
 
-### User: U7HAYKY9X Timestamp:_2020-10-22T14:46:58.29_: 
+### User: U7HAYKY9X Timestamp:_2020-10-22T14:46:58.29_:
 ```
 Is there a neat way of figuring out if a bitstype has a specific bit layout? For example, right now I do
 function iszero(x::NTuple{16, UInt8})
@@ -728,7 +728,7 @@ function iszero(x::NTuple{16, UInt8})
 end
 ```
 
-### User: U013KHU2XC1 Timestamp: 2020-10-22T12:57:57.285: 
+### User: U013KHU2XC1 Timestamp: 2020-10-22T12:57:57.285:
 ```
 Getting a stable error on Taro activation. Any ideas on how to get more detailed description?
 
@@ -755,13 +755,13 @@ Environment:
 ```
 [View Thread]()
 
-### User: U0111S7RTML Timestamp: 2020-10-22T12:37:52.283: 
+### User: U0111S7RTML Timestamp: 2020-10-22T12:37:52.283:
 ```
 Out of curiosity, is there an autodiff package that can mollify if statements?
 ```
 [View Thread]()
 
-### User: U01AYQ4HQHF Timestamp: 2020-10-22T10:40:33.282: 
+### User: U01AYQ4HQHF Timestamp: 2020-10-22T10:40:33.282:
 ```
 Any idea what is wrong?
 struct StVenant_rakenne
@@ -798,19 +798,19 @@ Closest candidates are:
 ```
 [View Thread]()
 
-### User: UHZUXBR2P Timestamp: 2020-10-22T10:32:26.281: 
+### User: UHZUXBR2P Timestamp: 2020-10-22T10:32:26.281:
 ```
 Is there a way to catch a warning? I want to redefine some constants, but instead of triggering a whole list of warnings, I thought it might be better to catch them and print a single one.
 ```
 [View Thread]()
 
-### User: U8J1KET6K Timestamp: 2020-10-22T09:21:39.275: 
+### User: U8J1KET6K Timestamp: 2020-10-22T09:21:39.275:
 ```
 Hi, I was just glancing at <https://docs.julialang.org/en/v1/manual/integers-and-floating-point-numbers/>  and in the table I saw that the boolean has 8 bits. Why does it have 8 instead of 1 ...?
 ```
 [View Thread]()
 
-### User: U6G4M02N4 Timestamp:_2020-10-22T09:18:10.274_: 
+### User: U6G4M02N4 Timestamp:_2020-10-22T09:18:10.274_:
 ```
 I'm looking for something that leverages some flavor of search trees to achieve intersections in ~ O(log(N)) time
 ```
@@ -819,18 +819,18 @@ I'm looking for something that leverages some flavor of search trees to achieve 
 ```
 Anybody know of a package to (efficiently) find intersections of N-dimensional meshes with lines, planes, etc?
 ```
-### User: U7JQGPGCQ Timestamp: 2020-10-22T08:20:32.272: 
+### User: U7JQGPGCQ Timestamp: 2020-10-22T08:20:32.272:
 ```
 What's the best way currently to get `Pkg` to run in a reasonable time on Windows and Julia 1.5.2? Updating the registry currently takes something like 5 minutes for me, part of which is probably my lovely corporate antivir which I can't disable
 ```
 [View Thread]()
 
-### User: UM4TSHKF1 Timestamp:_2020-10-22T03:12:24.269_: 
+### User: UM4TSHKF1 Timestamp:_2020-10-22T03:12:24.269_:
 ```
 Can verify that I reran a previously successful job to get this error
 ```
 
-### User: UM4TSHKF1 Timestamp: 2020-10-22T03:08:36.269: 
+### User: UM4TSHKF1 Timestamp: 2020-10-22T03:08:36.269:
 ```
 Is anyone familiar with this build error I'm getting that wasn't an issue maybe an hour ago? Testing with Julia 1.4 on Ubuntu-latest via GitHub Actions
 Run julia-actions/julia-buildpkg@latest
@@ -894,19 +894,19 @@ Stacktrace:
 ```
 [View Thread]()
 
-### User: ULZQ4DCSU Timestamp: 2020-10-22T02:45:47.267: 
+### User: ULZQ4DCSU Timestamp: 2020-10-22T02:45:47.267:
 ```
 Could anyone point out why the following is happening?  If `t0 ≤ t < t1 == true`, `ExcitatoryConductance` gives `ge  =   Ne*gbar*(finf+(f0-finf)` and ignores `exp(-t/tau)`.  Does this have something to do with my usage of constants?
 ```
 [View Thread]()
 
-### User: U8D9768Q6 Timestamp: 2020-10-22T02:12:17.261: 
+### User: U8D9768Q6 Timestamp: 2020-10-22T02:12:17.261:
 ```
 Sorry, I don't understand why your `deepsym` function doesn't solve the issue. It does exactly what you say you want.
 ```
 [View Thread]()
 
-### User: U014LRLJXRP Timestamp:_2020-10-22T02:04:08.26_: 
+### User: U014LRLJXRP Timestamp:_2020-10-22T02:04:08.26_:
 ```
 Sorry if I am cluttering up the channel, but I also can’t figure out how to get a function to act on the innermost element of an abstract array?  I want:
 julia deepsymbol([[1 2 3], [4 5 6]])
@@ -922,7 +922,7 @@ deepsym (generic function with 2 methods)
 But that makes _everything_ symbols.  Any ideas? :slightly_smiling_face:
 ```
 
-### User: U014LRLJXRP Timestamp: 2020-10-22T01:38:42.252: 
+### User: U014LRLJXRP Timestamp: 2020-10-22T01:38:42.252:
 ```
 How can I use `where T` with a return type in a one-line function?
 julia&gt; function myfunc(x::T)::T where T
@@ -938,15 +938,14 @@ myfunc (generic function with 1 method)
 ```
 [View Thread]()
 
-### User: U018PBPUQBD Timestamp: 2020-10-22T01:13:40.246: 
+### User: U018PBPUQBD Timestamp: 2020-10-22T01:13:40.246:
 ```
 Can I make values of a matrix into a Dict()?
 ```
 [View Thread]()
 
-### User: UHDQQ4GN6 Timestamp: 2020-10-22T00:37:20.244: 
+### User: UHDQQ4GN6 Timestamp: 2020-10-22T00:37:20.244:
 ```
 I have a package with Python dependencies that uses `Base.prompt` to ask users if it should try auto-installing the dependnecy using either conda or pip. We need the Python package when precompiling to build docstrings. But it looks like `Base.prompt` never prompts the user during precompilation, so it fails. Any suggestions?
 ```
 [View Thread]()
-
