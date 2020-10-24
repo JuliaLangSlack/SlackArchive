@@ -8,6 +8,7 @@ The website_* must be defined for the RSS to work
 @def website_url   = "https://slackarchive.julialang.org"
 
 @def author = "The Julia Community"
+@def prepath = "slackarchive"
 
 @def mintoclevel = 2
 
