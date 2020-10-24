@@ -31,7 +31,7 @@ function update_homepage(token::String)
     open("index.md", "w") do file
 
         # TODO: Enable this for write mode.
-        write(file, "# Preview of Slack Helpdesk History \n \n ")
+        write(file, "# Preview of Slack Helpdesk History \n\n")
 
         # Loop through all of the messages to write them into a file.
 

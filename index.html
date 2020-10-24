@@ -1,4 +1,4 @@
-<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link href="/css/franklin.css" rel=stylesheet > <link href="/css/vela.css" rel=stylesheet > <script src="/libs/vela/jquery.min.js"></script> <link rel=icon  href="/assets/favicon.png"> <title>Franklin Example | Vela</title> <div class=main-nav  id=menu > <div class=flex-container > <span class=sidebar-brand > <h3 style='font-size: 25px'>Vela Template</h3> </span> </div> <nav class=sidebar-nav > <ul class=metismenu  id=metismenu  > <li><a href="/index.html">Home</a> <li><a href="/menu1/">Code blocks</a> <li><a href="" class=has-arrow >Topic</a> <ul> <li><a href="/menu2/">More goodies</a> </ul> <li><a href="/menu3/">Tags</a> </ul> </nav> </div> <main id=panel > <div class="toggle-button hamburger hamburger--spin"> <div class=hamburger-box > <div class=hamburger-inner ></div> </div> </div> <h1 class="page title">Preview of Slack Helpdesk History </h1> <hr> <div class=franklin-content ><h1 id=preview_of_slack_helpdesk_history ><a href="#preview_of_slack_helpdesk_history">Preview of Slack Helpdesk History </a></h1> <h3>User: U8MPCDJAY Timestamp:<em>2020-10-24T20:47:25.05</em>:</h3> <pre><code class="julia hljs">I’m trying to make some highly async code interrupt-friendly with <span class=hljs-keyword >try</span>-catches, and most of the time it works, but every so often <span class=hljs-literal >I</span> hit this. Is there any way to figure out what it was doing <span class=hljs-keyword >in</span> julia code at the time?
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link href="/css/franklin.css" rel=stylesheet > <link href="/css/vela.css" rel=stylesheet > <script src="/libs/vela/jquery.min.js"></script> <link rel=icon  href="/assets/favicon.png"> <title>Slack Archive</title> <div class=main-nav  id=menu > <div class=flex-container > <span class=sidebar-brand > <h3 style='font-size: 25px'>Vela Template</h3> </span> </div> <nav class=sidebar-nav > <ul class=metismenu  id=metismenu  > <li><a href="/index.html">Home</a> <li><a href="/menu1/">Code blocks</a> <li><a href="" class=has-arrow >Topic</a> <ul> <li><a href="/menu2/">More goodies</a> </ul> <li><a href="/menu3/">Tags</a> </ul> </nav> </div> <main id=panel > <div class="toggle-button hamburger hamburger--spin"> <div class=hamburger-box > <div class=hamburger-inner ></div> </div> </div> <h1 class="page title">Preview of Slack Helpdesk History</h1> <hr> <div class=franklin-content ><h1 id=preview_of_slack_helpdesk_history ><a href="#preview_of_slack_helpdesk_history">Preview of Slack Helpdesk History</a></h1> <h3 id=user_u8mpcdjay_timestamp2020-10-24t20472505 ><a href="#user_u8mpcdjay_timestamp2020-10-24t20472505">User: U8MPCDJAY Timestamp:<em>2020-10-24T20:47:25.05</em>: </a></h3> <pre><code class="julia hljs">I’m trying to make some highly async code interrupt-friendly with <span class=hljs-keyword >try</span>-catches, and most of the time it works, but every so often <span class=hljs-literal >I</span> hit this. Is there any way to figure out what it was doing <span class=hljs-keyword >in</span> julia code at the time?
 ^Cfatal: error thrown and no exception handler available.
 <span class=hljs-built_in >InterruptException</span>()
 jl_mutex_unlock at /Users/ian/Documents/GitHub/julia/src/./locks.h:<span class=hljs-number >139</span> [inlined]
@@ -10,15 +10,15 @@ _jl_invoke at /Users/ian/Documents/GitHub/julia/src/gf.c:<span class=hljs-number
 jl_apply_generic at /Users/ian/Documents/GitHub/julia/src/gf.c:<span class=hljs-number >2373</span>
 jl_apply at /Users/ian/Documents/GitHub/julia/src/./julia.h:<span class=hljs-number >1690</span> [inlined]
 jl_finish_task at /Users/ian/Documents/GitHub/julia/src/task.c:<span class=hljs-number >208</span>
-start_task at /Users/ian/Documents/GitHub/julia/src/task.c:<span class=hljs-number >832</span></code></pre> <h3 id=user_u8d9768q6_timestamp2020-10-24t204530049 ><a href="#user_u8d9768q6_timestamp2020-10-24t204530049">User: U8D9768Q6 Timestamp:<em>2020-10-24T20:45:30.049</em>: </a></h3> <pre><code class="julia hljs">(though it&#x27;s a rather big <span class=hljs-string >`if`</span> about whether that&#x27;s actually something we want to support)</code></pre>
+start_task at /Users/ian/Documents/GitHub/julia/src/task.c:<span class=hljs-number >832</span></code></pre> <h3 id=user_u8d9768q6_timestamp2020-10-24t204530049 ><a href="#user_u8d9768q6_timestamp2020-10-24t204530049">User: U8D9768Q6 Timestamp:<em>2020-10-24T20:45:30.049</em>:</a></h3> <pre><code class="julia hljs">(though it&#x27;s a rather big <span class=hljs-string >`if`</span> about whether that&#x27;s actually something we want to support)</code></pre>
 <pre><code class="julia hljs">There&#x27;s a lot of things <span class=hljs-keyword >where</span> people design <span class=hljs-string >`AbstractArray`</span>  functions to support arbitrary offsets, but <span class=hljs-keyword >for</span> the most part assume unit spacing. If we wanted better irregularly spaced array support, we&#x27;d likely need functions like <span class=hljs-string >`first(::AbstractArray, ::Int)`</span></code></pre>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span> don&#x27;t see how that&#x27;d be a concern. Shouldn&#x27;t it just <span class=hljs-keyword >return</span> the same <span class=hljs-keyword >type</span> as <span class=hljs-string >`getindex`</span> on a slice would?</code></pre>
-<h3 id=user_u01arrmlm7e_timestamp_2020-10-24t203958043 ><a href="#user_u01arrmlm7e_timestamp_2020-10-24t203958043">User: U01ARRMLM7E Timestamp: 2020-10-24T20:39:58.043: </a></h3>
+<h3 id=user_u01arrmlm7e_timestamp_2020-10-24t203958043 ><a href="#user_u01arrmlm7e_timestamp_2020-10-24t203958043">User: U01ARRMLM7E Timestamp: 2020-10-24T20:39:58.043:</a></h3>
 <pre><code class="julia hljs">What&#x27;s the situation <span class=hljs-keyword >where</span> the output <span class=hljs-keyword >type</span> of <span class=hljs-string >`first(x,3)`</span> differs from the input <span class=hljs-keyword >type</span>?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u012xer8k4m_timestamp2020-10-24t203852042 ><a href="#user_u012xer8k4m_timestamp2020-10-24t203852042">User: U012XER8K4M Timestamp:<em>2020-10-24T20:38:52.042</em>: </a></h3>
+<h3 id=user_u012xer8k4m_timestamp2020-10-24t203852042 ><a href="#user_u012xer8k4m_timestamp2020-10-24t203852042">User: U012XER8K4M Timestamp:<em>2020-10-24T20:38:52.042</em>:</a></h3>
 <pre><code class="julia hljs">Perhaps a combination of <span class=hljs-string >`[1:3]`</span> already exists, and some questions about what the output <span class=hljs-keyword >type</span> should be, considering the myriad of array types.</code></pre>
-<h3 id=user_u8d9768q6_timestamp2020-10-24t203845042 ><a href="#user_u8d9768q6_timestamp2020-10-24t203845042">User: U8D9768Q6 Timestamp:<em>2020-10-24T20:38:45.042</em>: </a></h3>
+<h3 id=user_u8d9768q6_timestamp2020-10-24t203845042 ><a href="#user_u8d9768q6_timestamp2020-10-24t203845042">User: U8D9768Q6 Timestamp:<em>2020-10-24T20:38:45.042</em>:</a></h3>
 <pre><code class="julia hljs">With <span class=hljs-string >`Array`</span>s, you can just <span class=hljs-keyword >do</span> <span class=hljs-string >`arr[begin:begin+3]`</span>, but it would be nice to have a <span class=hljs-string >`first`</span> method like <span class=hljs-keyword >for</span> strings.</code></pre>
 <pre><code class="julia hljs">No, not really. The reason it exists <span class=hljs-keyword >for</span> <span class=hljs-string >`AbstractString`</span> is that indexing them is a bad idea when unicode is involved:
 julia&gt; first(<span class=hljs-string >&quot;∀ϵ≠0: ϵ²&gt;0&quot;</span>, <span class=hljs-number >3</span>)
@@ -30,25 +30,25 @@ Stacktrace:
  [<span class=hljs-number >1</span>] string_index_err(::<span class=hljs-built_in >String</span>, ::<span class=hljs-built_in >Int64</span>) at ./strings/string.jl:<span class=hljs-number >12</span>
  [<span class=hljs-number >2</span>] getindex(::<span class=hljs-built_in >String</span>, ::<span class=hljs-built_in >UnitRange</span>{<span class=hljs-built_in >Int64</span>}) at ./strings/string.jl:<span class=hljs-number >250</span>
  [<span class=hljs-number >3</span>] top-level scope at REPL[<span class=hljs-number >3</span>]:<span class=hljs-number >1</span></code></pre>
-<h3 id=user_u01arrmlm7e_timestamp2020-10-24t20344004 ><a href="#user_u01arrmlm7e_timestamp2020-10-24t20344004">User: U01ARRMLM7E Timestamp:<em>2020-10-24T20:34:40.04</em>: </a></h3>
+<h3 id=user_u01arrmlm7e_timestamp2020-10-24t20344004 ><a href="#user_u01arrmlm7e_timestamp2020-10-24t20344004">User: U01ARRMLM7E Timestamp:<em>2020-10-24T20:34:40.04</em>:</a></h3>
 <pre><code class="julia hljs">Is there some fundamental reason why this method doesn&#x27;t/shouldn&#x27;t exist?
 &gt; first([<span class=hljs-number >1</span>,<span class=hljs-number >2</span>,<span class=hljs-number >3</span>], <span class=hljs-number >3</span>)
 ERROR: <span class=hljs-built_in >MethodError</span>: no method matching first(::<span class=hljs-built_in >Array</span>{<span class=hljs-built_in >Int64</span>,<span class=hljs-number >1</span>}, ::<span class=hljs-built_in >Int64</span>)</code></pre>
-<h3 id=user_u018s3hqgrk_timestamp2020-10-24t201028038 ><a href="#user_u018s3hqgrk_timestamp2020-10-24t201028038">User: U018S3HQGRK Timestamp:<em>2020-10-24T20:10:28.038</em>: </a></h3>
+<h3 id=user_u018s3hqgrk_timestamp2020-10-24t201028038 ><a href="#user_u018s3hqgrk_timestamp2020-10-24t201028038">User: U018S3HQGRK Timestamp:<em>2020-10-24T20:10:28.038</em>:</a></h3>
 <pre><code class="julia hljs">i have a small widget with sliders <span class=hljs-keyword >in</span> pluto.jl, i&#x27;ve been trying to add a <span class=hljs-string >&quot;reset&quot;</span> button to make them go back to default values. anyone can help with this?</code></pre>
-<h3 id=user_u017lq3a59u_timestamp_2020-10-24t195510036 ><a href="#user_u017lq3a59u_timestamp_2020-10-24t195510036">User: U017LQ3A59U Timestamp: 2020-10-24T19:55:10.036: </a></h3>
+<h3 id=user_u017lq3a59u_timestamp_2020-10-24t195510036 ><a href="#user_u017lq3a59u_timestamp_2020-10-24t195510036">User: U017LQ3A59U Timestamp: 2020-10-24T19:55:10.036:</a></h3>
 <pre><code class="julia hljs">Is there a known way to <span class=hljs-string >&quot;reparametrize&quot;</span> a <span class=hljs-keyword >struct</span> <span class=hljs-keyword >in</span> a generic way? That is given an object of <span class=hljs-keyword >type</span> <span class=hljs-string >`A{T}`</span> <span class=hljs-literal >I</span> would like to be able to <span class=hljs-keyword >return</span> a new object of <span class=hljs-keyword >type</span> <span class=hljs-string >`A{S}`</span> (taking care of the conversion from <span class=hljs-string >`T`</span> to <span class=hljs-string >`S`</span> manually). If <span class=hljs-literal >I</span> have a single <span class=hljs-keyword >type</span> it&#x27;s easy enough, <span class=hljs-literal >I</span> can define
 reparametrize(a::A{T}) <span class=hljs-keyword >where</span> T = A{S}( <span class=hljs-comment >#convert internal params to S here# )</span>
 But <span class=hljs-keyword >if</span> <span class=hljs-literal >I</span> want <span class=hljs-string >`A`</span> not to be more generic i.<span class=hljs-literal >e</span>. <span class=hljs-string >`A &lt;: SuperType`</span> <span class=hljs-literal >I</span> can&#x27;t get my head around how <span class=hljs-keyword >do</span> it to get a <span class=hljs-keyword >function</span> with the following signature
 reparametrize(a::A) <span class=hljs-keyword >where</span> {T, A &lt;: SupertType{T})</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u0176mbg29x_timestamp_2020-10-24t194147027 ><a href="#user_u0176mbg29x_timestamp_2020-10-24t194147027">User: U0176MBG29X Timestamp: 2020-10-24T19:41:47.027: </a></h3>
+<h3 id=user_u0176mbg29x_timestamp_2020-10-24t194147027 ><a href="#user_u0176mbg29x_timestamp_2020-10-24t194147027">User: U0176MBG29X Timestamp: 2020-10-24T19:41:47.027:</a></h3>
 <pre><code class="julia hljs">Is there any way to limit the stacktrace from ~<span class=hljs-number >20</span> levels of depth to just the top <span class=hljs-number >5</span> levels or something like that? The stacktrace often takes up my entire screen</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ugu761du2_timestamp_2020-10-24t185235022 ><a href="#user_ugu761du2_timestamp_2020-10-24t185235022">User: UGU761DU2 Timestamp: 2020-10-24T18:52:35.022: </a></h3>
+<h3 id=user_ugu761du2_timestamp_2020-10-24t185235022 ><a href="#user_ugu761du2_timestamp_2020-10-24t185235022">User: UGU761DU2 Timestamp: 2020-10-24T18:52:35.022:</a></h3>
 <pre><code class="julia hljs">Note that <span class=hljs-string >`Gray`</span> will be expecting numbers scaled from <span class=hljs-number >0</span> (black) to <span class=hljs-number >1</span> (white)</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ugu761du2_timestamp2020-10-24t185106022 ><a href="#user_ugu761du2_timestamp2020-10-24t185106022">User: UGU761DU2 Timestamp:<em>2020-10-24T18:51:06.022</em>: </a></h3>
+<h3 id=user_ugu761du2_timestamp2020-10-24t185106022 ><a href="#user_ugu761du2_timestamp2020-10-24t185106022">User: UGU761DU2 Timestamp:<em>2020-10-24T18:51:06.022</em>:</a></h3>
 <pre><code class="julia hljs">Or view right <span class=hljs-keyword >in</span> your terminal with ImageInTerminal.jl</code></pre>
 <pre><code class="julia hljs">Which should show up as an image <span class=hljs-keyword >in</span> Juno or VSCode, and which you could save to a file with <span class=hljs-literal >e</span>.g. <span class=hljs-string >`save(&quot;somefilename.png&quot;, img)`</span></code></pre>
 <pre><code class="julia hljs">Which will give you a “<span class=hljs-string >`100×100 Array{Gray{Float64},2} with eltype Gray{Float64}:`</span>”</code></pre>
@@ -56,16 +56,16 @@ reparametrize(a::A) <span class=hljs-keyword >where</span> {T, A &lt;: SupertTyp
 <span class=hljs-keyword >using</span> Images
 a = rand(<span class=hljs-number >100</span>,<span class=hljs-number >100</span>)
 img  = Gray.(a)</code></pre>
-<h3 id=user_u018s3hqgrk_timestamp2020-10-24t182431017 ><a href="#user_u018s3hqgrk_timestamp2020-10-24t182431017">User: U018S3HQGRK Timestamp:<em>2020-10-24T18:24:31.017</em>: </a></h3>
+<h3 id=user_u018s3hqgrk_timestamp2020-10-24t182431017 ><a href="#user_u018s3hqgrk_timestamp2020-10-24t182431017">User: U018S3HQGRK Timestamp:<em>2020-10-24T18:24:31.017</em>:</a></h3>
 <pre><code class="julia hljs">sorry <span class=hljs-keyword >for</span> the beginner questions.. how <span class=hljs-keyword >do</span> i show a grayscale image?</code></pre>
-<h3 id=user_ugr3910cq_timestamp_2020-10-24t174410015 ><a href="#user_ugr3910cq_timestamp_2020-10-24t174410015">User: UGR3910CQ Timestamp: 2020-10-24T17:44:10.015: </a></h3>
+<h3 id=user_ugr3910cq_timestamp_2020-10-24t174410015 ><a href="#user_ugr3910cq_timestamp_2020-10-24t174410015">User: UGR3910CQ Timestamp: 2020-10-24T17:44:10.015:</a></h3>
 <pre><code class="julia hljs">This is a test</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01c2e6tyem_timestamp_2020-10-24t160521009 ><a href="#user_u01c2e6tyem_timestamp_2020-10-24t160521009">User: U01C2E6TYEM Timestamp: 2020-10-24T16:05:21.009: </a></h3>
+<h3 id=user_u01c2e6tyem_timestamp_2020-10-24t160521009 ><a href="#user_u01c2e6tyem_timestamp_2020-10-24t160521009">User: U01C2E6TYEM Timestamp: 2020-10-24T16:05:21.009:</a></h3>
 <pre><code class="julia hljs">Is there any reason why inv([x]) has a missing method (i.<span class=hljs-literal >e</span>. <span class=hljs-number >1</span>x1 arrays <span class=hljs-keyword >do</span> not have an inverse)? Is it at all ambiguous to just write?
 inv(x::<span class=hljs-built_in >Array</span>{<span class=hljs-built_in >Int64</span>,<span class=hljs-number >1</span>}) = [<span class=hljs-number >1</span>/x[<span class=hljs-number >1</span>]]</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01c8179lb0_timestamp_2020-10-24t145326004 ><a href="#user_u01c8179lb0_timestamp_2020-10-24t145326004">User: U01C8179LB0 Timestamp: 2020-10-24T14:53:26.004: </a></h3>
+<h3 id=user_u01c8179lb0_timestamp_2020-10-24t145326004 ><a href="#user_u01c8179lb0_timestamp_2020-10-24t145326004">User: U01C8179LB0 Timestamp: 2020-10-24T14:53:26.004:</a></h3>
 <pre><code class="julia hljs">A beginner’s issue with metaprogramming: Say we want to define a <span class=hljs-keyword >macro</span> that substitutes input expression into code and the resulting expression is afterwards evaluated <span class=hljs-keyword >in</span> the caller’s scope. like this
 <span class=hljs-keyword >macro</span> foo(ex)
     :(<span class=hljs-built_in >Array</span>{<span class=hljs-built_in >Int64</span>}(undef, $ex))
@@ -77,45 +77,45 @@ inv(x::<span class=hljs-built_in >Array</span>{<span class=hljs-built_in >Int64<
 <span class=hljs-keyword >end</span>
 I’d like to substitute the <span class=hljs-string >`ex`</span> with <span class=hljs-string >`length(a)`</span> and evaluate it within the <span class=hljs-keyword >local</span> scope. However, it doesn’t work: The $ does the expansion and finds out that <span class=hljs-string >`a`</span> is missing <span class=hljs-keyword >in</span> the <span class=hljs-keyword >macro</span> scope, <span class=hljs-keyword >while</span> <span class=hljs-string >`ex`</span> can’t be used either. <span class=hljs-built_in >Any</span> hint?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u018s3hqgrk_timestamp_2020-10-24t133712494 ><a href="#user_u018s3hqgrk_timestamp_2020-10-24t133712494">User: U018S3HQGRK Timestamp: 2020-10-24T13:37:12.494: </a></h3>
+<h3 id=user_u018s3hqgrk_timestamp_2020-10-24t133712494 ><a href="#user_u018s3hqgrk_timestamp_2020-10-24t133712494">User: U018S3HQGRK Timestamp: 2020-10-24T13:37:12.494:</a></h3>
 <pre><code class="julia hljs">hey, trying out julia, given an RGB image? how to i get an array that only has the red channel?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01c2e6tyem_timestamp_2020-10-24t130730494 ><a href="#user_u01c2e6tyem_timestamp_2020-10-24t130730494">User: U01C2E6TYEM Timestamp: 2020-10-24T13:07:30.494: </a></h3>
+<h3 id=user_u01c2e6tyem_timestamp_2020-10-24t130730494 ><a href="#user_u01c2e6tyem_timestamp_2020-10-24t130730494">User: U01C2E6TYEM Timestamp: 2020-10-24T13:07:30.494:</a></h3>
 <pre><code class="julia hljs">How should <span class=hljs-literal >I</span> deal with n x m matrices <span class=hljs-keyword >where</span> <span class=hljs-literal >I</span> want to extract the size, but one of n or m is possibly <span class=hljs-number >1</span>, hence Julia returns a single value rather than a tuple?
 size([<span class=hljs-number >2</span>, <span class=hljs-number >1</span>]) = (<span class=hljs-number >2</span>,)
 <span class=hljs-literal >I</span> need to fill <span class=hljs-keyword >in</span> an upper triangular matrix with zeros of sizes that depend on the size of its surrounding blocks.</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u010lt79lkx_timestamp_2020-10-24t12393649 ><a href="#user_u010lt79lkx_timestamp_2020-10-24t12393649">User: U010LT79LKX Timestamp: 2020-10-24T12:39:36.49: </a></h3>
+<h3 id=user_u010lt79lkx_timestamp_2020-10-24t12393649 ><a href="#user_u010lt79lkx_timestamp_2020-10-24t12393649">User: U010LT79LKX Timestamp: 2020-10-24T12:39:36.49:</a></h3>
 <pre><code class="julia hljs">Is there a fast speech to text library <span class=hljs-keyword >in</span> Julia?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ulx78ctc3_timestamp_2020-10-24t115217488 ><a href="#user_ulx78ctc3_timestamp_2020-10-24t115217488">User: ULX78CTC3 Timestamp: 2020-10-24T11:52:17.488: </a></h3>
+<h3 id=user_ulx78ctc3_timestamp_2020-10-24t115217488 ><a href="#user_ulx78ctc3_timestamp_2020-10-24t115217488">User: ULX78CTC3 Timestamp: 2020-10-24T11:52:17.488:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span> am writing tests <span class=hljs-keyword >for</span> a package <span class=hljs-keyword >where</span> a method needs some user input(<span class=hljs-keyword >using</span> readLine()). Is there any way <span class=hljs-literal >I</span> can get julia to automatically send the input when the readLine() method is supposed to take an input?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ulx78ctc3_timestamp_2020-10-24t104737484 ><a href="#user_ulx78ctc3_timestamp_2020-10-24t104737484">User: ULX78CTC3 Timestamp: 2020-10-24T10:47:37.484: </a></h3>
+<h3 id=user_ulx78ctc3_timestamp_2020-10-24t104737484 ><a href="#user_ulx78ctc3_timestamp_2020-10-24t104737484">User: ULX78CTC3 Timestamp: 2020-10-24T10:47:37.484:</a></h3>
 <pre><code class="julia hljs">What might be the fastest way to check <span class=hljs-keyword >if</span> all tuple elements are <span class=hljs-number >1</span>? <span class=hljs-literal >I</span></code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u011v84gz5e_timestamp_2020-10-24t090113482 ><a href="#user_u011v84gz5e_timestamp_2020-10-24t090113482">User: U011V84GZ5E Timestamp: 2020-10-24T09:01:13.482: </a></h3>
+<h3 id=user_u011v84gz5e_timestamp_2020-10-24t090113482 ><a href="#user_u011v84gz5e_timestamp_2020-10-24t090113482">User: U011V84GZ5E Timestamp: 2020-10-24T09:01:13.482:</a></h3>
 <pre><code class="julia hljs">Hello community, is it possible to retrieve the <span class=hljs-keyword >type</span> and size of input &amp; output arguments of a <span class=hljs-keyword >function</span>? E.g. input: <span class=hljs-built_in >Float64</span> vector of length N and output <span class=hljs-built_in >Int</span> array of size KxL? This would be usefull <span class=hljs-keyword >for</span> troubleshooting <span class=hljs-literal >I</span> guess:
 <span class=hljs-string >`typeof(J_AD)`</span>
 <span class=hljs-string >`var&quot;#17#18&quot;`</span>
 Or am <span class=hljs-literal >I</span> missing something? Thanks</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01b0jz4sjf_timestamp2020-10-24t061920471 ><a href="#user_u01b0jz4sjf_timestamp2020-10-24t061920471">User: U01B0JZ4SJF Timestamp:<em>2020-10-24T06:19:20.471</em>: </a></h3>
+<h3 id=user_u01b0jz4sjf_timestamp2020-10-24t061920471 ><a href="#user_u01b0jz4sjf_timestamp2020-10-24t061920471">User: U01B0JZ4SJF Timestamp:<em>2020-10-24T06:19:20.471</em>:</a></h3>
 <pre><code class="julia hljs">how can i send status code <span class=hljs-keyword >in</span> genie</code></pre>
-<h3 id=user_ukg4wf8pj_timestamp2020-10-24t03413347 ><a href="#user_ukg4wf8pj_timestamp2020-10-24t03413347">User: UKG4WF8PJ Timestamp:<em>2020-10-24T03:41:33.47</em>: </a></h3>
+<h3 id=user_ukg4wf8pj_timestamp2020-10-24t03413347 ><a href="#user_ukg4wf8pj_timestamp2020-10-24t03413347">User: UKG4WF8PJ Timestamp:<em>2020-10-24T03:41:33.47</em>:</a></h3>
 <pre><code class="julia hljs">what is recommended, <span class=hljs-keyword >return</span> an error or throw an error?</code></pre>
-<h3 id=user_um3gcdfgr_timestamp_2020-10-24t032027468 ><a href="#user_um3gcdfgr_timestamp_2020-10-24t032027468">User: UM3GCDFGR Timestamp: 2020-10-24T03:20:27.468: </a></h3>
+<h3 id=user_um3gcdfgr_timestamp_2020-10-24t032027468 ><a href="#user_um3gcdfgr_timestamp_2020-10-24t032027468">User: UM3GCDFGR Timestamp: 2020-10-24T03:20:27.468:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span> have one super simple question, say we have a dataframe <span class=hljs-string >`df`</span> with two columns <span class=hljs-string >`share`</span> and <span class=hljs-string >`year`</span>, how to create a new column <span class=hljs-string >`res_share`</span> which is the residual share <span class=hljs-keyword >in</span> each year? In R that would be: <span class=hljs-string >`df %&gt;% group_by(year) %&gt;% 1-sum(share)`</span>. But somehow <span class=hljs-literal >I</span> can&#x27;t figure out how to <span class=hljs-keyword >do</span> this <span class=hljs-keyword >in</span> Query (or <span class=hljs-keyword >in</span> plain Julia without writing ugly loops)</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01acuzr8cc_timestamp_2020-10-24t022257462 ><a href="#user_u01acuzr8cc_timestamp_2020-10-24t022257462">User: U01ACUZR8CC Timestamp: 2020-10-24T02:22:57.462: </a></h3>
+<h3 id=user_u01acuzr8cc_timestamp_2020-10-24t022257462 ><a href="#user_u01acuzr8cc_timestamp_2020-10-24t022257462">User: U01ACUZR8CC Timestamp: 2020-10-24T02:22:57.462:</a></h3>
 <pre><code class="julia hljs">Hey folks. I’m trying to use Optim.jl <span class=hljs-keyword >for</span> a small problem but keep running into precompile issues and the errors don’t seem to have any useful information (to my best knowledge). <span class=hljs-built_in >Any</span> ideas what could be causing the issue (error posted <span class=hljs-keyword >in</span> thread)?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u677r5q5a_timestamp2020-10-24t01125546 ><a href="#user_u677r5q5a_timestamp2020-10-24t01125546">User: U677R5Q5A Timestamp:<em>2020-10-24T01:12:55.46</em>: </a></h3>
+<h3 id=user_u677r5q5a_timestamp2020-10-24t01125546 ><a href="#user_u677r5q5a_timestamp2020-10-24t01125546">User: U677R5Q5A Timestamp:<em>2020-10-24T01:12:55.46</em>:</a></h3>
 <pre><code class="julia hljs">Thank you <span class=hljs-keyword >for</span> bearing with me, good old XY problem <span class=hljs-literal >I</span> suppose – as well as not continuing <span class=hljs-keyword >in</span> an ancient thread elsewhere. Background here: &lt;https://julialang.slack.com/archives/CBF3Z1D7V/p1602646185191500&gt; What <span class=hljs-literal >I</span> am trying to achieve is patching Pkg to include a few lines to apply necessary patches <span class=hljs-keyword >for</span> binaries to run on NixOS – the lines themselves are ~<span class=hljs-number >5</span> and not scary. However, as Pkg is <span class=hljs-keyword >in</span> base that would mean touching the system image. Ideally, <span class=hljs-literal >I</span> would like to make this work without rebuilding Julia from source (this is the “easy” way) so that one can rely on the official binaries to the largest extent possible on a wonky OS like NixOS.</code></pre>
-<h3 id=user_ukg4wf8pj_timestamp_2020-10-23t213019457 ><a href="#user_ukg4wf8pj_timestamp_2020-10-23t213019457">User: UKG4WF8PJ Timestamp: 2020-10-23T21:30:19.457: </a></h3>
+<h3 id=user_ukg4wf8pj_timestamp_2020-10-23t213019457 ><a href="#user_ukg4wf8pj_timestamp_2020-10-23t213019457">User: UKG4WF8PJ Timestamp: 2020-10-23T21:30:19.457:</a></h3>
 <pre><code class="julia hljs">is there a way to check <span class=hljs-keyword >if</span> the io on <span class=hljs-keyword >where</span> <span class=hljs-literal >im</span> printing results has support <span class=hljs-keyword >for</span> unicode?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_uen48t0bt_timestamp_2020-10-23t205514453 ><a href="#user_uen48t0bt_timestamp_2020-10-23t205514453">User: UEN48T0BT Timestamp: 2020-10-23T20:55:14.453: </a></h3>
+<h3 id=user_uen48t0bt_timestamp_2020-10-23t205514453 ><a href="#user_uen48t0bt_timestamp_2020-10-23t205514453">User: UEN48T0BT Timestamp: 2020-10-23T20:55:14.453:</a></h3>
 <pre><code class="julia hljs">Is there a way to dispatch on keys of NamedTuples? Like:
 <span class=hljs-keyword >struct</span> Foo <span class=hljs-keyword >end</span>
 <span class=hljs-keyword >struct</span> Bar <span class=hljs-keyword >end</span>
@@ -124,38 +124,38 @@ tnt = (Foo() =&gt; anything1, Bar() =&gt; anything2) <span class=hljs-comment >#
 <span class=hljs-meta >@test</span> getproperty(tnt, Bar()) == anything2
 Or are there types like this defined somewhere?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u8d9768q6_timestamp2020-10-23t201218449 ><a href="#user_u8d9768q6_timestamp2020-10-23t201218449">User: U8D9768Q6 Timestamp:<em>2020-10-23T20:12:18.449</em>: </a></h3>
+<h3 id=user_u8d9768q6_timestamp2020-10-23t201218449 ><a href="#user_u8d9768q6_timestamp2020-10-23t201218449">User: U8D9768Q6 Timestamp:<em>2020-10-23T20:12:18.449</em>:</a></h3>
 <pre><code class="julia hljs">There&#x27;s <span class=hljs-string >`std`</span> from the <span class=hljs-string >`Statistics`</span> standard library.
 julia&gt; <span class=hljs-keyword >using</span> Statistics: std
 
 julia&gt; std(randn(<span class=hljs-number >1000</span>))
 <span class=hljs-number >0.9768968828910654</span></code></pre>
-<h3 id=user_u019zkq5yq6_timestamp2020-10-23t200702448 ><a href="#user_u019zkq5yq6_timestamp2020-10-23t200702448">User: U019ZKQ5YQ6 Timestamp:<em>2020-10-23T20:07:02.448</em>: </a></h3>
+<h3 id=user_u019zkq5yq6_timestamp2020-10-23t200702448 ><a href="#user_u019zkq5yq6_timestamp2020-10-23t200702448">User: U019ZKQ5YQ6 Timestamp:<em>2020-10-23T20:07:02.448</em>:</a></h3>
 <pre><code class="julia hljs">Eyo! what is UP. Just like <span class=hljs-string >&quot;mean.&quot;</span> can find the mean of multiple lists at once, is there then one <span class=hljs-keyword >function</span> that can find the standard deviation or some kind of spread measure?</code></pre>
-<h3 id=user_u7y2y04rj_timestamp_2020-10-23t192606443 ><a href="#user_u7y2y04rj_timestamp_2020-10-23t192606443">User: U7Y2Y04RJ Timestamp: 2020-10-23T19:26:06.443: </a></h3>
+<h3 id=user_u7y2y04rj_timestamp_2020-10-23t192606443 ><a href="#user_u7y2y04rj_timestamp_2020-10-23t192606443">User: U7Y2Y04RJ Timestamp: 2020-10-23T19:26:06.443:</a></h3>
 <pre><code class="julia hljs">Hi all. <span class=hljs-literal >I</span> wanna know If there is a way to create a <span class=hljs-keyword >macro</span> to represent an access _v[i]_ of an array _v_ as something like xi (math style).</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u019k6q9n15_timestamp_2020-10-23t190730438 ><a href="#user_u019k6q9n15_timestamp_2020-10-23t190730438">User: U019K6Q9N15 Timestamp: 2020-10-23T19:07:30.438: </a></h3>
+<h3 id=user_u019k6q9n15_timestamp_2020-10-23t190730438 ><a href="#user_u019k6q9n15_timestamp_2020-10-23t190730438">User: U019K6Q9N15 Timestamp: 2020-10-23T19:07:30.438:</a></h3>
 <pre><code class="julia hljs">Is there any way to dispatch a <span class=hljs-keyword >function</span> <span class=hljs-keyword >for</span> a <span class=hljs-keyword >type</span> alias? Or <span class=hljs-keyword >do</span> <span class=hljs-literal >I</span> have to make a <span class=hljs-keyword >struct</span> which minimally wraps the alias and reimplement the methods which <span class=hljs-literal >I</span> wanted to get from the alias? Consider the specific example of creating an alias <span class=hljs-keyword >for</span> <span class=hljs-string >`Dict{Symbol, Int}`</span> . This <span class=hljs-keyword >type</span> has a bunch of nice methods, but one might also imagine that <span class=hljs-literal >I</span>&#x27;d like to distinguish between my inhabitants of it and inhabitants of my alias with, <span class=hljs-keyword >for</span> example, <span class=hljs-string >`Base.show`</span> .</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01arrmlm7e_timestamp_2020-10-23t190635437 ><a href="#user_u01arrmlm7e_timestamp_2020-10-23t190635437">User: U01ARRMLM7E Timestamp: 2020-10-23T19:06:35.437: </a></h3>
+<h3 id=user_u01arrmlm7e_timestamp_2020-10-23t190635437 ><a href="#user_u01arrmlm7e_timestamp_2020-10-23t190635437">User: U01ARRMLM7E Timestamp: 2020-10-23T19:06:35.437:</a></h3>
 <pre><code class="julia hljs">What&#x27;s the equivalent of
 In [<span class=hljs-number >3</span>]: list(itertools.product([<span class=hljs-number >1</span>,<span class=hljs-number >2</span>,<span class=hljs-number >3</span>],repeat=<span class=hljs-number >2</span>))
 Out[<span class=hljs-number >3</span>]: [(<span class=hljs-number >1</span>, <span class=hljs-number >1</span>), (<span class=hljs-number >1</span>, <span class=hljs-number >2</span>), (<span class=hljs-number >1</span>, <span class=hljs-number >3</span>), (<span class=hljs-number >2</span>, <span class=hljs-number >1</span>), (<span class=hljs-number >2</span>, <span class=hljs-number >2</span>), (<span class=hljs-number >2</span>, <span class=hljs-number >3</span>), (<span class=hljs-number >3</span>, <span class=hljs-number >1</span>), (<span class=hljs-number >3</span>, <span class=hljs-number >2</span>), (<span class=hljs-number >3</span>, <span class=hljs-number >3</span>)]
 <span class=hljs-keyword >in</span> Julia?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_uj7dvtvq8_timestamp2020-10-23t173023431 ><a href="#user_uj7dvtvq8_timestamp2020-10-23t173023431">User: UJ7DVTVQ8 Timestamp:<em>2020-10-23T17:30:23.431</em>: </a></h3>
+<h3 id=user_uj7dvtvq8_timestamp2020-10-23t173023431 ><a href="#user_uj7dvtvq8_timestamp2020-10-23t173023431">User: UJ7DVTVQ8 Timestamp:<em>2020-10-23T17:30:23.431</em>:</a></h3>
 <pre><code class="julia hljs">Anyone knows what was breaking <span class=hljs-keyword >in</span> the latest realease of <span class=hljs-string >`FillArrays`</span>?</code></pre>
-<h3 id=user_u012rphrsp3_timestamp_2020-10-23t17115943 ><a href="#user_u012rphrsp3_timestamp_2020-10-23t17115943">User: U012RPHRSP3 Timestamp: 2020-10-23T17:11:59.43: </a></h3>
+<h3 id=user_u012rphrsp3_timestamp_2020-10-23t17115943 ><a href="#user_u012rphrsp3_timestamp_2020-10-23t17115943">User: U012RPHRSP3 Timestamp: 2020-10-23T17:11:59.43:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-keyword >while</span> trying to update <span class=hljs-string >`Franklin.jl`</span> <span class=hljs-literal >I</span> ran into the error  <span class=hljs-string >`ERROR: ArgumentError: Unsupported architecture &#x27;aarch64&#x27; for macOS`</span>. <span class=hljs-literal >I</span> tried running <span class=hljs-string >`pkg&gt; update`</span>and <span class=hljs-string >`pkg&gt; resolve`</span> as suggested here: &lt;https://discourse.julialang.org/t/unsupported-architecture/<span class=hljs-number >48786</span>&gt;, but that did not help. <span class=hljs-literal >I</span> am <span class=hljs-keyword >using</span> julia <span class=hljs-number >1.5</span><span class=hljs-number >.0</span> and windows <span class=hljs-number >10.</span> <span class=hljs-built_in >Any</span> suggestions what <span class=hljs-literal >I</span> should <span class=hljs-keyword >do</span>?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ue6bdnm9b_timestamp_2020-10-23t165251427 ><a href="#user_ue6bdnm9b_timestamp_2020-10-23t165251427">User: UE6BDNM9B Timestamp: 2020-10-23T16:52:51.427: </a></h3>
+<h3 id=user_ue6bdnm9b_timestamp_2020-10-23t165251427 ><a href="#user_ue6bdnm9b_timestamp_2020-10-23t165251427">User: UE6BDNM9B Timestamp: 2020-10-23T16:52:51.427:</a></h3>
 <pre><code class="julia hljs">how to get the dependencies of a package, such as Flux@<span class=hljs-number >0.10</span><span class=hljs-number >.4</span></code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u019zkq5yq6_timestamp_2020-10-23t163752423 ><a href="#user_u019zkq5yq6_timestamp_2020-10-23t163752423">User: U019ZKQ5YQ6 Timestamp: 2020-10-23T16:37:52.423: </a></h3>
+<h3 id=user_u019zkq5yq6_timestamp_2020-10-23t163752423 ><a href="#user_u019zkq5yq6_timestamp_2020-10-23t163752423">User: U019ZKQ5YQ6 Timestamp: 2020-10-23T16:37:52.423:</a></h3>
 <pre><code class="julia hljs">If i have a dataset with <span class=hljs-number >1.000</span><span class=hljs-number >.000</span> obs. is there a way to select the first <span class=hljs-number >1000</span> then skip <span class=hljs-number >9000</span> and then select <span class=hljs-number >10.000</span>-<span class=hljs-number >11.000</span> etc?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u0176mbg29x_timestamp_2020-10-23t162345422 ><a href="#user_u0176mbg29x_timestamp_2020-10-23t162345422">User: U0176MBG29X Timestamp: 2020-10-23T16:23:45.422: </a></h3>
+<h3 id=user_u0176mbg29x_timestamp_2020-10-23t162345422 ><a href="#user_u0176mbg29x_timestamp_2020-10-23t162345422">User: U0176MBG29X Timestamp: 2020-10-23T16:23:45.422:</a></h3>
 <pre><code class="julia hljs">How can <span class=hljs-literal >I</span> log both to console as well as a file (and flush after each log line)? Basically <span class=hljs-literal >I</span> am trying to combine the following into the same <span class=hljs-keyword >global</span> logger:
 logger = ConsoleLogger(io, &lt;http://Logging.Info|Logging.Info&gt;)
 global_logger(logger)
@@ -163,7 +163,7 @@ global_logger(logger)
 logger = ConsoleLogger(stdout, &lt;http://Logging.Info|Logging.Info&gt;)
 global_logger(logger)</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u6z8377n2_timestamp_2020-10-23t16084642 ><a href="#user_u6z8377n2_timestamp_2020-10-23t16084642">User: U6Z8377N2 Timestamp: 2020-10-23T16:08:46.42: </a></h3>
+<h3 id=user_u6z8377n2_timestamp_2020-10-23t16084642 ><a href="#user_u6z8377n2_timestamp_2020-10-23t16084642">User: U6Z8377N2 Timestamp: 2020-10-23T16:08:46.42:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span> was wondering what is the most Julia way to <span class=hljs-keyword >return</span> data. <span class=hljs-literal >I</span> have a <span class=hljs-keyword >function</span> that can <span class=hljs-keyword >return</span> two different results. This is what <span class=hljs-literal >I</span> have so far
 <span class=hljs-keyword >function</span> bar()
    res1 = zeros(<span class=hljs-built_in >Float64</span>, <span class=hljs-number >1000</span>)
@@ -178,45 +178,45 @@ but maybe <span class=hljs-literal >I</span> am thinking of <span class=hljs-key
    <span class=hljs-comment ># algorithm to fill in res1 and res2</span>
    <span class=hljs-keyword >if</span> result_type == :first
      <span class=hljs-keyword >return</span> res1
-   <span class=hljs-keyword >else</span> 
+   <span class=hljs-keyword >else</span>
      <span class=hljs-keyword >return</span> res2
    <span class=hljs-keyword >end</span>
 <span class=hljs-keyword >end</span>
 <span class=hljs-literal >I</span> like the second option because there is code downstream which assumes <span class=hljs-string >`bar()`</span> returns a single array (but that&#x27;s really not that big of a deal). Third option would be to use a <span class=hljs-keyword >struct</span>?
 <span class=hljs-keyword >struct</span> MyResults
-   res1::<span class=hljs-built_in >Array</span>{<span class=hljs-built_in >Float64</span>, <span class=hljs-number >1</span>} 
+   res1::<span class=hljs-built_in >Array</span>{<span class=hljs-built_in >Float64</span>, <span class=hljs-number >1</span>}
    res2::<span class=hljs-built_in >Array</span>{<span class=hljs-built_in >Float64</span>, <span class=hljs-number >1</span>}
 <span class=hljs-keyword >end</span>
 <span class=hljs-keyword >function</span> bar()
    res1 = zeros(<span class=hljs-built_in >Float64</span>, <span class=hljs-number >1000</span>)
    res2 = zeros(<span class=hljs-built_in >Float64</span>, <span class=hljs-number >1000</span>)
    <span class=hljs-comment ># algorithm to fill in res1 and res2</span>
-   res = MyResults() 
-   res.res1 = res1 
+   res = MyResults()
+   res.res1 = res1
    res.res2 = res2
    <span class=hljs-keyword >return</span> res
 <span class=hljs-keyword >end</span>
 but <span class=hljs-literal >I</span> think this is unneccesarily making things complicated</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u6z8377n2_timestamp_2020-10-23t152759417 ><a href="#user_u6z8377n2_timestamp_2020-10-23t152759417">User: U6Z8377N2 Timestamp: 2020-10-23T15:27:59.417: </a></h3>
+<h3 id=user_u6z8377n2_timestamp_2020-10-23t152759417 ><a href="#user_u6z8377n2_timestamp_2020-10-23t152759417">User: U6Z8377N2 Timestamp: 2020-10-23T15:27:59.417:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span> guess, <span class=hljs-literal >I</span> could just map over integers and index <span class=hljs-keyword >in</span>. Or use <span class=hljs-string >`enumerate`</span></code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u6z8377n2_timestamp2020-10-23t152743416 ><a href="#user_u6z8377n2_timestamp2020-10-23t152743416">User: U6Z8377N2 Timestamp:<em>2020-10-23T15:27:43.416</em>: </a></h3>
+<h3 id=user_u6z8377n2_timestamp2020-10-23t152743416 ><a href="#user_u6z8377n2_timestamp2020-10-23t152743416">User: U6Z8377N2 Timestamp:<em>2020-10-23T15:27:43.416</em>:</a></h3>
 <pre><code class="julia hljs">Is it possible to get the index of an array when <span class=hljs-keyword >using</span> <span class=hljs-string >`map`</span> <span class=hljs-literal >I</span> have code like this
-res = map(myarray) <span class=hljs-keyword >do</span> x 
+res = map(myarray) <span class=hljs-keyword >do</span> x
    <span class=hljs-keyword >do</span> stuff with x
-   <span class=hljs-keyword >do</span> special things <span class=hljs-keyword >if</span> x is the first element 
+   <span class=hljs-keyword >do</span> special things <span class=hljs-keyword >if</span> x is the first element
 <span class=hljs-keyword >end</span>
 but <span class=hljs-literal >I</span> don&#x27;t really know how to <span class=hljs-keyword >do</span> the second item there</code></pre>
-<h3 id=user_u6c937enb_timestamp_2020-10-23t152602415 ><a href="#user_u6c937enb_timestamp_2020-10-23t152602415">User: U6C937ENB Timestamp: 2020-10-23T15:26:02.415: </a></h3>
+<h3 id=user_u6c937enb_timestamp_2020-10-23t152602415 ><a href="#user_u6c937enb_timestamp_2020-10-23t152602415">User: U6C937ENB Timestamp: 2020-10-23T15:26:02.415:</a></h3>
 <pre><code class="julia hljs">Wat?
 julia&gt; f(;args::T...)<span class=hljs-keyword >where</span> {T} = T
 ERROR: syntax: space before <span class=hljs-string >&quot;{&quot;</span> not allowed <span class=hljs-keyword >in</span> <span class=hljs-string >&quot;where {&quot;</span> at none:<span class=hljs-number >1</span></code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01cuq4b67j_timestamp_2020-10-23t142509412 ><a href="#user_u01cuq4b67j_timestamp_2020-10-23t142509412">User: U01CUQ4B67J Timestamp: 2020-10-23T14:25:09.412: </a></h3>
+<h3 id=user_u01cuq4b67j_timestamp_2020-10-23t142509412 ><a href="#user_u01cuq4b67j_timestamp_2020-10-23t142509412">User: U01CUQ4B67J Timestamp: 2020-10-23T14:25:09.412:</a></h3>
 <pre><code class="julia hljs">maybe close it first</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u7hayky9x_timestamp_2020-10-23t142311412 ><a href="#user_u7hayky9x_timestamp_2020-10-23t142311412">User: U7HAYKY9X Timestamp: 2020-10-23T14:23:11.412: </a></h3>
+<h3 id=user_u7hayky9x_timestamp_2020-10-23t142311412 ><a href="#user_u7hayky9x_timestamp_2020-10-23t142311412">User: U7HAYKY9X Timestamp: 2020-10-23T14:23:11.412:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span> have a bewildering situation. <span class=hljs-literal >I</span> have generated some <span class=hljs-string >`Expr`</span> , <span class=hljs-keyword >let</span>&#x27;s call it <span class=hljs-string >`code`</span> . Now <span class=hljs-keyword >if</span> <span class=hljs-literal >I</span> <span class=hljs-keyword >do</span>
 <span class=hljs-keyword >function</span> foo()
     $code
@@ -231,31 +231,31 @@ code2 = Meta.parse(<span class=hljs-built_in >String</span>(open(read, <span cla
 <span class=hljs-keyword >end</span>
 then it errors. Should these two behave the same? Edit: Figured it out, see thread.</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_uc6b1tt7b_timestamp_2020-10-23t132828408 ><a href="#user_uc6b1tt7b_timestamp_2020-10-23t132828408">User: UC6B1TT7B Timestamp: 2020-10-23T13:28:28.408: </a></h3>
+<h3 id=user_uc6b1tt7b_timestamp_2020-10-23t132828408 ><a href="#user_uc6b1tt7b_timestamp_2020-10-23t132828408">User: UC6B1TT7B Timestamp: 2020-10-23T13:28:28.408:</a></h3>
 <pre><code class="julia hljs">It happens quite often (from time to time) that <span class=hljs-literal >I</span> have a set of elements, and want to create a dictionary mapping each unique element <span class=hljs-keyword >in</span> the set to the number of occurrences of it <span class=hljs-keyword >in</span> the set, like this:
 count_dict = <span class=hljs-built_in >Dict</span>(map(element -&gt; element =&gt; count(element .== my_set), unique(my_set)))
 Does there exists a <span class=hljs-keyword >function</span> <span class=hljs-keyword >for</span> this
 (like <span class=hljs-literal >I</span> can manage without, but it seemed like something which might exist, and <span class=hljs-keyword >if</span> it does, <span class=hljs-literal >I</span> should ask)</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u019zkq5yq6_timestamp_2020-10-23t132609405 ><a href="#user_u019zkq5yq6_timestamp_2020-10-23t132609405">User: U019ZKQ5YQ6 Timestamp: 2020-10-23T13:26:09.405: </a></h3>
+<h3 id=user_u019zkq5yq6_timestamp_2020-10-23t132609405 ><a href="#user_u019zkq5yq6_timestamp_2020-10-23t132609405">User: U019ZKQ5YQ6 Timestamp: 2020-10-23T13:26:09.405:</a></h3>
 <pre><code class="julia hljs">If i have a dataframe and i only want to look at each <span class=hljs-number >10</span>th observation, how <span class=hljs-keyword >do</span> i <span class=hljs-keyword >do</span> that?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u677r5q5a_timestamp2020-10-23t131242403 ><a href="#user_u677r5q5a_timestamp2020-10-23t131242403">User: U677R5Q5A Timestamp:<em>2020-10-23T13:12:42.403</em>: </a></h3>
+<h3 id=user_u677r5q5a_timestamp2020-10-23t131242403 ><a href="#user_u677r5q5a_timestamp2020-10-23t131242403">User: U677R5Q5A Timestamp:<em>2020-10-23T13:12:42.403</em>:</a></h3>
 <pre><code class="julia hljs">Thank you &lt;<span class=hljs-meta >@USU9FRPEU</span>&gt;, <span class=hljs-literal >I</span> ended up reading a slightly more general one (&lt;https://julialang.github.io/PackageCompiler.jl/dev/devdocs/sysimages_part_1/&gt;), but now <span class=hljs-literal >I</span> feel much more comfortable with the process.
 
 Follow-up question: If <span class=hljs-literal >I</span> want to change definitions <span class=hljs-keyword >in</span> the base system image (rather than add another <span class=hljs-keyword >module</span>), <span class=hljs-literal >I</span> suppose <span class=hljs-literal >I</span> would change the code <span class=hljs-keyword >in</span> Base, find a way to unload the <span class=hljs-keyword >module</span>, and then apply the same logic described <span class=hljs-keyword >in</span> the link above?
 
 Sorry <span class=hljs-keyword >if</span> this is “too advanced” <span class=hljs-keyword >for</span> the help desk.</code></pre>
-<h3 id=user_u012uunbfm0_timestamp_2020-10-23t130158403 ><a href="#user_u012uunbfm0_timestamp_2020-10-23t130158403">User: U012UUNBFM0 Timestamp: 2020-10-23T13:01:58.403: </a></h3>
+<h3 id=user_u012uunbfm0_timestamp_2020-10-23t130158403 ><a href="#user_u012uunbfm0_timestamp_2020-10-23t130158403">User: U012UUNBFM0 Timestamp: 2020-10-23T13:01:58.403:</a></h3>
 <pre><code class="julia hljs">Can <span class=hljs-literal >I</span> plot a matrix like this <span class=hljs-keyword >in</span> Julia?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u017ygfqte3_timestamp_2020-10-23t121945401 ><a href="#user_u017ygfqte3_timestamp_2020-10-23t121945401">User: U017YGFQTE3 Timestamp: 2020-10-23T12:19:45.401: </a></h3>
+<h3 id=user_u017ygfqte3_timestamp_2020-10-23t121945401 ><a href="#user_u017ygfqte3_timestamp_2020-10-23t121945401">User: U017YGFQTE3 Timestamp: 2020-10-23T12:19:45.401:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span>&#x27;m looking <span class=hljs-keyword >for</span> an iterator that generates the same output as
-Base.Iterators.product([<span class=hljs-number >0</span>:<span class=hljs-number >1</span> <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:n]...) 
+Base.Iterators.product([<span class=hljs-number >0</span>:<span class=hljs-number >1</span> <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:n]...)
 but <span class=hljs-keyword >where</span> the output is ordered <span class=hljs-keyword >in</span> the total number of <span class=hljs-number >1</span>s. So, the first element should be all zeros, then the next block are all the <span class=hljs-string >`(0,...,0,1,0,...0)`</span>, before the elements with two <span class=hljs-number >1</span>s, and so on.
 Another option that would work <span class=hljs-keyword >for</span> me would be something akin to <span class=hljs-string >`Itertools.subsets`</span> but <span class=hljs-keyword >where</span> the output is ordered <span class=hljs-keyword >in</span> the size of the subsets.</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01d75cd203_timestamp_2020-10-23t1217064 ><a href="#user_u01d75cd203_timestamp_2020-10-23t1217064">User: U01D75CD203 Timestamp: 2020-10-23T12:17:06.4: </a></h3>
+<h3 id=user_u01d75cd203_timestamp_2020-10-23t1217064 ><a href="#user_u01d75cd203_timestamp_2020-10-23t1217064">User: U01D75CD203 Timestamp: 2020-10-23T12:17:06.4:</a></h3>
 <pre><code class="julia hljs">Hello, <span class=hljs-keyword >in</span> matlab language, we can use figure(<span class=hljs-number >1</span>) and figure(<span class=hljs-number >2</span>) to creat two independent plots. How should <span class=hljs-literal >I</span> <span class=hljs-keyword >do</span> <span class=hljs-keyword >in</span> Julia language? It shows that <span class=hljs-keyword >in</span> Julia,
 x = plot( <span class=hljs-number >1</span>:<span class=hljs-number >10</span>, rand(<span class=hljs-number >10</span>, <span class=hljs-number >1</span> ) )  <span class=hljs-comment ># x-plot</span>
 y = plot( <span class=hljs-number >1</span>:<span class=hljs-number >10</span>, rand(<span class=hljs-number >10</span>, <span class=hljs-number >1</span> ) )  <span class=hljs-comment ># y-plot</span>
@@ -264,9 +264,9 @@ the screen will show only the second plot, and one has to use display <span clas
 
  Is there any trick to solve this problem?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u73kenng4_timestamp2020-10-23t111959393 ><a href="#user_u73kenng4_timestamp2020-10-23t111959393">User: U73KENNG4 Timestamp:<em>2020-10-23T11:19:59.393</em>: </a></h3>
+<h3 id=user_u73kenng4_timestamp2020-10-23t111959393 ><a href="#user_u73kenng4_timestamp2020-10-23t111959393">User: U73KENNG4 Timestamp:<em>2020-10-23T11:19:59.393</em>:</a></h3>
 <pre><code class="julia hljs">Is there some easy way to make the <span class=hljs-string >`MethodError: no method matching keymap(::Vector{Dict})`</span> on master go away?</code></pre>
-<h3 id=user_un45lv5k6_timestamp2020-10-23t102503391 ><a href="#user_un45lv5k6_timestamp2020-10-23t102503391">User: UN45LV5K6 Timestamp:<em>2020-10-23T10:25:03.391</em>: </a></h3>
+<h3 id=user_un45lv5k6_timestamp2020-10-23t102503391 ><a href="#user_un45lv5k6_timestamp2020-10-23t102503391">User: UN45LV5K6 Timestamp:<em>2020-10-23T10:25:03.391</em>:</a></h3>
 <pre><code class="julia hljs">How <span class=hljs-keyword >do</span> <span class=hljs-literal >I</span> make sure that channels are closed properly when a producer or consumer fails, without the following to deadlock:
 producer(c1, c2) = foreach(x -&gt; (put!(c1, x); put!(c2, x)), <span class=hljs-number >1</span>:<span class=hljs-number >3</span>)
 consumer1(c) = foreach(x -&gt; println(<span class=hljs-string >&quot;One: &quot;</span>, x), c)
@@ -275,7 +275,7 @@ consumer2(c) = foreach(x -&gt; println(<span class=hljs-string >&quot;Two: &quot
 <span class=hljs-meta >@sync</span> <span class=hljs-keyword >begin</span>
     c1 = <span class=hljs-built_in >Channel</span>()
     c2 = <span class=hljs-built_in >Channel</span>()
-    
+
     t = <span class=hljs-meta >@async</span> producer(c1, c2)
     bind(c1, t)
     bind(c2, t)
@@ -284,15 +284,15 @@ consumer2(c) = foreach(x -&gt; println(<span class=hljs-string >&quot;Two: &quot
     <span class=hljs-meta >@async</span> consumer2(c2)
 <span class=hljs-keyword >end</span>
 The <span class=hljs-string >`bind`</span> only works <span class=hljs-keyword >for</span> errors <span class=hljs-keyword >in</span> <span class=hljs-string >`producer`</span>, but not <span class=hljs-string >`consumer`</span>.</code></pre>
-<h3 id=user_u7gqe9jp9_timestamp_2020-10-23t101835388 ><a href="#user_u7gqe9jp9_timestamp_2020-10-23t101835388">User: U7GQE9JP9 Timestamp: 2020-10-23T10:18:35.388: </a></h3>
+<h3 id=user_u7gqe9jp9_timestamp_2020-10-23t101835388 ><a href="#user_u7gqe9jp9_timestamp_2020-10-23t101835388">User: U7GQE9JP9 Timestamp: 2020-10-23T10:18:35.388:</a></h3>
 <pre><code class="julia hljs">Hello,
 
 <span class=hljs-literal >I</span> hope this is not a very dump question. <span class=hljs-literal >I</span> would like to associate a manifest.toml to a .jl file. Is it possible or <span class=hljs-keyword >do</span> <span class=hljs-literal >I</span> need to create a package?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u014lrljxrp_timestamp_2020-10-23t075314386 ><a href="#user_u014lrljxrp_timestamp_2020-10-23t075314386">User: U014LRLJXRP Timestamp: 2020-10-23T07:53:14.386: </a></h3>
+<h3 id=user_u014lrljxrp_timestamp_2020-10-23t075314386 ><a href="#user_u014lrljxrp_timestamp_2020-10-23t075314386">User: U014LRLJXRP Timestamp: 2020-10-23T07:53:14.386:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span> am trying to implement <span class=hljs-string >`rref`</span> <span class=hljs-keyword >in</span> a modulo field, but <span class=hljs-literal >I</span> am having trouble with all-zero rows.  <span class=hljs-literal >I</span> wonder <span class=hljs-keyword >if</span> someone could take a look at my code (<span class=hljs-keyword >in</span> thread) and see <span class=hljs-keyword >where</span> <span class=hljs-literal >I</span> am going wrong, because I’m at a loss…</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u014lrljxrp_timestamp_2020-10-23t051128379 ><a href="#user_u014lrljxrp_timestamp_2020-10-23t051128379">User: U014LRLJXRP Timestamp: 2020-10-23T05:11:28.379: </a></h3>
+<h3 id=user_u014lrljxrp_timestamp_2020-10-23t051128379 ><a href="#user_u014lrljxrp_timestamp_2020-10-23t051128379">User: U014LRLJXRP Timestamp: 2020-10-23T05:11:28.379:</a></h3>
 <pre><code class="julia hljs">How might <span class=hljs-literal >I</span> go about writing a <span class=hljs-keyword >function</span> that takes <span class=hljs-keyword >in</span> a matrix <span class=hljs-string >`G`</span> and a number <span class=hljs-string >`m`</span> (which is the modulus of the field), and outputs all unique linear combinations?
 
 <span class=hljs-literal >I</span> have a feeling <span class=hljs-literal >I</span> need to use <span class=hljs-string >`@nloops`</span>, so <span class=hljs-literal >I</span> have written this:
@@ -307,12 +307,12 @@ The <span class=hljs-string >`bind`</span> only works <span class=hljs-keyword >
 get_codewords(G::<span class=hljs-built_in >AbstractArray</span>, m::<span class=hljs-built_in >Integer</span>) = get_codewords(G, <span class=hljs-built_in >Val</span>(size(G, <span class=hljs-number >1</span>)), m)
 But this is not quite what <span class=hljs-literal >I</span> want.  <span class=hljs-built_in >Any</span> ideas?  <span class=hljs-literal >I</span> am a little new to the Linear Algebra game <span class=hljs-keyword >in</span> Julia, so <span class=hljs-literal >I</span> am probably _way_ overcomplicating it…</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u677r5q5a_timestamp2020-10-23t033925372 ><a href="#user_u677r5q5a_timestamp2020-10-23t033925372">User: U677R5Q5A Timestamp:<em>2020-10-23T03:39:25.372</em>: </a></h3>
+<h3 id=user_u677r5q5a_timestamp2020-10-23t033925372 ><a href="#user_u677r5q5a_timestamp2020-10-23t033925372">User: U677R5Q5A Timestamp:<em>2020-10-23T03:39:25.372</em>:</a></h3>
 <pre><code class="julia hljs">Apologies, this is stuff <span class=hljs-literal >I</span> should know by experience. But apparently <span class=hljs-literal >I</span> am getting old.</code></pre>
-<h3 id=user_u677r5q5a_timestamp_2020-10-23t033907372 ><a href="#user_u677r5q5a_timestamp_2020-10-23t033907372">User: U677R5Q5A Timestamp: 2020-10-23T03:39:07.372: </a></h3>
+<h3 id=user_u677r5q5a_timestamp_2020-10-23t033907372 ><a href="#user_u677r5q5a_timestamp_2020-10-23t033907372">User: U677R5Q5A Timestamp: 2020-10-23T03:39:07.372:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span> somehow seem to have failed to wrap my head around the docs. But is there any way to rebuild/build a system image without needing a complete checkout of the Julia source tree?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_um3gcdfgr_timestamp_2020-10-23t031725371 ><a href="#user_um3gcdfgr_timestamp_2020-10-23t031725371">User: UM3GCDFGR Timestamp: 2020-10-23T03:17:25.371: </a></h3>
+<h3 id=user_um3gcdfgr_timestamp_2020-10-23t031725371 ><a href="#user_um3gcdfgr_timestamp_2020-10-23t031725371">User: UM3GCDFGR Timestamp: 2020-10-23T03:17:25.371:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-number >100</span>: dist = <span class=hljs-number >940031.0555043541</span>
 <span class=hljs-number >200</span>: dist = <span class=hljs-number >841554.7489537231</span>
 julia&gt; <span class=hljs-number >300</span>: dist = <span class=hljs-number >824895.3910763789</span>^C
@@ -328,26 +328,26 @@ julia&gt;
 <span class=hljs-number >900</span>: dist = <span class=hljs-number >735667.8233516186</span>
 <span class=hljs-literal >I</span> got something like above</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_um3gcdfgr_timestamp2020-10-23t03170237 ><a href="#user_um3gcdfgr_timestamp2020-10-23t03170237">User: UM3GCDFGR Timestamp:<em>2020-10-23T03:17:02.37</em>: </a></h3>
+<h3 id=user_um3gcdfgr_timestamp2020-10-23t03170237 ><a href="#user_um3gcdfgr_timestamp2020-10-23t03170237">User: UM3GCDFGR Timestamp:<em>2020-10-23T03:17:02.37</em>:</a></h3>
 <pre><code class="julia hljs">Would anyone tell me how to interrupt <span class=hljs-string >`Optim.optimize`</span>? <span class=hljs-literal >I</span> tried <span class=hljs-string >`cntr+c`</span> but it doesn&#x27;t work.. It will just <span class=hljs-keyword >continue</span> to optimize unless <span class=hljs-literal >I</span> kill the whole Julia session</code></pre>
-<h3 id=user_us64j0npq_timestamp_2020-10-23t030344369 ><a href="#user_us64j0npq_timestamp_2020-10-23t030344369">User: US64J0NPQ Timestamp: 2020-10-23T03:03:44.369: </a></h3>
+<h3 id=user_us64j0npq_timestamp_2020-10-23t030344369 ><a href="#user_us64j0npq_timestamp_2020-10-23t030344369">User: US64J0NPQ Timestamp: 2020-10-23T03:03:44.369:</a></h3>
 <pre><code class="julia hljs">Would anyone with expertise <span class=hljs-keyword >in</span> GTK be willing to help me with this issue here: &lt;https://github.com/JuliaGraphics/Gtk.jl/issues/<span class=hljs-number >529</span>&gt;
 
 In short, what <span class=hljs-literal >I</span> am trying to <span class=hljs-keyword >do</span> is grab a previously created GTK window that is created by a Julia script and <span class=hljs-string >&quot;recycle&quot;</span> it <span class=hljs-keyword >in</span> such way as to not have to open and close a new GTK window every single time <span class=hljs-literal >I</span> run the script. <span class=hljs-literal >I</span> want to use the same GTK each time <span class=hljs-literal >I</span> run my script. How <span class=hljs-keyword >do</span> <span class=hljs-literal >I</span> <span class=hljs-keyword >do</span> this?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u014lrljxrp_timestamp_2020-10-23t015212365 ><a href="#user_u014lrljxrp_timestamp_2020-10-23t015212365">User: U014LRLJXRP Timestamp: 2020-10-23T01:52:12.365: </a></h3>
+<h3 id=user_u014lrljxrp_timestamp_2020-10-23t015212365 ><a href="#user_u014lrljxrp_timestamp_2020-10-23t015212365">User: U014LRLJXRP Timestamp: 2020-10-23T01:52:12.365:</a></h3>
 <pre><code class="julia hljs">Why is <span class=hljs-string >`\endash`</span> and <span class=hljs-string >`\emdash`</span> listed <span class=hljs-keyword >in</span> the &lt;https://docs.julialang.org/en/v1<span class=hljs-number >.5</span>/manual/unicode-input/|unicode support&gt; but when <span class=hljs-literal >I</span> use it <span class=hljs-literal >I</span> get <span class=hljs-string >`syntax: invalid character &quot;–&quot; near column 1`</span>?…</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u014lrljxrp_timestamp_2020-10-23t012153361 ><a href="#user_u014lrljxrp_timestamp_2020-10-23t012153361">User: U014LRLJXRP Timestamp: 2020-10-23T01:21:53.361: </a></h3>
+<h3 id=user_u014lrljxrp_timestamp_2020-10-23t012153361 ><a href="#user_u014lrljxrp_timestamp_2020-10-23t012153361">User: U014LRLJXRP Timestamp: 2020-10-23T01:21:53.361:</a></h3>
 <pre><code class="julia hljs">If <span class=hljs-literal >I</span> have an identity matrix followed by some other stuff (<span class=hljs-literal >e</span>.g., <span class=hljs-string >`[1 0 0 2 3 0; 0 1 0 1 2 2; 0 0 1 4 3 0]`</span>), is there a way <span class=hljs-keyword >in</span> Julia to <span class=hljs-keyword >return</span> only the part of the matrix that isn’t the identity?  E.g., <span class=hljs-keyword >return</span> <span class=hljs-string >`[2 3 0; 1 2 2; 4 3 0]`</span>?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01724q3pgw_timestamp_2020-10-23t004722359 ><a href="#user_u01724q3pgw_timestamp_2020-10-23t004722359">User: U01724Q3PGW Timestamp: 2020-10-23T00:47:22.359: </a></h3>
+<h3 id=user_u01724q3pgw_timestamp_2020-10-23t004722359 ><a href="#user_u01724q3pgw_timestamp_2020-10-23t004722359">User: U01724Q3PGW Timestamp: 2020-10-23T00:47:22.359:</a></h3>
 <pre><code class="julia hljs">Is there a way to plot with a second y axis (say, on the right) on a single plot? <span class=hljs-literal >I</span> didn&#x27;t see anything <span class=hljs-keyword >in</span> the Plots.jl examples or tutorial and stackoverflow wasn&#x27;t much use either... <span class=hljs-literal >I</span> tried <span class=hljs-string >`axis=:right`</span>, but it must be an unknown symbol</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01c5huv05u_timestamp_2020-10-22t215524349 ><a href="#user_u01c5huv05u_timestamp_2020-10-22t215524349">User: U01C5HUV05U Timestamp: 2020-10-22T21:55:24.349: </a></h3>
+<h3 id=user_u01c5huv05u_timestamp_2020-10-22t215524349 ><a href="#user_u01c5huv05u_timestamp_2020-10-22t215524349">User: U01C5HUV05U Timestamp: 2020-10-22T21:55:24.349:</a></h3>
 <pre><code class="julia hljs">How can <span class=hljs-literal >I</span> cube an entire array?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01ba7wdyb1_timestamp_2020-10-22t210445348 ><a href="#user_u01ba7wdyb1_timestamp_2020-10-22t210445348">User: U01BA7WDYB1 Timestamp: 2020-10-22T21:04:45.348: </a></h3>
+<h3 id=user_u01ba7wdyb1_timestamp_2020-10-22t210445348 ><a href="#user_u01ba7wdyb1_timestamp_2020-10-22t210445348">User: U01BA7WDYB1 Timestamp: 2020-10-22T21:04:45.348:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span> encountered some strange behaviour <span class=hljs-keyword >while</span> testing the speed of sampling <span class=hljs-number >1</span> out of <span class=hljs-number >3</span> values with specified sampling weights. One of the values is null so <span class=hljs-literal >I</span> mistakenly used <span class=hljs-string >`Nothing`</span> to represent it (instead of <span class=hljs-string >`nothing`</span>, whose <span class=hljs-keyword >type</span> is actually Nothing). The code is something like this:
 M = M_trans(params...)
 <span class=hljs-meta >@time</span> <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:<span class=hljs-number >1000000</span>
@@ -356,22 +356,22 @@ M = M_trans(params...)
 which returns <span class=hljs-string >`0.640328 seconds (5.00 M allocations: 289.917 MiB, 4.92% gc time)`</span>. <span class=hljs-literal >I</span> decided to fix it by <span class=hljs-keyword >using</span> <span class=hljs-string >`nothing`</span> but unexpectedly this results <span class=hljs-keyword >in</span> a &gt;<span class=hljs-number >10</span>x decrease <span class=hljs-keyword >in</span> speed: <span class=hljs-string >`8.461066 seconds (7.00 M allocations: 350.952 MiB, 0.42% gc time)`</span>.
 Ultimately <span class=hljs-literal >I</span>&#x27;ll just use an integer to encode the null value which is faster than both but <span class=hljs-literal >I</span>&#x27;m just curious about this behaviour. Should <span class=hljs-literal >I</span> avoid <span class=hljs-keyword >using</span> <span class=hljs-string >`nothing`</span> at all costs?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01c2p6bksr_timestamp_2020-10-22t201006342 ><a href="#user_u01c2p6bksr_timestamp_2020-10-22t201006342">User: U01C2P6BKSR Timestamp: 2020-10-22T20:10:06.342: </a></h3>
+<h3 id=user_u01c2p6bksr_timestamp_2020-10-22t201006342 ><a href="#user_u01c2p6bksr_timestamp_2020-10-22t201006342">User: U01C2P6BKSR Timestamp: 2020-10-22T20:10:06.342:</a></h3>
 <pre><code class="julia hljs">Has anyone run into an issue with <span class=hljs-string >`using Flux`</span> inside of a package lately? As of a couple hours ago, <span class=hljs-literal >I</span> get a bunch of errors about methods being overwritten and <span class=hljs-string >`incremental compilation may be fatally broken for this module`</span>
 
 <span class=hljs-literal >I</span> made an issue about it, but <span class=hljs-literal >I</span>&#x27;m really not sure what&#x27;s going on at all: &lt;https://github.com/FluxML/Flux.jl/issues/<span class=hljs-number >1370</span>&gt;</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ukg4wf8pj_timestamp2020-10-22t190950337 ><a href="#user_ukg4wf8pj_timestamp2020-10-22t190950337">User: UKG4WF8PJ Timestamp:<em>2020-10-22T19:09:50.337</em>: </a></h3>
+<h3 id=user_ukg4wf8pj_timestamp2020-10-22t190950337 ><a href="#user_ukg4wf8pj_timestamp2020-10-22t190950337">User: UKG4WF8PJ Timestamp:<em>2020-10-22T19:09:50.337</em>:</a></h3>
 <pre><code class="julia hljs">Optim.jl,JuMP.jl</code></pre>
-<h3 id=user_u015eghqzp0_timestamp2020-10-22t190831336 ><a href="#user_u015eghqzp0_timestamp2020-10-22t190831336">User: U015EGHQZP0 Timestamp:<em>2020-10-22T19:08:31.336</em>: </a></h3>
+<h3 id=user_u015eghqzp0_timestamp2020-10-22t190831336 ><a href="#user_u015eghqzp0_timestamp2020-10-22t190831336">User: U015EGHQZP0 Timestamp:<em>2020-10-22T19:08:31.336</em>:</a></h3>
 <pre><code class="julia hljs">Is there a package that lets you optimize nonlinear user-defined functions?</code></pre>
-<h3 id=user_up4u6aknz_timestamp_2020-10-22t182419334 ><a href="#user_up4u6aknz_timestamp_2020-10-22t182419334">User: UP4U6AKNZ Timestamp: 2020-10-22T18:24:19.334: </a></h3>
+<h3 id=user_up4u6aknz_timestamp_2020-10-22t182419334 ><a href="#user_up4u6aknz_timestamp_2020-10-22t182419334">User: UP4U6AKNZ Timestamp: 2020-10-22T18:24:19.334:</a></h3>
 <pre><code class="julia hljs">The Julia Artifacts string <span class=hljs-keyword >macro</span> <span class=hljs-string >`artifact&quot;blabla&quot;`</span> appears to be dispatched on REPL behavior (only then it will look <span class=hljs-keyword >for</span> the <span class=hljs-string >`toml`</span> file  <span class=hljs-keyword >in</span> <span class=hljs-string >`pwd()`</span>): &lt;https://github.com/JuliaLang/Pkg.jl/blob/aaf4e6e8ab784f7435c1bdc56832bc03e014dedb/src/Artifacts.jl<span class=hljs-comment >#L1046&gt; It fails for me when using it in a `notebook` environment (Basically doesn&#x27;t find `Artifacts.toml`). Are there simple work-around solutions?</span></code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01d211hb0v_timestamp_2020-10-22t175422327 ><a href="#user_u01d211hb0v_timestamp_2020-10-22t175422327">User: U01D211HB0V Timestamp: 2020-10-22T17:54:22.327: </a></h3>
+<h3 id=user_u01d211hb0v_timestamp_2020-10-22t175422327 ><a href="#user_u01d211hb0v_timestamp_2020-10-22t175422327">User: U01D211HB0V Timestamp: 2020-10-22T17:54:22.327:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span> have a <span class=hljs-number >2</span>d array <span class=hljs-literal >I</span> create like <span class=hljs-string >`a = [rand(4) for i in [0]]`</span> (simplified <span class=hljs-keyword >for</span> clarity) and <span class=hljs-literal >I</span> want to broadcast <span class=hljs-string >`cos()`</span> over it. However <span class=hljs-string >`cos.(a)`</span> yields <span class=hljs-string >`MethodError: no method matching cos(::Array{Float64,1})`</span> . What am <span class=hljs-literal >I</span> missing?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_uaree2nmd_timestamp2020-10-22t174152324 ><a href="#user_uaree2nmd_timestamp2020-10-22t174152324">User: UAREE2NMD Timestamp:<em>2020-10-22T17:41:52.324</em>: </a></h3>
+<h3 id=user_uaree2nmd_timestamp2020-10-22t174152324 ><a href="#user_uaree2nmd_timestamp2020-10-22t174152324">User: UAREE2NMD Timestamp:<em>2020-10-22T17:41:52.324</em>:</a></h3>
 <pre><code class="julia hljs">The following works fine:
 julia&gt; <span class=hljs-keyword >using</span> Dates
 
@@ -393,27 +393,27 @@ Stacktrace:
  [<span class=hljs-number >6</span>] <span class=hljs-built_in >DateTime</span>(::<span class=hljs-built_in >String</span>, ::<span class=hljs-built_in >DateFormat</span>{<span class=hljs-built_in >Symbol</span>(<span class=hljs-string >&quot;yyyy-mm-dd\\THH:MM:&lt;http://SS.sZ|SS.sZ&gt;&quot;</span>),<span class=hljs-built_in >Tuple</span>{Dates.DatePart{<span class=hljs-string >&#x27;y&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;m&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;d&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;H&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;M&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;S&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;s&#x27;</span>},Dates.DatePart{<span class=hljs-string >&#x27;Z&#x27;</span>}}}) at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1<span class=hljs-number >.5</span>/Dates/src/io.jl:<span class=hljs-number >482</span>
  [<span class=hljs-number >7</span>] top-level scope at REPL[<span class=hljs-number >8</span>]:<span class=hljs-number >1</span>
 Looks like it is a bug and <span class=hljs-literal >I</span> reported it &lt;https://github.com/JuliaTime/TimeZones.jl/issues/<span class=hljs-number >303</span>|here&gt;. But <span class=hljs-keyword >in</span> the meantime, how can <span class=hljs-literal >I</span> work around this? (given that <span class=hljs-literal >I</span> <span class=hljs-keyword >do</span> need to use both <span class=hljs-string >`Dates`</span> and <span class=hljs-string >`TimeZones`</span>)</code></pre>
-<h3 id=user_u018pbpuqbd_timestamp_2020-10-22t173111321 ><a href="#user_u018pbpuqbd_timestamp_2020-10-22t173111321">User: U018PBPUQBD Timestamp: 2020-10-22T17:31:11.321: </a></h3>
+<h3 id=user_u018pbpuqbd_timestamp_2020-10-22t173111321 ><a href="#user_u018pbpuqbd_timestamp_2020-10-22t173111321">User: U018PBPUQBD Timestamp: 2020-10-22T17:31:11.321:</a></h3>
 <pre><code class="julia hljs">Hello, <span class=hljs-keyword >for</span> this code
 <span class=hljs-comment >#lower power flow limit</span>
-        <span class=hljs-meta >@constraint</span>(wildfire_model, 
-                -ref[:branch][l][<span class=hljs-string >&quot;rate_a&quot;</span>] &lt;= 
-                sum(SF[l_index,j]*p[j] <span class=hljs-keyword >for</span> j <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:length(ref[:bus])) 
+        <span class=hljs-meta >@constraint</span>(wildfire_model,
+                -ref[:branch][l][<span class=hljs-string >&quot;rate_a&quot;</span>] &lt;=
+                sum(SF[l_index,j]*p[j] <span class=hljs-keyword >for</span> j <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:length(ref[:bus]))
                     + sum(PSDF[l_index,j]*alpha[j] <span class=hljs-keyword >for</span> j <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:length(ref[:branch])))
 
         <span class=hljs-comment >#upper power flow limit</span>
-        <span class=hljs-meta >@constraint</span>(wildfire_model, 
-                sum(SF[l_index,j]*p[j] <span class=hljs-keyword >for</span> j <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:length(ref[:bus])) 
+        <span class=hljs-meta >@constraint</span>(wildfire_model,
+                sum(SF[l_index,j]*p[j] <span class=hljs-keyword >for</span> j <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:length(ref[:bus]))
                     + sum(PSDF[l_index,j]*alpha[j] <span class=hljs-keyword >for</span> j <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:length(ref[:branch])))
                 &lt;= ref[:branch][l][<span class=hljs-string >&quot;rate_a&quot;</span>])
 <span class=hljs-literal >I</span> am getting this error <span class=hljs-string >`syntax: &quot;&lt;=&quot; is not a unary operator`</span> . This is <span class=hljs-keyword >in</span> JuMP. <span class=hljs-literal >I</span> am not sure what <span class=hljs-literal >I</span> did wrong</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_us64j0npq_timestamp_2020-10-22t17004231 ><a href="#user_us64j0npq_timestamp_2020-10-22t17004231">User: US64J0NPQ Timestamp: 2020-10-22T17:00:42.31: </a></h3>
+<h3 id=user_us64j0npq_timestamp_2020-10-22t17004231 ><a href="#user_us64j0npq_timestamp_2020-10-22t17004231">User: US64J0NPQ Timestamp: 2020-10-22T17:00:42.31:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span> am struggling on a data structure dilemma. <span class=hljs-literal >I</span> have a time series data set spread out across five different file formats. File <span class=hljs-number >1</span> contains the time series, File <span class=hljs-number >2</span> and <span class=hljs-number >3</span> contains about how the data collection instrument was set up <span class=hljs-keyword >for</span> that particular time series, File <span class=hljs-number >4</span> contains additional time series information, and File <span class=hljs-number >5</span> contains further information on the data collection instrument. These files exist <span class=hljs-keyword >for</span> nearly <span class=hljs-number >30</span> separate data recording sessions and each file could contain differing information that would be important <span class=hljs-keyword >for</span> analysis. In total, this comes to about <span class=hljs-number >3</span> billion data entries spread across these files.
 
 How best could <span class=hljs-literal >I</span> structure this data? <span class=hljs-literal >I</span> have looked at RecursiveArrayTools.jl and thought that waspromising, AxisArrays.jl may also work as it can get me away from dictionaries, and AxisIndices (which looks like it builds on top of AxisArrays and makes it even better). Does anyone have any suggestions on what <span class=hljs-literal >I</span> should <span class=hljs-keyword >do</span> here? Thanks <span class=hljs-keyword >for</span> the help everyone! :smile:</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ulkhn71k3_timestamp_2020-10-22t164137305 ><a href="#user_ulkhn71k3_timestamp_2020-10-22t164137305">User: ULKHN71K3 Timestamp: 2020-10-22T16:41:37.305: </a></h3>
+<h3 id=user_ulkhn71k3_timestamp_2020-10-22t164137305 ><a href="#user_ulkhn71k3_timestamp_2020-10-22t164137305">User: ULKHN71K3 Timestamp: 2020-10-22T16:41:37.305:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span> am discovering the joys and headaches of Named Tuples. How can <span class=hljs-literal >I</span> make this work?
 
 <span class=hljs-string >`function nameparts(v)`</span>
@@ -452,23 +452,23 @@ Closest candidates are:
 
 What am <span class=hljs-literal >I</span> missing? Do <span class=hljs-literal >I</span> need to implement new methods <span class=hljs-keyword >for</span> <span class=hljs-string >`convert`</span> ?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u019zkq5yq6_timestamp_2020-10-22t160658297 ><a href="#user_u019zkq5yq6_timestamp_2020-10-22t160658297">User: U019ZKQ5YQ6 Timestamp: 2020-10-22T16:06:58.297: </a></h3>
+<h3 id=user_u019zkq5yq6_timestamp_2020-10-22t160658297 ><a href="#user_u019zkq5yq6_timestamp_2020-10-22t160658297">User: U019ZKQ5YQ6 Timestamp: 2020-10-22T16:06:58.297:</a></h3>
 <pre><code class="julia hljs">What is going on :sob: <span class=hljs-literal >I</span> am pressing enter</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u6c937enb_timestamp_2020-10-22t153153295 ><a href="#user_u6c937enb_timestamp_2020-10-22t153153295">User: U6C937ENB Timestamp: 2020-10-22T15:31:53.295: </a></h3>
+<h3 id=user_u6c937enb_timestamp_2020-10-22t153153295 ><a href="#user_u6c937enb_timestamp_2020-10-22t153153295">User: U6C937ENB Timestamp: 2020-10-22T15:31:53.295:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span> have a <span class=hljs-string >`t=(;a=f, b=g)`</span> named tuple of functions and <span class=hljs-literal >I</span> want to transform this <span class=hljs-keyword >in</span> a named tuple of <span class=hljs-keyword >return</span> values, such  <span class=hljs-string >`ev(t, x)`</span>  gives <span class=hljs-string >`(;a=f(x), b=g(x))`</span>  The tricky part is reading the key names from the argument <span class=hljs-keyword >type</span> of <span class=hljs-string >`t`</span> of the <span class=hljs-keyword >function</span> <span class=hljs-string >`ev`</span> and use this somehow to create a new named tuple...</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u018y8s0pk9_timestamp_2020-10-22t144957292 ><a href="#user_u018y8s0pk9_timestamp_2020-10-22t144957292">User: U018Y8S0PK9 Timestamp: 2020-10-22T14:49:57.292: </a></h3>
+<h3 id=user_u018y8s0pk9_timestamp_2020-10-22t144957292 ><a href="#user_u018y8s0pk9_timestamp_2020-10-22t144957292">User: U018Y8S0PK9 Timestamp: 2020-10-22T14:49:57.292:</a></h3>
 <pre><code class="julia hljs">Is there a simple way to batch together a dataset of <span class=hljs-number >3</span>D images? <span class=hljs-literal >I</span> know flux has a flux.batch but I’m not sure <span class=hljs-keyword >if</span> that works <span class=hljs-keyword >for</span> <span class=hljs-number >3</span>D images</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u7hayky9x_timestamp2020-10-22t14465829 ><a href="#user_u7hayky9x_timestamp2020-10-22t14465829">User: U7HAYKY9X Timestamp:<em>2020-10-22T14:46:58.29</em>: </a></h3>
+<h3 id=user_u7hayky9x_timestamp2020-10-22t14465829 ><a href="#user_u7hayky9x_timestamp2020-10-22t14465829">User: U7HAYKY9X Timestamp:<em>2020-10-22T14:46:58.29</em>:</a></h3>
 <pre><code class="julia hljs">Is there a neat way of figuring out <span class=hljs-keyword >if</span> a <span class=hljs-keyword >bitstype</span> has a specific bit layout? For example, right now <span class=hljs-literal >I</span> <span class=hljs-keyword >do</span>
 <span class=hljs-keyword >function</span> iszero(x::<span class=hljs-built_in >NTuple</span>{<span class=hljs-number >16</span>, <span class=hljs-built_in >UInt8</span>})
     r = <span class=hljs-built_in >Ref</span>(x)
     ptr = <span class=hljs-built_in >Ptr</span>{UIn128}(pointer_from_objref(r))
     <span class=hljs-keyword >return</span> iszero(unsafe_load(ptr))
 <span class=hljs-keyword >end</span></code></pre>
-<h3 id=user_u013khu2xc1_timestamp_2020-10-22t125757285 ><a href="#user_u013khu2xc1_timestamp_2020-10-22t125757285">User: U013KHU2XC1 Timestamp: 2020-10-22T12:57:57.285: </a></h3>
+<h3 id=user_u013khu2xc1_timestamp_2020-10-22t125757285 ><a href="#user_u013khu2xc1_timestamp_2020-10-22t125757285">User: U013KHU2XC1 Timestamp: 2020-10-22T12:57:57.285:</a></h3>
 <pre><code class="julia hljs">Getting a stable error on Taro activation. <span class=hljs-built_in >Any</span> ideas on how to get more detailed description?
 
 <span class=hljs-string >`export JULIA_COPY_STACKS=yes &amp;&amp; julia --project=.`</span>
@@ -492,10 +492,10 @@ Platform Info:
 Environment:
   JULIA_COPY_STACKS = yes</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u0111s7rtml_timestamp_2020-10-22t123752283 ><a href="#user_u0111s7rtml_timestamp_2020-10-22t123752283">User: U0111S7RTML Timestamp: 2020-10-22T12:37:52.283: </a></h3>
+<h3 id=user_u0111s7rtml_timestamp_2020-10-22t123752283 ><a href="#user_u0111s7rtml_timestamp_2020-10-22t123752283">User: U0111S7RTML Timestamp: 2020-10-22T12:37:52.283:</a></h3>
 <pre><code class="julia hljs">Out of curiosity, is there an autodiff package that can mollify <span class=hljs-keyword >if</span> statements?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01ayq4hqhf_timestamp_2020-10-22t104033282 ><a href="#user_u01ayq4hqhf_timestamp_2020-10-22t104033282">User: U01AYQ4HQHF Timestamp: 2020-10-22T10:40:33.282: </a></h3>
+<h3 id=user_u01ayq4hqhf_timestamp_2020-10-22t104033282 ><a href="#user_u01ayq4hqhf_timestamp_2020-10-22t104033282">User: U01AYQ4HQHF Timestamp: 2020-10-22T10:40:33.282:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-built_in >Any</span> idea what is wrong?
 <span class=hljs-keyword >struct</span> StVenant_rakenne
 
@@ -529,21 +529,21 @@ Closest candidates are:
   -(::BigFloat, ::Union{Int16, Int32, Int64, Int8}) at mpfr.jl:425
   ...&quot;</span></code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_uhzuxbr2p_timestamp_2020-10-22t103226281 ><a href="#user_uhzuxbr2p_timestamp_2020-10-22t103226281">User: UHZUXBR2P Timestamp: 2020-10-22T10:32:26.281: </a></h3>
+<h3 id=user_uhzuxbr2p_timestamp_2020-10-22t103226281 ><a href="#user_uhzuxbr2p_timestamp_2020-10-22t103226281">User: UHZUXBR2P Timestamp: 2020-10-22T10:32:26.281:</a></h3>
 <pre><code class="julia hljs">Is there a way to <span class=hljs-keyword >catch</span> a warning? <span class=hljs-literal >I</span> want to redefine some constants, but instead of triggering a whole list of warnings, <span class=hljs-literal >I</span> thought it might be better to <span class=hljs-keyword >catch</span> them and print a single one.</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u8j1ket6k_timestamp_2020-10-22t092139275 ><a href="#user_u8j1ket6k_timestamp_2020-10-22t092139275">User: U8J1KET6K Timestamp: 2020-10-22T09:21:39.275: </a></h3>
+<h3 id=user_u8j1ket6k_timestamp_2020-10-22t092139275 ><a href="#user_u8j1ket6k_timestamp_2020-10-22t092139275">User: U8J1KET6K Timestamp: 2020-10-22T09:21:39.275:</a></h3>
 <pre><code class="julia hljs">Hi, <span class=hljs-literal >I</span> was just glancing at &lt;https://docs.julialang.org/en/v1/manual/integers-and-floating-point-numbers/&gt;  and <span class=hljs-keyword >in</span> the table <span class=hljs-literal >I</span> saw that the boolean has <span class=hljs-number >8</span> bits. Why does it have <span class=hljs-number >8</span> instead of <span class=hljs-number >1</span> ...?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u6g4m02n4_timestamp2020-10-22t091810274 ><a href="#user_u6g4m02n4_timestamp2020-10-22t091810274">User: U6G4M02N4 Timestamp:<em>2020-10-22T09:18:10.274</em>: </a></h3>
+<h3 id=user_u6g4m02n4_timestamp2020-10-22t091810274 ><a href="#user_u6g4m02n4_timestamp2020-10-22t091810274">User: U6G4M02N4 Timestamp:<em>2020-10-22T09:18:10.274</em>:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span>&#x27;m looking <span class=hljs-keyword >for</span> something that leverages some flavor of search trees to achieve intersections <span class=hljs-keyword >in</span> ~ O(log(N)) time</code></pre>
 <pre><code class="julia hljs">Anybody know of a package to (efficiently) find intersections of N-dimensional meshes with lines, planes, etc?</code></pre>
-<h3 id=user_u7jqgpgcq_timestamp_2020-10-22t082032272 ><a href="#user_u7jqgpgcq_timestamp_2020-10-22t082032272">User: U7JQGPGCQ Timestamp: 2020-10-22T08:20:32.272: </a></h3>
+<h3 id=user_u7jqgpgcq_timestamp_2020-10-22t082032272 ><a href="#user_u7jqgpgcq_timestamp_2020-10-22t082032272">User: U7JQGPGCQ Timestamp: 2020-10-22T08:20:32.272:</a></h3>
 <pre><code class="julia hljs">What&#x27;s the best way currently to get <span class=hljs-string >`Pkg`</span> to run <span class=hljs-keyword >in</span> a reasonable time on Windows and Julia <span class=hljs-number >1.5</span><span class=hljs-number >.2</span>? Updating the registry currently takes something like <span class=hljs-number >5</span> minutes <span class=hljs-keyword >for</span> me, part of which is probably my lovely corporate antivir which <span class=hljs-literal >I</span> can&#x27;t disable</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_um4tshkf1_timestamp2020-10-22t031224269 ><a href="#user_um4tshkf1_timestamp2020-10-22t031224269">User: UM4TSHKF1 Timestamp:<em>2020-10-22T03:12:24.269</em>: </a></h3>
+<h3 id=user_um4tshkf1_timestamp2020-10-22t031224269 ><a href="#user_um4tshkf1_timestamp2020-10-22t031224269">User: UM4TSHKF1 Timestamp:<em>2020-10-22T03:12:24.269</em>:</a></h3>
 <pre><code class="julia hljs">Can verify that <span class=hljs-literal >I</span> reran a previously successful job to get this error</code></pre>
-<h3 id=user_um4tshkf1_timestamp_2020-10-22t030836269 ><a href="#user_um4tshkf1_timestamp_2020-10-22t030836269">User: UM4TSHKF1 Timestamp: 2020-10-22T03:08:36.269: </a></h3>
+<h3 id=user_um4tshkf1_timestamp_2020-10-22t030836269 ><a href="#user_um4tshkf1_timestamp_2020-10-22t030836269">User: UM4TSHKF1 Timestamp: 2020-10-22T03:08:36.269:</a></h3>
 <pre><code class="julia hljs">Is anyone familiar with this build error <span class=hljs-literal >I</span>&#x27;m getting that wasn&#x27;t an issue maybe an hour ago? Testing with Julia <span class=hljs-number >1.4</span> on Ubuntu-latest via GitHub Actions
 Run julia-actions/julia-buildpkg<span class=hljs-meta >@latest</span>
     Cloning default registries into <span class=hljs-string >`~/.julia`</span>
@@ -604,13 +604,13 @@ Stacktrace:
  [<span class=hljs-number >3</span>] (::Pkg.Artifacts.<span class=hljs-string >var&quot;#21#22&quot;</span>{<span class=hljs-built_in >String</span>,<span class=hljs-built_in >String</span>})(::<span class=hljs-built_in >Dict</span>{<span class=hljs-built_in >String</span>,<span class=hljs-built_in >Any</span>}) at ./none:<span class=hljs-number >0</span>
  [<span class=hljs-number >4</span>] iterate at ./generator.jl:<span class=hljs-number >47</span> [inlined]</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ulzq4dcsu_timestamp_2020-10-22t024547267 ><a href="#user_ulzq4dcsu_timestamp_2020-10-22t024547267">User: ULZQ4DCSU Timestamp: 2020-10-22T02:45:47.267: </a></h3>
+<h3 id=user_ulzq4dcsu_timestamp_2020-10-22t024547267 ><a href="#user_ulzq4dcsu_timestamp_2020-10-22t024547267">User: ULZQ4DCSU Timestamp: 2020-10-22T02:45:47.267:</a></h3>
 <pre><code class="julia hljs">Could anyone point out why the following is happening?  If <span class=hljs-string >`t0 ≤ t &lt; t1 == true`</span>, <span class=hljs-string >`ExcitatoryConductance`</span> gives <span class=hljs-string >`ge  =   Ne*gbar*(finf+(f0-finf)`</span> and ignores <span class=hljs-string >`exp(-t/tau)`</span>.  Does this have something to <span class=hljs-keyword >do</span> with my usage of constants?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u8d9768q6_timestamp_2020-10-22t021217261 ><a href="#user_u8d9768q6_timestamp_2020-10-22t021217261">User: U8D9768Q6 Timestamp: 2020-10-22T02:12:17.261: </a></h3>
+<h3 id=user_u8d9768q6_timestamp_2020-10-22t021217261 ><a href="#user_u8d9768q6_timestamp_2020-10-22t021217261">User: U8D9768Q6 Timestamp: 2020-10-22T02:12:17.261:</a></h3>
 <pre><code class="julia hljs">Sorry, <span class=hljs-literal >I</span> don&#x27;t understand why your <span class=hljs-string >`deepsym`</span> <span class=hljs-keyword >function</span> doesn&#x27;t solve the issue. It does exactly what you say you want.</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u014lrljxrp_timestamp2020-10-22t02040826 ><a href="#user_u014lrljxrp_timestamp2020-10-22t02040826">User: U014LRLJXRP Timestamp:<em>2020-10-22T02:04:08.26</em>: </a></h3>
+<h3 id=user_u014lrljxrp_timestamp2020-10-22t02040826 ><a href="#user_u014lrljxrp_timestamp2020-10-22t02040826">User: U014LRLJXRP Timestamp:<em>2020-10-22T02:04:08.26</em>:</a></h3>
 <pre><code class="julia hljs">Sorry <span class=hljs-keyword >if</span> <span class=hljs-literal >I</span> am cluttering up the channel, but <span class=hljs-literal >I</span> also can’t figure out how to get a <span class=hljs-keyword >function</span> to act on the innermost element of an <span class=hljs-keyword >abstract</span> array?  <span class=hljs-literal >I</span> want:
 julia deepsymbol([[<span class=hljs-number >1</span> <span class=hljs-number >2</span> <span class=hljs-number >3</span>], [<span class=hljs-number >4</span> <span class=hljs-number >5</span> <span class=hljs-number >6</span>]])
 <span class=hljs-number >2</span>-element <span class=hljs-built_in >Array</span>{<span class=hljs-built_in >Symbol</span>,<span class=hljs-number >1</span>}:
@@ -623,7 +623,7 @@ deepsym (generic function with 1 method)
 julia&gt; deepsym(a) = Symbol.(deepsym.(a))
 deepsym (generic function with 2 methods)
 But that makes _everything_ symbols.  Any ideas? :slightly_smiling_face:</span></code></pre>
-<h3 id=user_u014lrljxrp_timestamp_2020-10-22t013842252 ><a href="#user_u014lrljxrp_timestamp_2020-10-22t013842252">User: U014LRLJXRP Timestamp: 2020-10-22T01:38:42.252: </a></h3>
+<h3 id=user_u014lrljxrp_timestamp_2020-10-22t013842252 ><a href="#user_u014lrljxrp_timestamp_2020-10-22t013842252">User: U014LRLJXRP Timestamp: 2020-10-22T01:38:42.252:</a></h3>
 <pre><code class="julia hljs">How can <span class=hljs-literal >I</span> use <span class=hljs-string >`where T`</span> with a <span class=hljs-keyword >return</span> <span class=hljs-keyword >type</span> <span class=hljs-keyword >in</span> a one-line <span class=hljs-keyword >function</span>?
 julia&gt; <span class=hljs-keyword >function</span> myfunc(x::T)::T <span class=hljs-keyword >where</span> T
     <span class=hljs-keyword >return</span> x^<span class=hljs-number >2</span>
@@ -636,10 +636,10 @@ ERROR: <span class=hljs-built_in >UndefVarError</span>: T not defined
 julia&gt; myfunc(x::T) <span class=hljs-keyword >where</span> T = x^<span class=hljs-number >2</span>
 myfunc (generic <span class=hljs-keyword >function</span> with <span class=hljs-number >1</span> method)</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u018pbpuqbd_timestamp_2020-10-22t011340246 ><a href="#user_u018pbpuqbd_timestamp_2020-10-22t011340246">User: U018PBPUQBD Timestamp: 2020-10-22T01:13:40.246: </a></h3>
+<h3 id=user_u018pbpuqbd_timestamp_2020-10-22t011340246 ><a href="#user_u018pbpuqbd_timestamp_2020-10-22t011340246">User: U018PBPUQBD Timestamp: 2020-10-22T01:13:40.246:</a></h3>
 <pre><code class="julia hljs">Can <span class=hljs-literal >I</span> make values of a matrix into a <span class=hljs-built_in >Dict</span>()?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_uhdqq4gn6_timestamp_2020-10-22t003720244 ><a href="#user_uhdqq4gn6_timestamp_2020-10-22t003720244">User: UHDQQ4GN6 Timestamp: 2020-10-22T00:37:20.244: </a></h3>
+<h3 id=user_uhdqq4gn6_timestamp_2020-10-22t003720244 ><a href="#user_uhdqq4gn6_timestamp_2020-10-22t003720244">User: UHDQQ4GN6 Timestamp: 2020-10-22T00:37:20.244:</a></h3>
 <pre><code class="julia hljs"><span class=hljs-literal >I</span> have a package with Python dependencies that uses <span class=hljs-string >`Base.prompt`</span> to ask users <span class=hljs-keyword >if</span> it should <span class=hljs-keyword >try</span> auto-installing the dependnecy <span class=hljs-keyword >using</span> either conda or pip. We need the Python package when precompiling to build docstrings. But it looks like <span class=hljs-string >`Base.prompt`</span> never prompts the user during precompilation, so it fails. <span class=hljs-built_in >Any</span> suggestions?</code></pre>
 <p><a href="">View Thread</a></p>
 <div class=page-foot >
