@@ -1,509 +1,565 @@
-<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/SlackArchive/libs/highlight/github.min.css"> <link href="/SlackArchive/css/franklin.css" rel=stylesheet > <link href="/SlackArchive/css/vela.css" rel=stylesheet > <script src="/SlackArchive/libs/vela/jquery.min.js"></script> <link rel=icon  href="/SlackArchive/assets/favicon.png"> <title>Slack Archive</title> <div class=main-nav  id=menu > <div class=flex-container > <span class=sidebar-brand > <h3 style='font-size: 25px'>Vela Template</h3> </span> </div> <nav class=sidebar-nav > <ul class=metismenu  id=metismenu  > <li><a href="/SlackArchive/index.html">Home</a> <li><a href="/SlackArchive/menu1/">Code blocks</a> <li><a href="" class=has-arrow >Topic</a> <ul> <li><a href="/SlackArchive/menu2/">More goodies</a> </ul> <li><a href="/SlackArchive/menu3/">Tags</a> </ul> </nav> </div> <main id=panel > <div class="toggle-button hamburger hamburger--spin"> <div class=hamburger-box > <div class=hamburger-inner ></div> </div> </div> <h1 class="page title">Preview of Slack Helpdesk History</h1> <hr> <div class=franklin-content ><h1 id=preview_of_slack_helpdesk_history ><a href="#preview_of_slack_helpdesk_history">Preview of Slack Helpdesk History</a></h1> <h3 id=user_u8mpcdjay_timestamp2020-10-24t20472505 ><a href="#user_u8mpcdjay_timestamp2020-10-24t20472505">User: U8MPCDJAY Timestamp:<em>2020-10-24T20:47:25.05</em>: </a></h3> <pre><code class="julia hljs">I’m trying to make some highly async code interrupt-friendly with <span class=hljs-keyword >try</span>-catches, and most of the time it works, but every so often <span class=hljs-literal >I</span> hit this. Is there any way to figure out what it was doing <span class=hljs-keyword >in</span> julia code at the time?
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <link rel="stylesheet" href="/SlackArchive/libs/highlight/github.min.css">
+   
+
+  <link href="/SlackArchive/css/franklin.css" rel="stylesheet">
+<link href="/SlackArchive/css/vela.css" rel="stylesheet">
+<script src="/SlackArchive/libs/vela/jquery.min.js"></script>
+
+<link rel="icon" href="/SlackArchive/assets/favicon.png">
+
+
+  <title>Slack Archive</title>
+</head>
+<body>
+<div class="main-nav" id="menu">
+  <div class="flex-container">
+    <span class="sidebar-brand">
+      <h3 style='font-size: 25px'>Vela Template</h3>
+    </span>
+  </div> <!-- class="flex-container" -->
+
+  <nav class="sidebar-nav">
+    <ul class="metismenu"  id="metismenu" >
+      <li><a href="/SlackArchive/index.html">Home</a></li>
+      <li><a href="/SlackArchive/menu1/">Code blocks</a></li>
+      <li><a href="" class="has-arrow">Topic</a>
+        <ul>
+          <li><a href="/SlackArchive/menu2/">More goodies</a></li>
+        </ul>
+      </li>
+      <li><a href="/SlackArchive/menu3/">Tags</a></li>
+    </ul>
+  </nav>
+</div> <!-- main nav menu -->
+
+<main id="panel">
+  <div class="toggle-button hamburger hamburger--spin">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </div>
+  <h1 class="page title">Preview of Slack Helpdesk History</h1>
+  <hr>
+
+
+
+<!-- Content appended here -->
+<div class="franklin-content"><h1 id="preview_of_slack_helpdesk_history"><a href="#preview_of_slack_helpdesk_history">Preview of Slack Helpdesk History</a></h1>
+<h3 id="user_u8mpcdjay_timestamp2020-10-24t20472505"><a href="#user_u8mpcdjay_timestamp2020-10-24t20472505">User: U8MPCDJAY Timestamp:<em>2020-10-24T20:47:25.05</em>: </a></h3>
+<pre><code class="language-julia">I’m trying to make some highly async code interrupt-friendly with try-catches, and most of the time it works, but every so often I hit this. Is there any way to figure out what it was doing in julia code at the time?
 ^Cfatal: error thrown and no exception handler available.
-<span class=hljs-built_in >InterruptException</span>()
-jl_mutex_unlock at /Users/ian/Documents/GitHub/julia/src/./locks.h:<span class=hljs-number >139</span> [inlined]
-jl_task_get_next at /Users/ian/Documents/GitHub/julia/src/partr.c:<span class=hljs-number >475</span>
-poptask at ./task.jl:<span class=hljs-number >744</span>
-wait at ./task.jl:<span class=hljs-number >752</span> [inlined]
-task_done_hook at ./task.jl:<span class=hljs-number >478</span>
-_jl_invoke at /Users/ian/Documents/GitHub/julia/src/gf.c:<span class=hljs-number >0</span> [inlined]
-jl_apply_generic at /Users/ian/Documents/GitHub/julia/src/gf.c:<span class=hljs-number >2373</span>
-jl_apply at /Users/ian/Documents/GitHub/julia/src/./julia.h:<span class=hljs-number >1690</span> [inlined]
-jl_finish_task at /Users/ian/Documents/GitHub/julia/src/task.c:<span class=hljs-number >208</span>
-start_task at /Users/ian/Documents/GitHub/julia/src/task.c:<span class=hljs-number >832</span></code></pre> <h3 id=user_u8d9768q6_timestamp2020-10-24t204530049 ><a href="#user_u8d9768q6_timestamp2020-10-24t204530049">User: U8D9768Q6 Timestamp:<em>2020-10-24T20:45:30.049</em>:</a></h3> <pre><code class="julia hljs">(though it&#x27;s a rather big <span class=hljs-string >`if`</span> about whether that&#x27;s actually something we want to support)</code></pre>
-<pre><code class="julia hljs">There&#x27;s a lot of things <span class=hljs-keyword >where</span> people design <span class=hljs-string >`AbstractArray`</span>  functions to support arbitrary offsets, but <span class=hljs-keyword >for</span> the most part assume unit spacing. If we wanted better irregularly spaced array support, we&#x27;d likely need functions like <span class=hljs-string >`first(::AbstractArray, ::Int)`</span></code></pre>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span> don&#x27;t see how that&#x27;d be a concern. Shouldn&#x27;t it just <span class=hljs-keyword >return</span> the same <span class=hljs-keyword >type</span> as <span class=hljs-string >`getindex`</span> on a slice would?</code></pre>
-<h3 id=user_u01arrmlm7e_timestamp_2020-10-24t203958043 ><a href="#user_u01arrmlm7e_timestamp_2020-10-24t203958043">User: U01ARRMLM7E Timestamp: 2020-10-24T20:39:58.043:</a></h3>
-<pre><code class="julia hljs">What&#x27;s the situation <span class=hljs-keyword >where</span> the output <span class=hljs-keyword >type</span> of <span class=hljs-string >`first(x,3)`</span> differs from the input <span class=hljs-keyword >type</span>?</code></pre>
+InterruptException&#40;&#41;
+jl_mutex_unlock at /Users/ian/Documents/GitHub/julia/src/./locks.h:139 &#91;inlined&#93;
+jl_task_get_next at /Users/ian/Documents/GitHub/julia/src/partr.c:475
+poptask at ./task.jl:744
+wait at ./task.jl:752 &#91;inlined&#93;
+task_done_hook at ./task.jl:478
+_jl_invoke at /Users/ian/Documents/GitHub/julia/src/gf.c:0 &#91;inlined&#93;
+jl_apply_generic at /Users/ian/Documents/GitHub/julia/src/gf.c:2373
+jl_apply at /Users/ian/Documents/GitHub/julia/src/./julia.h:1690 &#91;inlined&#93;
+jl_finish_task at /Users/ian/Documents/GitHub/julia/src/task.c:208
+start_task at /Users/ian/Documents/GitHub/julia/src/task.c:832</code></pre>
+<h3 id="user_u8d9768q6_timestamp2020-10-24t204530049"><a href="#user_u8d9768q6_timestamp2020-10-24t204530049">User: U8D9768Q6 Timestamp:<em>2020-10-24T20:45:30.049</em>:</a></h3>
+<pre><code class="language-julia">&#40;though it&#39;s a rather big &#96;if&#96; about whether that&#39;s actually something we want to support&#41;</code></pre>
+<pre><code class="language-julia">There&#39;s a lot of things where people design &#96;AbstractArray&#96;  functions to support arbitrary offsets, but for the most part assume unit spacing. If we wanted better irregularly spaced array support, we&#39;d likely need functions like &#96;first&#40;::AbstractArray, ::Int&#41;&#96;</code></pre>
+<pre><code class="language-julia">I don&#39;t see how that&#39;d be a concern. Shouldn&#39;t it just return the same type as &#96;getindex&#96; on a slice would?</code></pre>
+<h3 id="user_u01arrmlm7e_timestamp_2020-10-24t203958043"><a href="#user_u01arrmlm7e_timestamp_2020-10-24t203958043">User: U01ARRMLM7E Timestamp: 2020-10-24T20:39:58.043:</a></h3>
+<pre><code class="language-julia">What&#39;s the situation where the output type of &#96;first&#40;x,3&#41;&#96; differs from the input type?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u012xer8k4m_timestamp2020-10-24t203852042 ><a href="#user_u012xer8k4m_timestamp2020-10-24t203852042">User: U012XER8K4M Timestamp:<em>2020-10-24T20:38:52.042</em>:</a></h3>
-<pre><code class="julia hljs">Perhaps a combination of <span class=hljs-string >`[1:3]`</span> already exists, and some questions about what the output <span class=hljs-keyword >type</span> should be, considering the myriad of array types.</code></pre>
-<h3 id=user_u8d9768q6_timestamp2020-10-24t203845042 ><a href="#user_u8d9768q6_timestamp2020-10-24t203845042">User: U8D9768Q6 Timestamp:<em>2020-10-24T20:38:45.042</em>:</a></h3>
-<pre><code class="julia hljs">With <span class=hljs-string >`Array`</span>s, you can just <span class=hljs-keyword >do</span> <span class=hljs-string >`arr[begin:begin+3]`</span>, but it would be nice to have a <span class=hljs-string >`first`</span> method like <span class=hljs-keyword >for</span> strings.</code></pre>
-<pre><code class="julia hljs">No, not really. The reason it exists <span class=hljs-keyword >for</span> <span class=hljs-string >`AbstractString`</span> is that indexing them is a bad idea when unicode is involved:
-julia&gt; first(<span class=hljs-string >&quot;∀ϵ≠0: ϵ²&gt;0&quot;</span>, <span class=hljs-number >3</span>)
-<span class=hljs-string >&quot;∀ϵ≠&quot;</span>
+<h3 id="user_u012xer8k4m_timestamp2020-10-24t203852042"><a href="#user_u012xer8k4m_timestamp2020-10-24t203852042">User: U012XER8K4M Timestamp:<em>2020-10-24T20:38:52.042</em>:</a></h3>
+<pre><code class="language-julia">Perhaps a combination of &#96;&#91;1:3&#93;&#96; already exists, and some questions about what the output type should be, considering the myriad of array types.</code></pre>
+<h3 id="user_u8d9768q6_timestamp2020-10-24t203845042"><a href="#user_u8d9768q6_timestamp2020-10-24t203845042">User: U8D9768Q6 Timestamp:<em>2020-10-24T20:38:45.042</em>:</a></h3>
+<pre><code class="language-julia">With &#96;Array&#96;s, you can just do &#96;arr&#91;begin:begin&#43;3&#93;&#96;, but it would be nice to have a &#96;first&#96; method like for strings.</code></pre>
+<pre><code class="language-julia">No, not really. The reason it exists for `AbstractString` is that indexing them is a bad idea when unicode is involved:
+julia&gt; first("∀ϵ≠0: ϵ²&gt;0", 3)
+"∀ϵ≠"
 
-julia&gt; <span class=hljs-string >&quot;∀ϵ≠0: ϵ²&gt;0&quot;</span>[<span class=hljs-number >1</span>:<span class=hljs-number >3</span>]
-ERROR: StringIndexError(<span class=hljs-string >&quot;∀ϵ≠0: ϵ²&gt;0&quot;</span>, <span class=hljs-number >3</span>)
+julia&gt; "∀ϵ≠0: ϵ²&gt;0"[1:3]
+ERROR: StringIndexError("∀ϵ≠0: ϵ²&gt;0", 3)
 Stacktrace:
- [<span class=hljs-number >1</span>] string_index_err(::<span class=hljs-built_in >String</span>, ::<span class=hljs-built_in >Int64</span>) at ./strings/string.jl:<span class=hljs-number >12</span>
- [<span class=hljs-number >2</span>] getindex(::<span class=hljs-built_in >String</span>, ::<span class=hljs-built_in >UnitRange</span>{<span class=hljs-built_in >Int64</span>}) at ./strings/string.jl:<span class=hljs-number >250</span>
- [<span class=hljs-number >3</span>] top-level scope at REPL[<span class=hljs-number >3</span>]:<span class=hljs-number >1</span></code></pre>
-<h3 id=user_u01arrmlm7e_timestamp2020-10-24t20344004 ><a href="#user_u01arrmlm7e_timestamp2020-10-24t20344004">User: U01ARRMLM7E Timestamp:<em>2020-10-24T20:34:40.04</em>:</a></h3>
-<pre><code class="julia hljs">Is there some fundamental reason why this method doesn&#x27;t/shouldn&#x27;t exist?
-&gt; first([<span class=hljs-number >1</span>,<span class=hljs-number >2</span>,<span class=hljs-number >3</span>], <span class=hljs-number >3</span>)
-ERROR: <span class=hljs-built_in >MethodError</span>: no method matching first(::<span class=hljs-built_in >Array</span>{<span class=hljs-built_in >Int64</span>,<span class=hljs-number >1</span>}, ::<span class=hljs-built_in >Int64</span>)</code></pre>
-<h3 id=user_u018s3hqgrk_timestamp2020-10-24t201028038 ><a href="#user_u018s3hqgrk_timestamp2020-10-24t201028038">User: U018S3HQGRK Timestamp:<em>2020-10-24T20:10:28.038</em>:</a></h3>
-<pre><code class="julia hljs">i have a small widget with sliders <span class=hljs-keyword >in</span> pluto.jl, i&#x27;ve been trying to add a <span class=hljs-string >&quot;reset&quot;</span> button to make them go back to default values. anyone can help with this?</code></pre>
-<h3 id=user_u017lq3a59u_timestamp_2020-10-24t195510036 ><a href="#user_u017lq3a59u_timestamp_2020-10-24t195510036">User: U017LQ3A59U Timestamp: 2020-10-24T19:55:10.036:</a></h3>
-<pre><code class="julia hljs">Is there a known way to <span class=hljs-string >&quot;reparametrize&quot;</span> a <span class=hljs-keyword >struct</span> <span class=hljs-keyword >in</span> a generic way? That is given an object of <span class=hljs-keyword >type</span> <span class=hljs-string >`A{T}`</span> <span class=hljs-literal >I</span> would like to be able to <span class=hljs-keyword >return</span> a new object of <span class=hljs-keyword >type</span> <span class=hljs-string >`A{S}`</span> (taking care of the conversion from <span class=hljs-string >`T`</span> to <span class=hljs-string >`S`</span> manually). If <span class=hljs-literal >I</span> have a single <span class=hljs-keyword >type</span> it&#x27;s easy enough, <span class=hljs-literal >I</span> can define
-reparametrize(a::A{T}) <span class=hljs-keyword >where</span> T = A{S}( <span class=hljs-comment >#convert internal params to S here# )</span>
-But <span class=hljs-keyword >if</span> <span class=hljs-literal >I</span> want <span class=hljs-string >`A`</span> not to be more generic i.<span class=hljs-literal >e</span>. <span class=hljs-string >`A &lt;: SuperType`</span> <span class=hljs-literal >I</span> can&#x27;t get my head around how <span class=hljs-keyword >do</span> it to get a <span class=hljs-keyword >function</span> with the following signature
-reparametrize(a::A) <span class=hljs-keyword >where</span> {T, A &lt;: SupertType{T})</code></pre>
+ [1] string_index_err(::String, ::Int64) at ./strings/string.jl:12
+ [2] getindex(::String, ::UnitRange{Int64}) at ./strings/string.jl:250
+ [3] top-level scope at REPL[3]:1</code></pre>
+<h3 id="user_u01arrmlm7e_timestamp2020-10-24t20344004"><a href="#user_u01arrmlm7e_timestamp2020-10-24t20344004">User: U01ARRMLM7E Timestamp:<em>2020-10-24T20:34:40.04</em>:</a></h3>
+<pre><code class="language-julia">Is there some fundamental reason why this method doesn't/shouldn't exist?
+&gt; first([1,2,3], 3)
+ERROR: MethodError: no method matching first(::Array{Int64,1}, ::Int64)</code></pre>
+<h3 id="user_u018s3hqgrk_timestamp2020-10-24t201028038"><a href="#user_u018s3hqgrk_timestamp2020-10-24t201028038">User: U018S3HQGRK Timestamp:<em>2020-10-24T20:10:28.038</em>:</a></h3>
+<pre><code class="language-julia">i have a small widget with sliders in pluto.jl, i&#39;ve been trying to add a &quot;reset&quot; button to make them go back to default values. anyone can help with this?</code></pre>
+<h3 id="user_u017lq3a59u_timestamp_2020-10-24t195510036"><a href="#user_u017lq3a59u_timestamp_2020-10-24t195510036">User: U017LQ3A59U Timestamp: 2020-10-24T19:55:10.036:</a></h3>
+<pre><code class="language-julia">Is there a known way to "reparametrize" a struct in a generic way? That is given an object of type `A{T}` I would like to be able to return a new object of type `A{S}` (taking care of the conversion from `T` to `S` manually). If I have a single type it's easy enough, I can define
+reparametrize(a::A{T}) where T = A{S}( #convert internal params to S here# )
+But if I want `A` not to be more generic i.e. `A &lt;: SuperType` I can't get my head around how do it to get a function with the following signature
+reparametrize(a::A) where {T, A &lt;: SupertType{T})</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u0176mbg29x_timestamp_2020-10-24t194147027 ><a href="#user_u0176mbg29x_timestamp_2020-10-24t194147027">User: U0176MBG29X Timestamp: 2020-10-24T19:41:47.027:</a></h3>
-<pre><code class="julia hljs">Is there any way to limit the stacktrace from ~<span class=hljs-number >20</span> levels of depth to just the top <span class=hljs-number >5</span> levels or something like that? The stacktrace often takes up my entire screen</code></pre>
+<h3 id="user_u0176mbg29x_timestamp_2020-10-24t194147027"><a href="#user_u0176mbg29x_timestamp_2020-10-24t194147027">User: U0176MBG29X Timestamp: 2020-10-24T19:41:47.027:</a></h3>
+<pre><code class="language-julia">Is there any way to limit the stacktrace from ~20 levels of depth to just the top 5 levels or something like that? The stacktrace often takes up my entire screen</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ugu761du2_timestamp_2020-10-24t185235022 ><a href="#user_ugu761du2_timestamp_2020-10-24t185235022">User: UGU761DU2 Timestamp: 2020-10-24T18:52:35.022:</a></h3>
-<pre><code class="julia hljs">Note that <span class=hljs-string >`Gray`</span> will be expecting numbers scaled from <span class=hljs-number >0</span> (black) to <span class=hljs-number >1</span> (white)</code></pre>
+<h3 id="user_ugu761du2_timestamp_2020-10-24t185235022"><a href="#user_ugu761du2_timestamp_2020-10-24t185235022">User: UGU761DU2 Timestamp: 2020-10-24T18:52:35.022:</a></h3>
+<pre><code class="language-julia">Note that &#96;Gray&#96; will be expecting numbers scaled from 0 &#40;black&#41; to 1 &#40;white&#41;</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ugu761du2_timestamp2020-10-24t185106022 ><a href="#user_ugu761du2_timestamp2020-10-24t185106022">User: UGU761DU2 Timestamp:<em>2020-10-24T18:51:06.022</em>:</a></h3>
-<pre><code class="julia hljs">Or view right <span class=hljs-keyword >in</span> your terminal with ImageInTerminal.jl</code></pre>
-<pre><code class="julia hljs">Which should show up as an image <span class=hljs-keyword >in</span> Juno or VSCode, and which you could save to a file with <span class=hljs-literal >e</span>.g. <span class=hljs-string >`save(&quot;somefilename.png&quot;, img)`</span></code></pre>
-<pre><code class="julia hljs">Which will give you a “<span class=hljs-string >`100×100 Array{Gray{Float64},2} with eltype Gray{Float64}:`</span>”</code></pre>
-<pre><code class="julia hljs">What are you starting with? If you’re starting say with a matrix of numbers you could <span class=hljs-keyword >do</span>
-<span class=hljs-keyword >using</span> Images
-a = rand(<span class=hljs-number >100</span>,<span class=hljs-number >100</span>)
-img  = Gray.(a)</code></pre>
-<h3 id=user_u018s3hqgrk_timestamp2020-10-24t182431017 ><a href="#user_u018s3hqgrk_timestamp2020-10-24t182431017">User: U018S3HQGRK Timestamp:<em>2020-10-24T18:24:31.017</em>:</a></h3>
-<pre><code class="julia hljs">sorry <span class=hljs-keyword >for</span> the beginner questions.. how <span class=hljs-keyword >do</span> i show a grayscale image?</code></pre>
-<h3 id=user_ugr3910cq_timestamp_2020-10-24t174410015 ><a href="#user_ugr3910cq_timestamp_2020-10-24t174410015">User: UGR3910CQ Timestamp: 2020-10-24T17:44:10.015:</a></h3>
-<pre><code class="julia hljs">This is a test</code></pre>
+<h3 id="user_ugu761du2_timestamp2020-10-24t185106022"><a href="#user_ugu761du2_timestamp2020-10-24t185106022">User: UGU761DU2 Timestamp:<em>2020-10-24T18:51:06.022</em>:</a></h3>
+<pre><code class="language-julia">Or view right in your terminal with ImageInTerminal.jl</code></pre>
+<pre><code class="language-julia">Which should show up as an image in Juno or VSCode, and which you could save to a file with e.g. &#96;save&#40;&quot;somefilename.png&quot;, img&#41;&#96;</code></pre>
+<pre><code class="language-julia">Which will give you a “&#96;100×100 Array&#123;Gray&#123;Float64&#125;,2&#125; with eltype Gray&#123;Float64&#125;:&#96;”</code></pre>
+<pre><code class="language-julia">What are you starting with? If you’re starting say with a matrix of numbers you could do
+using Images
+a &#61; rand&#40;100,100&#41;
+img  &#61; Gray.&#40;a&#41;</code></pre>
+<h3 id="user_u018s3hqgrk_timestamp2020-10-24t182431017"><a href="#user_u018s3hqgrk_timestamp2020-10-24t182431017">User: U018S3HQGRK Timestamp:<em>2020-10-24T18:24:31.017</em>:</a></h3>
+<pre><code class="language-julia">sorry for the beginner questions.. how do i show a grayscale image?</code></pre>
+<h3 id="user_ugr3910cq_timestamp_2020-10-24t174410015"><a href="#user_ugr3910cq_timestamp_2020-10-24t174410015">User: UGR3910CQ Timestamp: 2020-10-24T17:44:10.015:</a></h3>
+<pre><code class="language-julia">This is a test</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01c2e6tyem_timestamp_2020-10-24t160521009 ><a href="#user_u01c2e6tyem_timestamp_2020-10-24t160521009">User: U01C2E6TYEM Timestamp: 2020-10-24T16:05:21.009:</a></h3>
-<pre><code class="julia hljs">Is there any reason why inv([x]) has a missing method (i.<span class=hljs-literal >e</span>. <span class=hljs-number >1</span>x1 arrays <span class=hljs-keyword >do</span> not have an inverse)? Is it at all ambiguous to just write?
-inv(x::<span class=hljs-built_in >Array</span>{<span class=hljs-built_in >Int64</span>,<span class=hljs-number >1</span>}) = [<span class=hljs-number >1</span>/x[<span class=hljs-number >1</span>]]</code></pre>
+<h3 id="user_u01c2e6tyem_timestamp_2020-10-24t160521009"><a href="#user_u01c2e6tyem_timestamp_2020-10-24t160521009">User: U01C2E6TYEM Timestamp: 2020-10-24T16:05:21.009:</a></h3>
+<pre><code class="language-julia">Is there any reason why inv&#40;&#91;x&#93;&#41; has a missing method &#40;i.e. 1x1 arrays do not have an inverse&#41;? Is it at all ambiguous to just write?
+inv&#40;x::Array&#123;Int64,1&#125;&#41; &#61; &#91;1/x&#91;1&#93;&#93;</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01c8179lb0_timestamp_2020-10-24t145326004 ><a href="#user_u01c8179lb0_timestamp_2020-10-24t145326004">User: U01C8179LB0 Timestamp: 2020-10-24T14:53:26.004:</a></h3>
-<pre><code class="julia hljs">A beginner’s issue with metaprogramming: Say we want to define a <span class=hljs-keyword >macro</span> that substitutes input expression into code and the resulting expression is afterwards evaluated <span class=hljs-keyword >in</span> the caller’s scope. like this
-<span class=hljs-keyword >macro</span> foo(ex)
-    :(<span class=hljs-built_in >Array</span>{<span class=hljs-built_in >Int64</span>}(undef, $ex))
-<span class=hljs-keyword >end</span>
+<h3 id="user_u01c8179lb0_timestamp_2020-10-24t145326004"><a href="#user_u01c8179lb0_timestamp_2020-10-24t145326004">User: U01C8179LB0 Timestamp: 2020-10-24T14:53:26.004:</a></h3>
+<pre><code class="language-julia">A beginner’s issue with metaprogramming: Say we want to define a macro that substitutes input expression into code and the resulting expression is afterwards evaluated in the caller’s scope. like this
+macro foo&#40;ex&#41;
+    :&#40;Array&#123;Int64&#125;&#40;undef, &#36;ex&#41;&#41;
+end
 
-<span class=hljs-keyword >let</span>
-    a = [<span class=hljs-number >1</span>, <span class=hljs-number >2</span>]
-    <span class=hljs-meta >@foo</span> length(a)
-<span class=hljs-keyword >end</span>
-I’d like to substitute the <span class=hljs-string >`ex`</span> with <span class=hljs-string >`length(a)`</span> and evaluate it within the <span class=hljs-keyword >local</span> scope. However, it doesn’t work: The $ does the expansion and finds out that <span class=hljs-string >`a`</span> is missing <span class=hljs-keyword >in</span> the <span class=hljs-keyword >macro</span> scope, <span class=hljs-keyword >while</span> <span class=hljs-string >`ex`</span> can’t be used either. <span class=hljs-built_in >Any</span> hint?</code></pre>
+let
+    a &#61; &#91;1, 2&#93;
+    @foo length&#40;a&#41;
+end
+I’d like to substitute the &#96;ex&#96; with &#96;length&#40;a&#41;&#96; and evaluate it within the local scope. However, it doesn’t work: The &#36; does the expansion and finds out that &#96;a&#96; is missing in the macro scope, while &#96;ex&#96; can’t be used either. Any hint?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u018s3hqgrk_timestamp_2020-10-24t133712494 ><a href="#user_u018s3hqgrk_timestamp_2020-10-24t133712494">User: U018S3HQGRK Timestamp: 2020-10-24T13:37:12.494:</a></h3>
-<pre><code class="julia hljs">hey, trying out julia, given an RGB image? how to i get an array that only has the red channel?</code></pre>
+<h3 id="user_u018s3hqgrk_timestamp_2020-10-24t133712494"><a href="#user_u018s3hqgrk_timestamp_2020-10-24t133712494">User: U018S3HQGRK Timestamp: 2020-10-24T13:37:12.494:</a></h3>
+<pre><code class="language-julia">hey, trying out julia, given an RGB image? how to i get an array that only has the red channel?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01c2e6tyem_timestamp_2020-10-24t130730494 ><a href="#user_u01c2e6tyem_timestamp_2020-10-24t130730494">User: U01C2E6TYEM Timestamp: 2020-10-24T13:07:30.494:</a></h3>
-<pre><code class="julia hljs">How should <span class=hljs-literal >I</span> deal with n x m matrices <span class=hljs-keyword >where</span> <span class=hljs-literal >I</span> want to extract the size, but one of n or m is possibly <span class=hljs-number >1</span>, hence Julia returns a single value rather than a tuple?
-size([<span class=hljs-number >2</span>, <span class=hljs-number >1</span>]) = (<span class=hljs-number >2</span>,)
-<span class=hljs-literal >I</span> need to fill <span class=hljs-keyword >in</span> an upper triangular matrix with zeros of sizes that depend on the size of its surrounding blocks.</code></pre>
+<h3 id="user_u01c2e6tyem_timestamp_2020-10-24t130730494"><a href="#user_u01c2e6tyem_timestamp_2020-10-24t130730494">User: U01C2E6TYEM Timestamp: 2020-10-24T13:07:30.494:</a></h3>
+<pre><code class="language-julia">How should I deal with n x m matrices where I want to extract the size, but one of n or m is possibly 1, hence Julia returns a single value rather than a tuple?
+size&#40;&#91;2, 1&#93;&#41; &#61; &#40;2,&#41;
+I need to fill in an upper triangular matrix with zeros of sizes that depend on the size of its surrounding blocks.</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u010lt79lkx_timestamp_2020-10-24t12393649 ><a href="#user_u010lt79lkx_timestamp_2020-10-24t12393649">User: U010LT79LKX Timestamp: 2020-10-24T12:39:36.49:</a></h3>
-<pre><code class="julia hljs">Is there a fast speech to text library <span class=hljs-keyword >in</span> Julia?</code></pre>
+<h3 id="user_u010lt79lkx_timestamp_2020-10-24t12393649"><a href="#user_u010lt79lkx_timestamp_2020-10-24t12393649">User: U010LT79LKX Timestamp: 2020-10-24T12:39:36.49:</a></h3>
+<pre><code class="language-julia">Is there a fast speech to text library in Julia?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ulx78ctc3_timestamp_2020-10-24t115217488 ><a href="#user_ulx78ctc3_timestamp_2020-10-24t115217488">User: ULX78CTC3 Timestamp: 2020-10-24T11:52:17.488:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span> am writing tests <span class=hljs-keyword >for</span> a package <span class=hljs-keyword >where</span> a method needs some user input(<span class=hljs-keyword >using</span> readLine()). Is there any way <span class=hljs-literal >I</span> can get julia to automatically send the input when the readLine() method is supposed to take an input?</code></pre>
+<h3 id="user_ulx78ctc3_timestamp_2020-10-24t115217488"><a href="#user_ulx78ctc3_timestamp_2020-10-24t115217488">User: ULX78CTC3 Timestamp: 2020-10-24T11:52:17.488:</a></h3>
+<pre><code class="language-julia">I am writing tests for a package where a method needs some user input&#40;using readLine&#40;&#41;&#41;. Is there any way I can get julia to automatically send the input when the readLine&#40;&#41; method is supposed to take an input?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ulx78ctc3_timestamp_2020-10-24t104737484 ><a href="#user_ulx78ctc3_timestamp_2020-10-24t104737484">User: ULX78CTC3 Timestamp: 2020-10-24T10:47:37.484:</a></h3>
-<pre><code class="julia hljs">What might be the fastest way to check <span class=hljs-keyword >if</span> all tuple elements are <span class=hljs-number >1</span>? <span class=hljs-literal >I</span></code></pre>
+<h3 id="user_ulx78ctc3_timestamp_2020-10-24t104737484"><a href="#user_ulx78ctc3_timestamp_2020-10-24t104737484">User: ULX78CTC3 Timestamp: 2020-10-24T10:47:37.484:</a></h3>
+<pre><code class="language-julia">What might be the fastest way to check if all tuple elements are 1? I</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u011v84gz5e_timestamp_2020-10-24t090113482 ><a href="#user_u011v84gz5e_timestamp_2020-10-24t090113482">User: U011V84GZ5E Timestamp: 2020-10-24T09:01:13.482:</a></h3>
-<pre><code class="julia hljs">Hello community, is it possible to retrieve the <span class=hljs-keyword >type</span> and size of input &amp; output arguments of a <span class=hljs-keyword >function</span>? E.g. input: <span class=hljs-built_in >Float64</span> vector of length N and output <span class=hljs-built_in >Int</span> array of size KxL? This would be usefull <span class=hljs-keyword >for</span> troubleshooting <span class=hljs-literal >I</span> guess:
-<span class=hljs-string >`typeof(J_AD)`</span>
-<span class=hljs-string >`var&quot;#17#18&quot;`</span>
-Or am <span class=hljs-literal >I</span> missing something? Thanks</code></pre>
+<h3 id="user_u011v84gz5e_timestamp_2020-10-24t090113482"><a href="#user_u011v84gz5e_timestamp_2020-10-24t090113482">User: U011V84GZ5E Timestamp: 2020-10-24T09:01:13.482:</a></h3>
+<pre><code class="language-julia">Hello community, is it possible to retrieve the type and size of input &amp; output arguments of a function? E.g. input: Float64 vector of length N and output Int array of size KxL? This would be usefull for troubleshooting I guess:
+`typeof(J_AD)`
+`var"#17#18"`
+Or am I missing something? Thanks</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01b0jz4sjf_timestamp2020-10-24t061920471 ><a href="#user_u01b0jz4sjf_timestamp2020-10-24t061920471">User: U01B0JZ4SJF Timestamp:<em>2020-10-24T06:19:20.471</em>:</a></h3>
-<pre><code class="julia hljs">how can i send status code <span class=hljs-keyword >in</span> genie</code></pre>
-<h3 id=user_ukg4wf8pj_timestamp2020-10-24t03413347 ><a href="#user_ukg4wf8pj_timestamp2020-10-24t03413347">User: UKG4WF8PJ Timestamp:<em>2020-10-24T03:41:33.47</em>:</a></h3>
-<pre><code class="julia hljs">what is recommended, <span class=hljs-keyword >return</span> an error or throw an error?</code></pre>
-<h3 id=user_um3gcdfgr_timestamp_2020-10-24t032027468 ><a href="#user_um3gcdfgr_timestamp_2020-10-24t032027468">User: UM3GCDFGR Timestamp: 2020-10-24T03:20:27.468:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span> have one super simple question, say we have a dataframe <span class=hljs-string >`df`</span> with two columns <span class=hljs-string >`share`</span> and <span class=hljs-string >`year`</span>, how to create a new column <span class=hljs-string >`res_share`</span> which is the residual share <span class=hljs-keyword >in</span> each year? In R that would be: <span class=hljs-string >`df %&gt;% group_by(year) %&gt;% 1-sum(share)`</span>. But somehow <span class=hljs-literal >I</span> can&#x27;t figure out how to <span class=hljs-keyword >do</span> this <span class=hljs-keyword >in</span> Query (or <span class=hljs-keyword >in</span> plain Julia without writing ugly loops)</code></pre>
+<h3 id="user_u01b0jz4sjf_timestamp2020-10-24t061920471"><a href="#user_u01b0jz4sjf_timestamp2020-10-24t061920471">User: U01B0JZ4SJF Timestamp:<em>2020-10-24T06:19:20.471</em>:</a></h3>
+<pre><code class="language-julia">how can i send status code in genie</code></pre>
+<h3 id="user_ukg4wf8pj_timestamp2020-10-24t03413347"><a href="#user_ukg4wf8pj_timestamp2020-10-24t03413347">User: UKG4WF8PJ Timestamp:<em>2020-10-24T03:41:33.47</em>:</a></h3>
+<pre><code class="language-julia">what is recommended, return an error or throw an error?</code></pre>
+<h3 id="user_um3gcdfgr_timestamp_2020-10-24t032027468"><a href="#user_um3gcdfgr_timestamp_2020-10-24t032027468">User: UM3GCDFGR Timestamp: 2020-10-24T03:20:27.468:</a></h3>
+<pre><code class="language-julia">I have one super simple question, say we have a dataframe `df` with two columns `share` and `year`, how to create a new column `res_share` which is the residual share in each year? In R that would be: `df %&gt;% group_by(year) %&gt;% 1-sum(share)`. But somehow I can't figure out how to do this in Query (or in plain Julia without writing ugly loops)</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01acuzr8cc_timestamp_2020-10-24t022257462 ><a href="#user_u01acuzr8cc_timestamp_2020-10-24t022257462">User: U01ACUZR8CC Timestamp: 2020-10-24T02:22:57.462:</a></h3>
-<pre><code class="julia hljs">Hey folks. I’m trying to use Optim.jl <span class=hljs-keyword >for</span> a small problem but keep running into precompile issues and the errors don’t seem to have any useful information (to my best knowledge). <span class=hljs-built_in >Any</span> ideas what could be causing the issue (error posted <span class=hljs-keyword >in</span> thread)?</code></pre>
+<h3 id="user_u01acuzr8cc_timestamp_2020-10-24t022257462"><a href="#user_u01acuzr8cc_timestamp_2020-10-24t022257462">User: U01ACUZR8CC Timestamp: 2020-10-24T02:22:57.462:</a></h3>
+<pre><code class="language-julia">Hey folks. I’m trying to use Optim.jl for a small problem but keep running into precompile issues and the errors don’t seem to have any useful information &#40;to my best knowledge&#41;. Any ideas what could be causing the issue &#40;error posted in thread&#41;?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u677r5q5a_timestamp2020-10-24t01125546 ><a href="#user_u677r5q5a_timestamp2020-10-24t01125546">User: U677R5Q5A Timestamp:<em>2020-10-24T01:12:55.46</em>:</a></h3>
-<pre><code class="julia hljs">Thank you <span class=hljs-keyword >for</span> bearing with me, good old XY problem <span class=hljs-literal >I</span> suppose – as well as not continuing <span class=hljs-keyword >in</span> an ancient thread elsewhere. Background here: &lt;https://julialang.slack.com/archives/CBF3Z1D7V/p1602646185191500&gt; What <span class=hljs-literal >I</span> am trying to achieve is patching Pkg to include a few lines to apply necessary patches <span class=hljs-keyword >for</span> binaries to run on NixOS – the lines themselves are ~<span class=hljs-number >5</span> and not scary. However, as Pkg is <span class=hljs-keyword >in</span> base that would mean touching the system image. Ideally, <span class=hljs-literal >I</span> would like to make this work without rebuilding Julia from source (this is the “easy” way) so that one can rely on the official binaries to the largest extent possible on a wonky OS like NixOS.</code></pre>
-<h3 id=user_ukg4wf8pj_timestamp_2020-10-23t213019457 ><a href="#user_ukg4wf8pj_timestamp_2020-10-23t213019457">User: UKG4WF8PJ Timestamp: 2020-10-23T21:30:19.457:</a></h3>
-<pre><code class="julia hljs">is there a way to check <span class=hljs-keyword >if</span> the io on <span class=hljs-keyword >where</span> <span class=hljs-literal >im</span> printing results has support <span class=hljs-keyword >for</span> unicode?</code></pre>
+<h3 id="user_u677r5q5a_timestamp2020-10-24t01125546"><a href="#user_u677r5q5a_timestamp2020-10-24t01125546">User: U677R5Q5A Timestamp:<em>2020-10-24T01:12:55.46</em>:</a></h3>
+<pre><code class="language-julia">Thank you for bearing with me, good old XY problem I suppose – as well as not continuing in an ancient thread elsewhere. Background here: &lt;https://julialang.slack.com/archives/CBF3Z1D7V/p1602646185191500&gt; What I am trying to achieve is patching Pkg to include a few lines to apply necessary patches for binaries to run on NixOS – the lines themselves are ~5 and not scary. However, as Pkg is in base that would mean touching the system image. Ideally, I would like to make this work without rebuilding Julia from source &#40;this is the “easy” way&#41; so that one can rely on the official binaries to the largest extent possible on a wonky OS like NixOS.</code></pre>
+<h3 id="user_ukg4wf8pj_timestamp_2020-10-23t213019457"><a href="#user_ukg4wf8pj_timestamp_2020-10-23t213019457">User: UKG4WF8PJ Timestamp: 2020-10-23T21:30:19.457:</a></h3>
+<pre><code class="language-julia">is there a way to check if the io on where im printing results has support for unicode?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_uen48t0bt_timestamp_2020-10-23t205514453 ><a href="#user_uen48t0bt_timestamp_2020-10-23t205514453">User: UEN48T0BT Timestamp: 2020-10-23T20:55:14.453:</a></h3>
-<pre><code class="julia hljs">Is there a way to dispatch on keys of NamedTuples? Like:
-<span class=hljs-keyword >struct</span> Foo <span class=hljs-keyword >end</span>
-<span class=hljs-keyword >struct</span> Bar <span class=hljs-keyword >end</span>
-tnt = (Foo() =&gt; anything1, Bar() =&gt; anything2) <span class=hljs-comment ># not allowed, but similar to NamedTuple</span>
-<span class=hljs-meta >@test</span> getproperty(tnt, Foo()) == anything1
-<span class=hljs-meta >@test</span> getproperty(tnt, Bar()) == anything2
+<h3 id="user_uen48t0bt_timestamp_2020-10-23t205514453"><a href="#user_uen48t0bt_timestamp_2020-10-23t205514453">User: UEN48T0BT Timestamp: 2020-10-23T20:55:14.453:</a></h3>
+<pre><code class="language-julia">Is there a way to dispatch on keys of NamedTuples? Like:
+struct Foo end
+struct Bar end
+tnt = (Foo() =&gt; anything1, Bar() =&gt; anything2) # not allowed, but similar to NamedTuple
+@test getproperty(tnt, Foo()) == anything1
+@test getproperty(tnt, Bar()) == anything2
 Or are there types like this defined somewhere?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u8d9768q6_timestamp2020-10-23t201218449 ><a href="#user_u8d9768q6_timestamp2020-10-23t201218449">User: U8D9768Q6 Timestamp:<em>2020-10-23T20:12:18.449</em>:</a></h3>
-<pre><code class="julia hljs">There&#x27;s <span class=hljs-string >`std`</span> from the <span class=hljs-string >`Statistics`</span> standard library.
-julia&gt; <span class=hljs-keyword >using</span> Statistics: std
+<h3 id="user_u8d9768q6_timestamp2020-10-23t201218449"><a href="#user_u8d9768q6_timestamp2020-10-23t201218449">User: U8D9768Q6 Timestamp:<em>2020-10-23T20:12:18.449</em>:</a></h3>
+<pre><code class="language-julia">There's `std` from the `Statistics` standard library.
+julia&gt; using Statistics: std
 
-julia&gt; std(randn(<span class=hljs-number >1000</span>))
-<span class=hljs-number >0.9768968828910654</span></code></pre>
-<h3 id=user_u019zkq5yq6_timestamp2020-10-23t200702448 ><a href="#user_u019zkq5yq6_timestamp2020-10-23t200702448">User: U019ZKQ5YQ6 Timestamp:<em>2020-10-23T20:07:02.448</em>:</a></h3>
-<pre><code class="julia hljs">Eyo! what is UP. Just like <span class=hljs-string >&quot;mean.&quot;</span> can find the mean of multiple lists at once, is there then one <span class=hljs-keyword >function</span> that can find the standard deviation or some kind of spread measure?</code></pre>
-<h3 id=user_u7y2y04rj_timestamp_2020-10-23t192606443 ><a href="#user_u7y2y04rj_timestamp_2020-10-23t192606443">User: U7Y2Y04RJ Timestamp: 2020-10-23T19:26:06.443:</a></h3>
-<pre><code class="julia hljs">Hi all. <span class=hljs-literal >I</span> wanna know If there is a way to create a <span class=hljs-keyword >macro</span> to represent an access _v[i]_ of an array _v_ as something like xi (math style).</code></pre>
+julia&gt; std(randn(1000))
+0.9768968828910654</code></pre>
+<h3 id="user_u019zkq5yq6_timestamp2020-10-23t200702448"><a href="#user_u019zkq5yq6_timestamp2020-10-23t200702448">User: U019ZKQ5YQ6 Timestamp:<em>2020-10-23T20:07:02.448</em>:</a></h3>
+<pre><code class="language-julia">Eyo&#33; what is UP. Just like &quot;mean.&quot; can find the mean of multiple lists at once, is there then one function that can find the standard deviation or some kind of spread measure?</code></pre>
+<h3 id="user_u7y2y04rj_timestamp_2020-10-23t192606443"><a href="#user_u7y2y04rj_timestamp_2020-10-23t192606443">User: U7Y2Y04RJ Timestamp: 2020-10-23T19:26:06.443:</a></h3>
+<pre><code class="language-julia">Hi all. I wanna know If there is a way to create a macro to represent an access _v&#91;i&#93;_ of an array _v_ as something like xi &#40;math style&#41;.</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u019k6q9n15_timestamp_2020-10-23t190730438 ><a href="#user_u019k6q9n15_timestamp_2020-10-23t190730438">User: U019K6Q9N15 Timestamp: 2020-10-23T19:07:30.438:</a></h3>
-<pre><code class="julia hljs">Is there any way to dispatch a <span class=hljs-keyword >function</span> <span class=hljs-keyword >for</span> a <span class=hljs-keyword >type</span> alias? Or <span class=hljs-keyword >do</span> <span class=hljs-literal >I</span> have to make a <span class=hljs-keyword >struct</span> which minimally wraps the alias and reimplement the methods which <span class=hljs-literal >I</span> wanted to get from the alias? Consider the specific example of creating an alias <span class=hljs-keyword >for</span> <span class=hljs-string >`Dict{Symbol, Int}`</span> . This <span class=hljs-keyword >type</span> has a bunch of nice methods, but one might also imagine that <span class=hljs-literal >I</span>&#x27;d like to distinguish between my inhabitants of it and inhabitants of my alias with, <span class=hljs-keyword >for</span> example, <span class=hljs-string >`Base.show`</span> .</code></pre>
+<h3 id="user_u019k6q9n15_timestamp_2020-10-23t190730438"><a href="#user_u019k6q9n15_timestamp_2020-10-23t190730438">User: U019K6Q9N15 Timestamp: 2020-10-23T19:07:30.438:</a></h3>
+<pre><code class="language-julia">Is there any way to dispatch a function for a type alias? Or do I have to make a struct which minimally wraps the alias and reimplement the methods which I wanted to get from the alias? Consider the specific example of creating an alias for &#96;Dict&#123;Symbol, Int&#125;&#96; . This type has a bunch of nice methods, but one might also imagine that I&#39;d like to distinguish between my inhabitants of it and inhabitants of my alias with, for example, &#96;Base.show&#96; .</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01arrmlm7e_timestamp_2020-10-23t190635437 ><a href="#user_u01arrmlm7e_timestamp_2020-10-23t190635437">User: U01ARRMLM7E Timestamp: 2020-10-23T19:06:35.437:</a></h3>
-<pre><code class="julia hljs">What&#x27;s the equivalent of
-In [<span class=hljs-number >3</span>]: list(itertools.product([<span class=hljs-number >1</span>,<span class=hljs-number >2</span>,<span class=hljs-number >3</span>],repeat=<span class=hljs-number >2</span>))
-Out[<span class=hljs-number >3</span>]: [(<span class=hljs-number >1</span>, <span class=hljs-number >1</span>), (<span class=hljs-number >1</span>, <span class=hljs-number >2</span>), (<span class=hljs-number >1</span>, <span class=hljs-number >3</span>), (<span class=hljs-number >2</span>, <span class=hljs-number >1</span>), (<span class=hljs-number >2</span>, <span class=hljs-number >2</span>), (<span class=hljs-number >2</span>, <span class=hljs-number >3</span>), (<span class=hljs-number >3</span>, <span class=hljs-number >1</span>), (<span class=hljs-number >3</span>, <span class=hljs-number >2</span>), (<span class=hljs-number >3</span>, <span class=hljs-number >3</span>)]
-<span class=hljs-keyword >in</span> Julia?</code></pre>
+<h3 id="user_u01arrmlm7e_timestamp_2020-10-23t190635437"><a href="#user_u01arrmlm7e_timestamp_2020-10-23t190635437">User: U01ARRMLM7E Timestamp: 2020-10-23T19:06:35.437:</a></h3>
+<pre><code class="language-julia">What&#39;s the equivalent of
+In &#91;3&#93;: list&#40;itertools.product&#40;&#91;1,2,3&#93;,repeat&#61;2&#41;&#41;
+Out&#91;3&#93;: &#91;&#40;1, 1&#41;, &#40;1, 2&#41;, &#40;1, 3&#41;, &#40;2, 1&#41;, &#40;2, 2&#41;, &#40;2, 3&#41;, &#40;3, 1&#41;, &#40;3, 2&#41;, &#40;3, 3&#41;&#93;
+in Julia?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_uj7dvtvq8_timestamp2020-10-23t173023431 ><a href="#user_uj7dvtvq8_timestamp2020-10-23t173023431">User: UJ7DVTVQ8 Timestamp:<em>2020-10-23T17:30:23.431</em>:</a></h3>
-<pre><code class="julia hljs">Anyone knows what was breaking <span class=hljs-keyword >in</span> the latest realease of <span class=hljs-string >`FillArrays`</span>?</code></pre>
-<h3 id=user_u012rphrsp3_timestamp_2020-10-23t17115943 ><a href="#user_u012rphrsp3_timestamp_2020-10-23t17115943">User: U012RPHRSP3 Timestamp: 2020-10-23T17:11:59.43:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-keyword >while</span> trying to update <span class=hljs-string >`Franklin.jl`</span> <span class=hljs-literal >I</span> ran into the error  <span class=hljs-string >`ERROR: ArgumentError: Unsupported architecture &#x27;aarch64&#x27; for macOS`</span>. <span class=hljs-literal >I</span> tried running <span class=hljs-string >`pkg&gt; update`</span>and <span class=hljs-string >`pkg&gt; resolve`</span> as suggested here: &lt;https://discourse.julialang.org/t/unsupported-architecture/<span class=hljs-number >48786</span>&gt;, but that did not help. <span class=hljs-literal >I</span> am <span class=hljs-keyword >using</span> julia <span class=hljs-number >1.5</span><span class=hljs-number >.0</span> and windows <span class=hljs-number >10.</span> <span class=hljs-built_in >Any</span> suggestions what <span class=hljs-literal >I</span> should <span class=hljs-keyword >do</span>?</code></pre>
+<h3 id="user_uj7dvtvq8_timestamp2020-10-23t173023431"><a href="#user_uj7dvtvq8_timestamp2020-10-23t173023431">User: UJ7DVTVQ8 Timestamp:<em>2020-10-23T17:30:23.431</em>:</a></h3>
+<pre><code class="language-julia">Anyone knows what was breaking in the latest realease of &#96;FillArrays&#96;?</code></pre>
+<h3 id="user_u012rphrsp3_timestamp_2020-10-23t17115943"><a href="#user_u012rphrsp3_timestamp_2020-10-23t17115943">User: U012RPHRSP3 Timestamp: 2020-10-23T17:11:59.43:</a></h3>
+<pre><code class="language-julia">while trying to update `Franklin.jl` I ran into the error  `ERROR: ArgumentError: Unsupported architecture 'aarch64' for macOS`. I tried running `pkg&gt; update`and `pkg&gt; resolve` as suggested here: <https://discourse.julialang.org/t/unsupported-architecture/48786>, but that did not help. I am using julia 1.5.0 and windows 10. Any suggestions what I should do?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ue6bdnm9b_timestamp_2020-10-23t165251427 ><a href="#user_ue6bdnm9b_timestamp_2020-10-23t165251427">User: UE6BDNM9B Timestamp: 2020-10-23T16:52:51.427:</a></h3>
-<pre><code class="julia hljs">how to get the dependencies of a package, such as Flux@<span class=hljs-number >0.10</span><span class=hljs-number >.4</span></code></pre>
+<h3 id="user_ue6bdnm9b_timestamp_2020-10-23t165251427"><a href="#user_ue6bdnm9b_timestamp_2020-10-23t165251427">User: UE6BDNM9B Timestamp: 2020-10-23T16:52:51.427:</a></h3>
+<pre><code class="language-julia">how to get the dependencies of a package, such as Flux@0.10.4</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u019zkq5yq6_timestamp_2020-10-23t163752423 ><a href="#user_u019zkq5yq6_timestamp_2020-10-23t163752423">User: U019ZKQ5YQ6 Timestamp: 2020-10-23T16:37:52.423:</a></h3>
-<pre><code class="julia hljs">If i have a dataset with <span class=hljs-number >1.000</span><span class=hljs-number >.000</span> obs. is there a way to select the first <span class=hljs-number >1000</span> then skip <span class=hljs-number >9000</span> and then select <span class=hljs-number >10.000</span>-<span class=hljs-number >11.000</span> etc?</code></pre>
+<h3 id="user_u019zkq5yq6_timestamp_2020-10-23t163752423"><a href="#user_u019zkq5yq6_timestamp_2020-10-23t163752423">User: U019ZKQ5YQ6 Timestamp: 2020-10-23T16:37:52.423:</a></h3>
+<pre><code class="language-julia">If i have a dataset with 1.000.000 obs. is there a way to select the first 1000 then skip 9000 and then select 10.000-11.000 etc?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u0176mbg29x_timestamp_2020-10-23t162345422 ><a href="#user_u0176mbg29x_timestamp_2020-10-23t162345422">User: U0176MBG29X Timestamp: 2020-10-23T16:23:45.422:</a></h3>
-<pre><code class="julia hljs">How can <span class=hljs-literal >I</span> log both to console as well as a file (and flush after each log line)? Basically <span class=hljs-literal >I</span> am trying to combine the following into the same <span class=hljs-keyword >global</span> logger:
-logger = ConsoleLogger(io, &lt;http://Logging.Info|Logging.Info&gt;)
-global_logger(logger)
+<h3 id="user_u0176mbg29x_timestamp_2020-10-23t162345422"><a href="#user_u0176mbg29x_timestamp_2020-10-23t162345422">User: U0176MBG29X Timestamp: 2020-10-23T16:23:45.422:</a></h3>
+<pre><code class="language-julia">How can I log both to console as well as a file &#40;and flush after each log line&#41;? Basically I am trying to combine the following into the same global logger:
+logger &#61; ConsoleLogger&#40;io, &lt;http://Logging.Info|Logging.Info&gt;&#41;
+global_logger&#40;logger&#41;
 
-logger = ConsoleLogger(stdout, &lt;http://Logging.Info|Logging.Info&gt;)
-global_logger(logger)</code></pre>
+logger &#61; ConsoleLogger&#40;stdout, &lt;http://Logging.Info|Logging.Info&gt;&#41;
+global_logger&#40;logger&#41;</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u6z8377n2_timestamp_2020-10-23t16084642 ><a href="#user_u6z8377n2_timestamp_2020-10-23t16084642">User: U6Z8377N2 Timestamp: 2020-10-23T16:08:46.42:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span> was wondering what is the most Julia way to <span class=hljs-keyword >return</span> data. <span class=hljs-literal >I</span> have a <span class=hljs-keyword >function</span> that can <span class=hljs-keyword >return</span> two different results. This is what <span class=hljs-literal >I</span> have so far
-<span class=hljs-keyword >function</span> bar()
-   res1 = zeros(<span class=hljs-built_in >Float64</span>, <span class=hljs-number >1000</span>)
-   res2 = zeros(<span class=hljs-built_in >Float64</span>, <span class=hljs-number >1000</span>)
-   <span class=hljs-comment ># algorithm to fill in res1 and res2</span>
-   <span class=hljs-keyword >return</span> res1, res2
-<span class=hljs-keyword >end</span>
-but maybe <span class=hljs-literal >I</span> am thinking of <span class=hljs-keyword >using</span> a <span class=hljs-string >`kwarg`</span>
-<span class=hljs-keyword >function</span> bar(;result_type)
-   res1 = zeros(<span class=hljs-built_in >Float64</span>, <span class=hljs-number >1000</span>)
-   res2 = zeros(<span class=hljs-built_in >Float64</span>, <span class=hljs-number >1000</span>)
-   <span class=hljs-comment ># algorithm to fill in res1 and res2</span>
-   <span class=hljs-keyword >if</span> result_type == :first
-     <span class=hljs-keyword >return</span> res1
-   <span class=hljs-keyword >else</span>
-     <span class=hljs-keyword >return</span> res2
-   <span class=hljs-keyword >end</span>
-<span class=hljs-keyword >end</span>
-<span class=hljs-literal >I</span> like the second option because there is code downstream which assumes <span class=hljs-string >`bar()`</span> returns a single array (but that&#x27;s really not that big of a deal). Third option would be to use a <span class=hljs-keyword >struct</span>?
-<span class=hljs-keyword >struct</span> MyResults
-   res1::<span class=hljs-built_in >Array</span>{<span class=hljs-built_in >Float64</span>, <span class=hljs-number >1</span>}
-   res2::<span class=hljs-built_in >Array</span>{<span class=hljs-built_in >Float64</span>, <span class=hljs-number >1</span>}
-<span class=hljs-keyword >end</span>
-<span class=hljs-keyword >function</span> bar()
-   res1 = zeros(<span class=hljs-built_in >Float64</span>, <span class=hljs-number >1000</span>)
-   res2 = zeros(<span class=hljs-built_in >Float64</span>, <span class=hljs-number >1000</span>)
-   <span class=hljs-comment ># algorithm to fill in res1 and res2</span>
-   res = MyResults()
-   res.res1 = res1
-   res.res2 = res2
-   <span class=hljs-keyword >return</span> res
-<span class=hljs-keyword >end</span>
-but <span class=hljs-literal >I</span> think this is unneccesarily making things complicated</code></pre>
+<h3 id="user_u6z8377n2_timestamp_2020-10-23t16084642"><a href="#user_u6z8377n2_timestamp_2020-10-23t16084642">User: U6Z8377N2 Timestamp: 2020-10-23T16:08:46.42:</a></h3>
+<pre><code class="language-julia">I was wondering what is the most Julia way to return data. I have a function that can return two different results. This is what I have so far
+function bar&#40;&#41;
+   res1 &#61; zeros&#40;Float64, 1000&#41;
+   res2 &#61; zeros&#40;Float64, 1000&#41;
+   # algorithm to fill in res1 and res2
+   return res1, res2
+end
+but maybe I am thinking of using a &#96;kwarg&#96;
+function bar&#40;;result_type&#41;
+   res1 &#61; zeros&#40;Float64, 1000&#41;
+   res2 &#61; zeros&#40;Float64, 1000&#41;
+   # algorithm to fill in res1 and res2
+   if result_type &#61;&#61; :first
+     return res1
+   else
+     return res2
+   end
+end
+I like the second option because there is code downstream which assumes &#96;bar&#40;&#41;&#96; returns a single array &#40;but that&#39;s really not that big of a deal&#41;. Third option would be to use a struct?
+struct MyResults
+   res1::Array&#123;Float64, 1&#125;
+   res2::Array&#123;Float64, 1&#125;
+end
+function bar&#40;&#41;
+   res1 &#61; zeros&#40;Float64, 1000&#41;
+   res2 &#61; zeros&#40;Float64, 1000&#41;
+   # algorithm to fill in res1 and res2
+   res &#61; MyResults&#40;&#41;
+   res.res1 &#61; res1
+   res.res2 &#61; res2
+   return res
+end
+but I think this is unneccesarily making things complicated</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u6z8377n2_timestamp_2020-10-23t152759417 ><a href="#user_u6z8377n2_timestamp_2020-10-23t152759417">User: U6Z8377N2 Timestamp: 2020-10-23T15:27:59.417:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span> guess, <span class=hljs-literal >I</span> could just map over integers and index <span class=hljs-keyword >in</span>. Or use <span class=hljs-string >`enumerate`</span></code></pre>
+<h3 id="user_u6z8377n2_timestamp_2020-10-23t152759417"><a href="#user_u6z8377n2_timestamp_2020-10-23t152759417">User: U6Z8377N2 Timestamp: 2020-10-23T15:27:59.417:</a></h3>
+<pre><code class="language-julia">I guess, I could just map over integers and index in. Or use &#96;enumerate&#96;</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u6z8377n2_timestamp2020-10-23t152743416 ><a href="#user_u6z8377n2_timestamp2020-10-23t152743416">User: U6Z8377N2 Timestamp:<em>2020-10-23T15:27:43.416</em>:</a></h3>
-<pre><code class="julia hljs">Is it possible to get the index of an array when <span class=hljs-keyword >using</span> <span class=hljs-string >`map`</span> <span class=hljs-literal >I</span> have code like this
-res = map(myarray) <span class=hljs-keyword >do</span> x
-   <span class=hljs-keyword >do</span> stuff with x
-   <span class=hljs-keyword >do</span> special things <span class=hljs-keyword >if</span> x is the first element
-<span class=hljs-keyword >end</span>
-but <span class=hljs-literal >I</span> don&#x27;t really know how to <span class=hljs-keyword >do</span> the second item there</code></pre>
-<h3 id=user_u6c937enb_timestamp_2020-10-23t152602415 ><a href="#user_u6c937enb_timestamp_2020-10-23t152602415">User: U6C937ENB Timestamp: 2020-10-23T15:26:02.415:</a></h3>
-<pre><code class="julia hljs">Wat?
-julia&gt; f(;args::T...)<span class=hljs-keyword >where</span> {T} = T
-ERROR: syntax: space before <span class=hljs-string >&quot;{&quot;</span> not allowed <span class=hljs-keyword >in</span> <span class=hljs-string >&quot;where {&quot;</span> at none:<span class=hljs-number >1</span></code></pre>
+<h3 id="user_u6z8377n2_timestamp2020-10-23t152743416"><a href="#user_u6z8377n2_timestamp2020-10-23t152743416">User: U6Z8377N2 Timestamp:<em>2020-10-23T15:27:43.416</em>:</a></h3>
+<pre><code class="language-julia">Is it possible to get the index of an array when using &#96;map&#96; I have code like this
+res &#61; map&#40;myarray&#41; do x
+   do stuff with x
+   do special things if x is the first element
+end
+but I don&#39;t really know how to do the second item there</code></pre>
+<h3 id="user_u6c937enb_timestamp_2020-10-23t152602415"><a href="#user_u6c937enb_timestamp_2020-10-23t152602415">User: U6C937ENB Timestamp: 2020-10-23T15:26:02.415:</a></h3>
+<pre><code class="language-julia">Wat?
+julia&gt; f(;args::T...)where {T} = T
+ERROR: syntax: space before "{" not allowed in "where {" at none:1</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01cuq4b67j_timestamp_2020-10-23t142509412 ><a href="#user_u01cuq4b67j_timestamp_2020-10-23t142509412">User: U01CUQ4B67J Timestamp: 2020-10-23T14:25:09.412:</a></h3>
-<pre><code class="julia hljs">maybe close it first</code></pre>
+<h3 id="user_u01cuq4b67j_timestamp_2020-10-23t142509412"><a href="#user_u01cuq4b67j_timestamp_2020-10-23t142509412">User: U01CUQ4B67J Timestamp: 2020-10-23T14:25:09.412:</a></h3>
+<pre><code class="language-julia">maybe close it first</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u7hayky9x_timestamp_2020-10-23t142311412 ><a href="#user_u7hayky9x_timestamp_2020-10-23t142311412">User: U7HAYKY9X Timestamp: 2020-10-23T14:23:11.412:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span> have a bewildering situation. <span class=hljs-literal >I</span> have generated some <span class=hljs-string >`Expr`</span> , <span class=hljs-keyword >let</span>&#x27;s call it <span class=hljs-string >`code`</span> . Now <span class=hljs-keyword >if</span> <span class=hljs-literal >I</span> <span class=hljs-keyword >do</span>
-<span class=hljs-keyword >function</span> foo()
+<h3 id="user_u7hayky9x_timestamp_2020-10-23t142311412"><a href="#user_u7hayky9x_timestamp_2020-10-23t142311412">User: U7HAYKY9X Timestamp: 2020-10-23T14:23:11.412:</a></h3>
+<pre><code class="language-julia">I have a bewildering situation. I have generated some `Expr` , let's call it `code` . Now if I do
+function foo()
     $code
-<span class=hljs-keyword >end</span>
-it works. But <span class=hljs-keyword >if</span> <span class=hljs-literal >I</span> <span class=hljs-keyword >do</span>
-<span class=hljs-comment ># Print code to file</span>
-open(io -&gt; println(io, code), <span class=hljs-string >&quot;foo.jl&quot;</span>, <span class=hljs-string >&quot;w&quot;</span>)
-<span class=hljs-comment ># read in code</span>
-code2 = Meta.parse(<span class=hljs-built_in >String</span>(open(read, <span class=hljs-string >&quot;foo.jl&quot;</span>)))
-<span class=hljs-keyword >function</span> foo()
+end
+it works. But if I do
+# Print code to file
+open(io -&gt; println(io, code), "foo.jl", "w")
+# read in code
+code2 = Meta.parse(String(open(read, "foo.jl")))
+function foo()
     $code2
-<span class=hljs-keyword >end</span>
+end
 then it errors. Should these two behave the same? Edit: Figured it out, see thread.</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_uc6b1tt7b_timestamp_2020-10-23t132828408 ><a href="#user_uc6b1tt7b_timestamp_2020-10-23t132828408">User: UC6B1TT7B Timestamp: 2020-10-23T13:28:28.408:</a></h3>
-<pre><code class="julia hljs">It happens quite often (from time to time) that <span class=hljs-literal >I</span> have a set of elements, and want to create a dictionary mapping each unique element <span class=hljs-keyword >in</span> the set to the number of occurrences of it <span class=hljs-keyword >in</span> the set, like this:
-count_dict = <span class=hljs-built_in >Dict</span>(map(element -&gt; element =&gt; count(element .== my_set), unique(my_set)))
-Does there exists a <span class=hljs-keyword >function</span> <span class=hljs-keyword >for</span> this
-(like <span class=hljs-literal >I</span> can manage without, but it seemed like something which might exist, and <span class=hljs-keyword >if</span> it does, <span class=hljs-literal >I</span> should ask)</code></pre>
+<h3 id="user_uc6b1tt7b_timestamp_2020-10-23t132828408"><a href="#user_uc6b1tt7b_timestamp_2020-10-23t132828408">User: UC6B1TT7B Timestamp: 2020-10-23T13:28:28.408:</a></h3>
+<pre><code class="language-julia">It happens quite often (from time to time) that I have a set of elements, and want to create a dictionary mapping each unique element in the set to the number of occurrences of it in the set, like this:
+count_dict = Dict(map(element -&gt; element =&gt; count(element .== my_set), unique(my_set)))
+Does there exists a function for this
+(like I can manage without, but it seemed like something which might exist, and if it does, I should ask)</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u019zkq5yq6_timestamp_2020-10-23t132609405 ><a href="#user_u019zkq5yq6_timestamp_2020-10-23t132609405">User: U019ZKQ5YQ6 Timestamp: 2020-10-23T13:26:09.405:</a></h3>
-<pre><code class="julia hljs">If i have a dataframe and i only want to look at each <span class=hljs-number >10</span>th observation, how <span class=hljs-keyword >do</span> i <span class=hljs-keyword >do</span> that?</code></pre>
+<h3 id="user_u019zkq5yq6_timestamp_2020-10-23t132609405"><a href="#user_u019zkq5yq6_timestamp_2020-10-23t132609405">User: U019ZKQ5YQ6 Timestamp: 2020-10-23T13:26:09.405:</a></h3>
+<pre><code class="language-julia">If i have a dataframe and i only want to look at each 10th observation, how do i do that?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u677r5q5a_timestamp2020-10-23t131242403 ><a href="#user_u677r5q5a_timestamp2020-10-23t131242403">User: U677R5Q5A Timestamp:<em>2020-10-23T13:12:42.403</em>:</a></h3>
-<pre><code class="julia hljs">Thank you &lt;<span class=hljs-meta >@USU9FRPEU</span>&gt;, <span class=hljs-literal >I</span> ended up reading a slightly more general one (&lt;https://julialang.github.io/PackageCompiler.jl/dev/devdocs/sysimages_part_1/&gt;), but now <span class=hljs-literal >I</span> feel much more comfortable with the process.
+<h3 id="user_u677r5q5a_timestamp2020-10-23t131242403"><a href="#user_u677r5q5a_timestamp2020-10-23t131242403">User: U677R5Q5A Timestamp:<em>2020-10-23T13:12:42.403</em>:</a></h3>
+<pre><code class="language-julia">Thank you &lt;@USU9FRPEU&gt;, I ended up reading a slightly more general one &#40;&lt;https://julialang.github.io/PackageCompiler.jl/dev/devdocs/sysimages_part_1/&gt;&#41;, but now I feel much more comfortable with the process.
 
-Follow-up question: If <span class=hljs-literal >I</span> want to change definitions <span class=hljs-keyword >in</span> the base system image (rather than add another <span class=hljs-keyword >module</span>), <span class=hljs-literal >I</span> suppose <span class=hljs-literal >I</span> would change the code <span class=hljs-keyword >in</span> Base, find a way to unload the <span class=hljs-keyword >module</span>, and then apply the same logic described <span class=hljs-keyword >in</span> the link above?
+Follow-up question: If I want to change definitions in the base system image &#40;rather than add another module&#41;, I suppose I would change the code in Base, find a way to unload the module, and then apply the same logic described in the link above?
 
-Sorry <span class=hljs-keyword >if</span> this is “too advanced” <span class=hljs-keyword >for</span> the help desk.</code></pre>
-<h3 id=user_u012uunbfm0_timestamp_2020-10-23t130158403 ><a href="#user_u012uunbfm0_timestamp_2020-10-23t130158403">User: U012UUNBFM0 Timestamp: 2020-10-23T13:01:58.403:</a></h3>
-<pre><code class="julia hljs">Can <span class=hljs-literal >I</span> plot a matrix like this <span class=hljs-keyword >in</span> Julia?</code></pre>
+Sorry if this is “too advanced” for the help desk.</code></pre>
+<h3 id="user_u012uunbfm0_timestamp_2020-10-23t130158403"><a href="#user_u012uunbfm0_timestamp_2020-10-23t130158403">User: U012UUNBFM0 Timestamp: 2020-10-23T13:01:58.403:</a></h3>
+<pre><code class="language-julia">Can I plot a matrix like this in Julia?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u017ygfqte3_timestamp_2020-10-23t121945401 ><a href="#user_u017ygfqte3_timestamp_2020-10-23t121945401">User: U017YGFQTE3 Timestamp: 2020-10-23T12:19:45.401:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span>&#x27;m looking <span class=hljs-keyword >for</span> an iterator that generates the same output as
-Base.Iterators.product([<span class=hljs-number >0</span>:<span class=hljs-number >1</span> <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:n]...)
-but <span class=hljs-keyword >where</span> the output is ordered <span class=hljs-keyword >in</span> the total number of <span class=hljs-number >1</span>s. So, the first element should be all zeros, then the next block are all the <span class=hljs-string >`(0,...,0,1,0,...0)`</span>, before the elements with two <span class=hljs-number >1</span>s, and so on.
-Another option that would work <span class=hljs-keyword >for</span> me would be something akin to <span class=hljs-string >`Itertools.subsets`</span> but <span class=hljs-keyword >where</span> the output is ordered <span class=hljs-keyword >in</span> the size of the subsets.</code></pre>
+<h3 id="user_u017ygfqte3_timestamp_2020-10-23t121945401"><a href="#user_u017ygfqte3_timestamp_2020-10-23t121945401">User: U017YGFQTE3 Timestamp: 2020-10-23T12:19:45.401:</a></h3>
+<pre><code class="language-julia">I&#39;m looking for an iterator that generates the same output as
+Base.Iterators.product&#40;&#91;0:1 for i in 1:n&#93;...&#41;
+but where the output is ordered in the total number of 1s. So, the first element should be all zeros, then the next block are all the &#96;&#40;0,...,0,1,0,...0&#41;&#96;, before the elements with two 1s, and so on.
+Another option that would work for me would be something akin to &#96;Itertools.subsets&#96; but where the output is ordered in the size of the subsets.</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01d75cd203_timestamp_2020-10-23t1217064 ><a href="#user_u01d75cd203_timestamp_2020-10-23t1217064">User: U01D75CD203 Timestamp: 2020-10-23T12:17:06.4:</a></h3>
-<pre><code class="julia hljs">Hello, <span class=hljs-keyword >in</span> matlab language, we can use figure(<span class=hljs-number >1</span>) and figure(<span class=hljs-number >2</span>) to creat two independent plots. How should <span class=hljs-literal >I</span> <span class=hljs-keyword >do</span> <span class=hljs-keyword >in</span> Julia language? It shows that <span class=hljs-keyword >in</span> Julia,
-x = plot( <span class=hljs-number >1</span>:<span class=hljs-number >10</span>, rand(<span class=hljs-number >10</span>, <span class=hljs-number >1</span> ) )  <span class=hljs-comment ># x-plot</span>
-y = plot( <span class=hljs-number >1</span>:<span class=hljs-number >10</span>, rand(<span class=hljs-number >10</span>, <span class=hljs-number >1</span> ) )  <span class=hljs-comment ># y-plot</span>
-the screen will show only the second plot, and one has to use display <span class=hljs-keyword >function</span> to show x-plot or y-plot, but not both. Google tells that an option of plot,
-<span class=hljs-string >&quot;reuse = false&quot;</span>, of y-plot will solve this problem <span class=hljs-keyword >in</span> REPL, but it shows that this does not work <span class=hljs-keyword >in</span> script or <span class=hljs-keyword >function</span> environment. <span class=hljs-literal >I</span> <span class=hljs-keyword >do</span> not want to <span class=hljs-keyword >do</span> subplot either.
+<h3 id="user_u01d75cd203_timestamp_2020-10-23t1217064"><a href="#user_u01d75cd203_timestamp_2020-10-23t1217064">User: U01D75CD203 Timestamp: 2020-10-23T12:17:06.4:</a></h3>
+<pre><code class="language-julia">Hello, in matlab language, we can use figure&#40;1&#41; and figure&#40;2&#41; to creat two independent plots. How should I do in Julia language? It shows that in Julia,
+x &#61; plot&#40; 1:10, rand&#40;10, 1 &#41; &#41;  # x-plot
+y &#61; plot&#40; 1:10, rand&#40;10, 1 &#41; &#41;  # y-plot
+the screen will show only the second plot, and one has to use display function to show x-plot or y-plot, but not both. Google tells that an option of plot,
+&quot;reuse &#61; false&quot;, of y-plot will solve this problem in REPL, but it shows that this does not work in script or function environment. I do not want to do subplot either.
 
  Is there any trick to solve this problem?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u73kenng4_timestamp2020-10-23t111959393 ><a href="#user_u73kenng4_timestamp2020-10-23t111959393">User: U73KENNG4 Timestamp:<em>2020-10-23T11:19:59.393</em>:</a></h3>
-<pre><code class="julia hljs">Is there some easy way to make the <span class=hljs-string >`MethodError: no method matching keymap(::Vector{Dict})`</span> on master go away?</code></pre>
-<h3 id=user_un45lv5k6_timestamp2020-10-23t102503391 ><a href="#user_un45lv5k6_timestamp2020-10-23t102503391">User: UN45LV5K6 Timestamp:<em>2020-10-23T10:25:03.391</em>:</a></h3>
-<pre><code class="julia hljs">How <span class=hljs-keyword >do</span> <span class=hljs-literal >I</span> make sure that channels are closed properly when a producer or consumer fails, without the following to deadlock:
-producer(c1, c2) = foreach(x -&gt; (put!(c1, x); put!(c2, x)), <span class=hljs-number >1</span>:<span class=hljs-number >3</span>)
-consumer1(c) = foreach(x -&gt; println(<span class=hljs-string >&quot;One: &quot;</span>, x), c)
-consumer2(c) = foreach(x -&gt; println(<span class=hljs-string >&quot;Two: &quot;</span>, x), c)
+<h3 id="user_u73kenng4_timestamp2020-10-23t111959393"><a href="#user_u73kenng4_timestamp2020-10-23t111959393">User: U73KENNG4 Timestamp:<em>2020-10-23T11:19:59.393</em>:</a></h3>
+<pre><code class="language-julia">Is there some easy way to make the &#96;MethodError: no method matching keymap&#40;::Vector&#123;Dict&#125;&#41;&#96; on master go away?</code></pre>
+<h3 id="user_un45lv5k6_timestamp2020-10-23t102503391"><a href="#user_un45lv5k6_timestamp2020-10-23t102503391">User: UN45LV5K6 Timestamp:<em>2020-10-23T10:25:03.391</em>:</a></h3>
+<pre><code class="language-julia">How do I make sure that channels are closed properly when a producer or consumer fails, without the following to deadlock:
+producer(c1, c2) = foreach(x -&gt; (put!(c1, x); put!(c2, x)), 1:3)
+consumer1(c) = foreach(x -&gt; println("One: ", x), c)
+consumer2(c) = foreach(x -&gt; println("Two: ", x), c)
 
-<span class=hljs-meta >@sync</span> <span class=hljs-keyword >begin</span>
-    c1 = <span class=hljs-built_in >Channel</span>()
-    c2 = <span class=hljs-built_in >Channel</span>()
+@sync begin
+    c1 = Channel()
+    c2 = Channel()
 
-    t = <span class=hljs-meta >@async</span> producer(c1, c2)
+    t = @async producer(c1, c2)
     bind(c1, t)
     bind(c2, t)
 
-    <span class=hljs-meta >@async</span> consumer1(c1)
-    <span class=hljs-meta >@async</span> consumer2(c2)
-<span class=hljs-keyword >end</span>
-The <span class=hljs-string >`bind`</span> only works <span class=hljs-keyword >for</span> errors <span class=hljs-keyword >in</span> <span class=hljs-string >`producer`</span>, but not <span class=hljs-string >`consumer`</span>.</code></pre>
-<h3 id=user_u7gqe9jp9_timestamp_2020-10-23t101835388 ><a href="#user_u7gqe9jp9_timestamp_2020-10-23t101835388">User: U7GQE9JP9 Timestamp: 2020-10-23T10:18:35.388:</a></h3>
-<pre><code class="julia hljs">Hello,
+    @async consumer1(c1)
+    @async consumer2(c2)
+end
+The `bind` only works for errors in `producer`, but not `consumer`.</code></pre>
+<h3 id="user_u7gqe9jp9_timestamp_2020-10-23t101835388"><a href="#user_u7gqe9jp9_timestamp_2020-10-23t101835388">User: U7GQE9JP9 Timestamp: 2020-10-23T10:18:35.388:</a></h3>
+<pre><code class="language-julia">Hello,
 
-<span class=hljs-literal >I</span> hope this is not a very dump question. <span class=hljs-literal >I</span> would like to associate a manifest.toml to a .jl file. Is it possible or <span class=hljs-keyword >do</span> <span class=hljs-literal >I</span> need to create a package?</code></pre>
+I hope this is not a very dump question. I would like to associate a manifest.toml to a .jl file. Is it possible or do I need to create a package?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u014lrljxrp_timestamp_2020-10-23t075314386 ><a href="#user_u014lrljxrp_timestamp_2020-10-23t075314386">User: U014LRLJXRP Timestamp: 2020-10-23T07:53:14.386:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span> am trying to implement <span class=hljs-string >`rref`</span> <span class=hljs-keyword >in</span> a modulo field, but <span class=hljs-literal >I</span> am having trouble with all-zero rows.  <span class=hljs-literal >I</span> wonder <span class=hljs-keyword >if</span> someone could take a look at my code (<span class=hljs-keyword >in</span> thread) and see <span class=hljs-keyword >where</span> <span class=hljs-literal >I</span> am going wrong, because I’m at a loss…</code></pre>
+<h3 id="user_u014lrljxrp_timestamp_2020-10-23t075314386"><a href="#user_u014lrljxrp_timestamp_2020-10-23t075314386">User: U014LRLJXRP Timestamp: 2020-10-23T07:53:14.386:</a></h3>
+<pre><code class="language-julia">I am trying to implement &#96;rref&#96; in a modulo field, but I am having trouble with all-zero rows.  I wonder if someone could take a look at my code &#40;in thread&#41; and see where I am going wrong, because I’m at a loss…</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u014lrljxrp_timestamp_2020-10-23t051128379 ><a href="#user_u014lrljxrp_timestamp_2020-10-23t051128379">User: U014LRLJXRP Timestamp: 2020-10-23T05:11:28.379:</a></h3>
-<pre><code class="julia hljs">How might <span class=hljs-literal >I</span> go about writing a <span class=hljs-keyword >function</span> that takes <span class=hljs-keyword >in</span> a matrix <span class=hljs-string >`G`</span> and a number <span class=hljs-string >`m`</span> (which is the modulus of the field), and outputs all unique linear combinations?
+<h3 id="user_u014lrljxrp_timestamp_2020-10-23t051128379"><a href="#user_u014lrljxrp_timestamp_2020-10-23t051128379">User: U014LRLJXRP Timestamp: 2020-10-23T05:11:28.379:</a></h3>
+<pre><code class="language-julia">How might I go about writing a function that takes in a matrix `G` and a number `m` (which is the modulus of the field), and outputs all unique linear combinations?
 
-<span class=hljs-literal >I</span> have a feeling <span class=hljs-literal >I</span> need to use <span class=hljs-string >`@nloops`</span>, so <span class=hljs-literal >I</span> have written this:
-<span class=hljs-meta >@generated</span> <span class=hljs-keyword >function</span> get_codewords(G::<span class=hljs-built_in >AbstractArray</span>, ::<span class=hljs-built_in >Val</span>{n}, m::<span class=hljs-built_in >Integer</span>) <span class=hljs-keyword >where</span> n
-    <span class=hljs-keyword >quote</span>
-        Base.Cartesian.<span class=hljs-meta >@nloops</span> $n i d -&gt; <span class=hljs-number >0</span>:m-<span class=hljs-number >1</span> <span class=hljs-keyword >begin</span>
-            wᵢ = vec([(Base.Cartesian.<span class=hljs-meta >@ntuple</span> $n i)...]) .* Base.Cartesian.<span class=hljs-meta >@nextract</span> <span class=hljs-number >1</span> x d -&gt; G[d, :]
+I have a feeling I need to use `@nloops`, so I have written this:
+@generated function get_codewords(G::AbstractArray, ::Val{n}, m::Integer) where n
+    quote
+        Base.Cartesian.@nloops $n i d -&gt; 0:m-1 begin
+            wᵢ = vec([(Base.Cartesian.@ntuple $n i)...]) .* Base.Cartesian.@nextract 1 x d -&gt; G[d, :]
             println(wᵢ)
-        <span class=hljs-keyword >end</span>
-    <span class=hljs-keyword >end</span>
-<span class=hljs-keyword >end</span>
-get_codewords(G::<span class=hljs-built_in >AbstractArray</span>, m::<span class=hljs-built_in >Integer</span>) = get_codewords(G, <span class=hljs-built_in >Val</span>(size(G, <span class=hljs-number >1</span>)), m)
-But this is not quite what <span class=hljs-literal >I</span> want.  <span class=hljs-built_in >Any</span> ideas?  <span class=hljs-literal >I</span> am a little new to the Linear Algebra game <span class=hljs-keyword >in</span> Julia, so <span class=hljs-literal >I</span> am probably _way_ overcomplicating it…</code></pre>
+        end
+    end
+end
+get_codewords(G::AbstractArray, m::Integer) = get_codewords(G, Val(size(G, 1)), m)
+But this is not quite what I want.  Any ideas?  I am a little new to the Linear Algebra game in Julia, so I am probably _way_ overcomplicating it…</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u677r5q5a_timestamp2020-10-23t033925372 ><a href="#user_u677r5q5a_timestamp2020-10-23t033925372">User: U677R5Q5A Timestamp:<em>2020-10-23T03:39:25.372</em>:</a></h3>
-<pre><code class="julia hljs">Apologies, this is stuff <span class=hljs-literal >I</span> should know by experience. But apparently <span class=hljs-literal >I</span> am getting old.</code></pre>
-<h3 id=user_u677r5q5a_timestamp_2020-10-23t033907372 ><a href="#user_u677r5q5a_timestamp_2020-10-23t033907372">User: U677R5Q5A Timestamp: 2020-10-23T03:39:07.372:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span> somehow seem to have failed to wrap my head around the docs. But is there any way to rebuild/build a system image without needing a complete checkout of the Julia source tree?</code></pre>
+<h3 id="user_u677r5q5a_timestamp2020-10-23t033925372"><a href="#user_u677r5q5a_timestamp2020-10-23t033925372">User: U677R5Q5A Timestamp:<em>2020-10-23T03:39:25.372</em>:</a></h3>
+<pre><code class="language-julia">Apologies, this is stuff I should know by experience. But apparently I am getting old.</code></pre>
+<h3 id="user_u677r5q5a_timestamp_2020-10-23t033907372"><a href="#user_u677r5q5a_timestamp_2020-10-23t033907372">User: U677R5Q5A Timestamp: 2020-10-23T03:39:07.372:</a></h3>
+<pre><code class="language-julia">I somehow seem to have failed to wrap my head around the docs. But is there any way to rebuild/build a system image without needing a complete checkout of the Julia source tree?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_um3gcdfgr_timestamp_2020-10-23t031725371 ><a href="#user_um3gcdfgr_timestamp_2020-10-23t031725371">User: UM3GCDFGR Timestamp: 2020-10-23T03:17:25.371:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-number >100</span>: dist = <span class=hljs-number >940031.0555043541</span>
-<span class=hljs-number >200</span>: dist = <span class=hljs-number >841554.7489537231</span>
-julia&gt; <span class=hljs-number >300</span>: dist = <span class=hljs-number >824895.3910763789</span>^C
+<h3 id="user_um3gcdfgr_timestamp_2020-10-23t031725371"><a href="#user_um3gcdfgr_timestamp_2020-10-23t031725371">User: UM3GCDFGR Timestamp: 2020-10-23T03:17:25.371:</a></h3>
+<pre><code class="language-julia">100: dist = 940031.0555043541
+200: dist = 841554.7489537231
+julia&gt; 300: dist = 824895.3910763789^C
 
 
 julia&gt;
 ^C
 
 julia&gt;
-<span class=hljs-number >600</span>: dist = <span class=hljs-number >803526.8252443164</span>
-<span class=hljs-number >700</span>: dist = <span class=hljs-number >760113.3374338557</span>
-<span class=hljs-number >800</span>: dist = <span class=hljs-number >741908.676501098</span>
-<span class=hljs-number >900</span>: dist = <span class=hljs-number >735667.8233516186</span>
-<span class=hljs-literal >I</span> got something like above</code></pre>
+600: dist = 803526.8252443164
+700: dist = 760113.3374338557
+800: dist = 741908.676501098
+900: dist = 735667.8233516186
+I got something like above</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_um3gcdfgr_timestamp2020-10-23t03170237 ><a href="#user_um3gcdfgr_timestamp2020-10-23t03170237">User: UM3GCDFGR Timestamp:<em>2020-10-23T03:17:02.37</em>:</a></h3>
-<pre><code class="julia hljs">Would anyone tell me how to interrupt <span class=hljs-string >`Optim.optimize`</span>? <span class=hljs-literal >I</span> tried <span class=hljs-string >`cntr+c`</span> but it doesn&#x27;t work.. It will just <span class=hljs-keyword >continue</span> to optimize unless <span class=hljs-literal >I</span> kill the whole Julia session</code></pre>
-<h3 id=user_us64j0npq_timestamp_2020-10-23t030344369 ><a href="#user_us64j0npq_timestamp_2020-10-23t030344369">User: US64J0NPQ Timestamp: 2020-10-23T03:03:44.369:</a></h3>
-<pre><code class="julia hljs">Would anyone with expertise <span class=hljs-keyword >in</span> GTK be willing to help me with this issue here: &lt;https://github.com/JuliaGraphics/Gtk.jl/issues/<span class=hljs-number >529</span>&gt;
+<h3 id="user_um3gcdfgr_timestamp2020-10-23t03170237"><a href="#user_um3gcdfgr_timestamp2020-10-23t03170237">User: UM3GCDFGR Timestamp:<em>2020-10-23T03:17:02.37</em>:</a></h3>
+<pre><code class="language-julia">Would anyone tell me how to interrupt &#96;Optim.optimize&#96;? I tried &#96;cntr&#43;c&#96; but it doesn&#39;t work.. It will just continue to optimize unless I kill the whole Julia session</code></pre>
+<h3 id="user_us64j0npq_timestamp_2020-10-23t030344369"><a href="#user_us64j0npq_timestamp_2020-10-23t030344369">User: US64J0NPQ Timestamp: 2020-10-23T03:03:44.369:</a></h3>
+<pre><code class="language-julia">Would anyone with expertise in GTK be willing to help me with this issue here: &lt;https://github.com/JuliaGraphics/Gtk.jl/issues/529&gt;
 
-In short, what <span class=hljs-literal >I</span> am trying to <span class=hljs-keyword >do</span> is grab a previously created GTK window that is created by a Julia script and <span class=hljs-string >&quot;recycle&quot;</span> it <span class=hljs-keyword >in</span> such way as to not have to open and close a new GTK window every single time <span class=hljs-literal >I</span> run the script. <span class=hljs-literal >I</span> want to use the same GTK each time <span class=hljs-literal >I</span> run my script. How <span class=hljs-keyword >do</span> <span class=hljs-literal >I</span> <span class=hljs-keyword >do</span> this?</code></pre>
+In short, what I am trying to do is grab a previously created GTK window that is created by a Julia script and &quot;recycle&quot; it in such way as to not have to open and close a new GTK window every single time I run the script. I want to use the same GTK each time I run my script. How do I do this?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u014lrljxrp_timestamp_2020-10-23t015212365 ><a href="#user_u014lrljxrp_timestamp_2020-10-23t015212365">User: U014LRLJXRP Timestamp: 2020-10-23T01:52:12.365:</a></h3>
-<pre><code class="julia hljs">Why is <span class=hljs-string >`\endash`</span> and <span class=hljs-string >`\emdash`</span> listed <span class=hljs-keyword >in</span> the &lt;https://docs.julialang.org/en/v1<span class=hljs-number >.5</span>/manual/unicode-input/|unicode support&gt; but when <span class=hljs-literal >I</span> use it <span class=hljs-literal >I</span> get <span class=hljs-string >`syntax: invalid character &quot;–&quot; near column 1`</span>?…</code></pre>
+<h3 id="user_u014lrljxrp_timestamp_2020-10-23t015212365"><a href="#user_u014lrljxrp_timestamp_2020-10-23t015212365">User: U014LRLJXRP Timestamp: 2020-10-23T01:52:12.365:</a></h3>
+<pre><code class="language-julia">Why is &#96;\endash&#96; and &#96;\emdash&#96; listed in the &lt;https://docs.julialang.org/en/v1.5/manual/unicode-input/|unicode support&gt; but when I use it I get &#96;syntax: invalid character &quot;–&quot; near column 1&#96;?…</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u014lrljxrp_timestamp_2020-10-23t012153361 ><a href="#user_u014lrljxrp_timestamp_2020-10-23t012153361">User: U014LRLJXRP Timestamp: 2020-10-23T01:21:53.361:</a></h3>
-<pre><code class="julia hljs">If <span class=hljs-literal >I</span> have an identity matrix followed by some other stuff (<span class=hljs-literal >e</span>.g., <span class=hljs-string >`[1 0 0 2 3 0; 0 1 0 1 2 2; 0 0 1 4 3 0]`</span>), is there a way <span class=hljs-keyword >in</span> Julia to <span class=hljs-keyword >return</span> only the part of the matrix that isn’t the identity?  E.g., <span class=hljs-keyword >return</span> <span class=hljs-string >`[2 3 0; 1 2 2; 4 3 0]`</span>?</code></pre>
+<h3 id="user_u014lrljxrp_timestamp_2020-10-23t012153361"><a href="#user_u014lrljxrp_timestamp_2020-10-23t012153361">User: U014LRLJXRP Timestamp: 2020-10-23T01:21:53.361:</a></h3>
+<pre><code class="language-julia">If I have an identity matrix followed by some other stuff &#40;e.g., &#96;&#91;1 0 0 2 3 0; 0 1 0 1 2 2; 0 0 1 4 3 0&#93;&#96;&#41;, is there a way in Julia to return only the part of the matrix that isn’t the identity?  E.g., return &#96;&#91;2 3 0; 1 2 2; 4 3 0&#93;&#96;?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01724q3pgw_timestamp_2020-10-23t004722359 ><a href="#user_u01724q3pgw_timestamp_2020-10-23t004722359">User: U01724Q3PGW Timestamp: 2020-10-23T00:47:22.359:</a></h3>
-<pre><code class="julia hljs">Is there a way to plot with a second y axis (say, on the right) on a single plot? <span class=hljs-literal >I</span> didn&#x27;t see anything <span class=hljs-keyword >in</span> the Plots.jl examples or tutorial and stackoverflow wasn&#x27;t much use either... <span class=hljs-literal >I</span> tried <span class=hljs-string >`axis=:right`</span>, but it must be an unknown symbol</code></pre>
+<h3 id="user_u01724q3pgw_timestamp_2020-10-23t004722359"><a href="#user_u01724q3pgw_timestamp_2020-10-23t004722359">User: U01724Q3PGW Timestamp: 2020-10-23T00:47:22.359:</a></h3>
+<pre><code class="language-julia">Is there a way to plot with a second y axis &#40;say, on the right&#41; on a single plot? I didn&#39;t see anything in the Plots.jl examples or tutorial and stackoverflow wasn&#39;t much use either... I tried &#96;axis&#61;:right&#96;, but it must be an unknown symbol</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01c5huv05u_timestamp_2020-10-22t215524349 ><a href="#user_u01c5huv05u_timestamp_2020-10-22t215524349">User: U01C5HUV05U Timestamp: 2020-10-22T21:55:24.349:</a></h3>
-<pre><code class="julia hljs">How can <span class=hljs-literal >I</span> cube an entire array?</code></pre>
+<h3 id="user_u01c5huv05u_timestamp_2020-10-22t215524349"><a href="#user_u01c5huv05u_timestamp_2020-10-22t215524349">User: U01C5HUV05U Timestamp: 2020-10-22T21:55:24.349:</a></h3>
+<pre><code class="language-julia">How can I cube an entire array?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01ba7wdyb1_timestamp_2020-10-22t210445348 ><a href="#user_u01ba7wdyb1_timestamp_2020-10-22t210445348">User: U01BA7WDYB1 Timestamp: 2020-10-22T21:04:45.348:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span> encountered some strange behaviour <span class=hljs-keyword >while</span> testing the speed of sampling <span class=hljs-number >1</span> out of <span class=hljs-number >3</span> values with specified sampling weights. One of the values is null so <span class=hljs-literal >I</span> mistakenly used <span class=hljs-string >`Nothing`</span> to represent it (instead of <span class=hljs-string >`nothing`</span>, whose <span class=hljs-keyword >type</span> is actually Nothing). The code is something like this:
+<h3 id="user_u01ba7wdyb1_timestamp_2020-10-22t210445348"><a href="#user_u01ba7wdyb1_timestamp_2020-10-22t210445348">User: U01BA7WDYB1 Timestamp: 2020-10-22T21:04:45.348:</a></h3>
+<pre><code class="language-julia">I encountered some strange behaviour while testing the speed of sampling 1 out of 3 values with specified sampling weights. One of the values is null so I mistakenly used `Nothing` to represent it (instead of `nothing`, whose type is actually Nothing). The code is something like this:
 M = M_trans(params...)
-<span class=hljs-meta >@time</span> <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:<span class=hljs-number >1000000</span>
-    sample([<span class=hljs-number >1</span>, <span class=hljs-number >0</span>, Nothing], aweights(M[s0, :]))
-<span class=hljs-keyword >end</span>
-which returns <span class=hljs-string >`0.640328 seconds (5.00 M allocations: 289.917 MiB, 4.92% gc time)`</span>. <span class=hljs-literal >I</span> decided to fix it by <span class=hljs-keyword >using</span> <span class=hljs-string >`nothing`</span> but unexpectedly this results <span class=hljs-keyword >in</span> a &gt;<span class=hljs-number >10</span>x decrease <span class=hljs-keyword >in</span> speed: <span class=hljs-string >`8.461066 seconds (7.00 M allocations: 350.952 MiB, 0.42% gc time)`</span>.
-Ultimately <span class=hljs-literal >I</span>&#x27;ll just use an integer to encode the null value which is faster than both but <span class=hljs-literal >I</span>&#x27;m just curious about this behaviour. Should <span class=hljs-literal >I</span> avoid <span class=hljs-keyword >using</span> <span class=hljs-string >`nothing`</span> at all costs?</code></pre>
+@time for i in 1:1000000
+    sample([1, 0, Nothing], aweights(M[s0, :]))
+end
+which returns `0.640328 seconds (5.00 M allocations: 289.917 MiB, 4.92% gc time)`. I decided to fix it by using `nothing` but unexpectedly this results in a &gt;10x decrease in speed: `8.461066 seconds (7.00 M allocations: 350.952 MiB, 0.42% gc time)`.
+Ultimately I'll just use an integer to encode the null value which is faster than both but I'm just curious about this behaviour. Should I avoid using `nothing` at all costs?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01c2p6bksr_timestamp_2020-10-22t201006342 ><a href="#user_u01c2p6bksr_timestamp_2020-10-22t201006342">User: U01C2P6BKSR Timestamp: 2020-10-22T20:10:06.342:</a></h3>
-<pre><code class="julia hljs">Has anyone run into an issue with <span class=hljs-string >`using Flux`</span> inside of a package lately? As of a couple hours ago, <span class=hljs-literal >I</span> get a bunch of errors about methods being overwritten and <span class=hljs-string >`incremental compilation may be fatally broken for this module`</span>
+<h3 id="user_u01c2p6bksr_timestamp_2020-10-22t201006342"><a href="#user_u01c2p6bksr_timestamp_2020-10-22t201006342">User: U01C2P6BKSR Timestamp: 2020-10-22T20:10:06.342:</a></h3>
+<pre><code class="language-julia">Has anyone run into an issue with &#96;using Flux&#96; inside of a package lately? As of a couple hours ago, I get a bunch of errors about methods being overwritten and &#96;incremental compilation may be fatally broken for this module&#96;
 
-<span class=hljs-literal >I</span> made an issue about it, but <span class=hljs-literal >I</span>&#x27;m really not sure what&#x27;s going on at all: &lt;https://github.com/FluxML/Flux.jl/issues/<span class=hljs-number >1370</span>&gt;</code></pre>
+I made an issue about it, but I&#39;m really not sure what&#39;s going on at all: &lt;https://github.com/FluxML/Flux.jl/issues/1370&gt;</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ukg4wf8pj_timestamp2020-10-22t190950337 ><a href="#user_ukg4wf8pj_timestamp2020-10-22t190950337">User: UKG4WF8PJ Timestamp:<em>2020-10-22T19:09:50.337</em>:</a></h3>
-<pre><code class="julia hljs">Optim.jl,JuMP.jl</code></pre>
-<h3 id=user_u015eghqzp0_timestamp2020-10-22t190831336 ><a href="#user_u015eghqzp0_timestamp2020-10-22t190831336">User: U015EGHQZP0 Timestamp:<em>2020-10-22T19:08:31.336</em>:</a></h3>
-<pre><code class="julia hljs">Is there a package that lets you optimize nonlinear user-defined functions?</code></pre>
-<h3 id=user_up4u6aknz_timestamp_2020-10-22t182419334 ><a href="#user_up4u6aknz_timestamp_2020-10-22t182419334">User: UP4U6AKNZ Timestamp: 2020-10-22T18:24:19.334:</a></h3>
-<pre><code class="julia hljs">The Julia Artifacts string <span class=hljs-keyword >macro</span> <span class=hljs-string >`artifact&quot;blabla&quot;`</span> appears to be dispatched on REPL behavior (only then it will look <span class=hljs-keyword >for</span> the <span class=hljs-string >`toml`</span> file  <span class=hljs-keyword >in</span> <span class=hljs-string >`pwd()`</span>): &lt;https://github.com/JuliaLang/Pkg.jl/blob/aaf4e6e8ab784f7435c1bdc56832bc03e014dedb/src/Artifacts.jl<span class=hljs-comment >#L1046&gt; It fails for me when using it in a `notebook` environment (Basically doesn&#x27;t find `Artifacts.toml`). Are there simple work-around solutions?</span></code></pre>
+<h3 id="user_ukg4wf8pj_timestamp2020-10-22t190950337"><a href="#user_ukg4wf8pj_timestamp2020-10-22t190950337">User: UKG4WF8PJ Timestamp:<em>2020-10-22T19:09:50.337</em>:</a></h3>
+<pre><code class="language-julia">Optim.jl,JuMP.jl</code></pre>
+<h3 id="user_u015eghqzp0_timestamp2020-10-22t190831336"><a href="#user_u015eghqzp0_timestamp2020-10-22t190831336">User: U015EGHQZP0 Timestamp:<em>2020-10-22T19:08:31.336</em>:</a></h3>
+<pre><code class="language-julia">Is there a package that lets you optimize nonlinear user-defined functions?</code></pre>
+<h3 id="user_up4u6aknz_timestamp_2020-10-22t182419334"><a href="#user_up4u6aknz_timestamp_2020-10-22t182419334">User: UP4U6AKNZ Timestamp: 2020-10-22T18:24:19.334:</a></h3>
+<pre><code class="language-julia">The Julia Artifacts string macro &#96;artifact&quot;blabla&quot;&#96; appears to be dispatched on REPL behavior &#40;only then it will look for the &#96;toml&#96; file  in &#96;pwd&#40;&#41;&#96;&#41;: &lt;https://github.com/JuliaLang/Pkg.jl/blob/aaf4e6e8ab784f7435c1bdc56832bc03e014dedb/src/Artifacts.jl#L1046&gt; It fails for me when using it in a &#96;notebook&#96; environment &#40;Basically doesn&#39;t find &#96;Artifacts.toml&#96;&#41;. Are there simple work-around solutions?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01d211hb0v_timestamp_2020-10-22t175422327 ><a href="#user_u01d211hb0v_timestamp_2020-10-22t175422327">User: U01D211HB0V Timestamp: 2020-10-22T17:54:22.327:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span> have a <span class=hljs-number >2</span>d array <span class=hljs-literal >I</span> create like <span class=hljs-string >`a = [rand(4) for i in [0]]`</span> (simplified <span class=hljs-keyword >for</span> clarity) and <span class=hljs-literal >I</span> want to broadcast <span class=hljs-string >`cos()`</span> over it. However <span class=hljs-string >`cos.(a)`</span> yields <span class=hljs-string >`MethodError: no method matching cos(::Array{Float64,1})`</span> . What am <span class=hljs-literal >I</span> missing?</code></pre>
+<h3 id="user_u01d211hb0v_timestamp_2020-10-22t175422327"><a href="#user_u01d211hb0v_timestamp_2020-10-22t175422327">User: U01D211HB0V Timestamp: 2020-10-22T17:54:22.327:</a></h3>
+<pre><code class="language-julia">I have a 2d array I create like &#96;a &#61; &#91;rand&#40;4&#41; for i in &#91;0&#93;&#93;&#96; &#40;simplified for clarity&#41; and I want to broadcast &#96;cos&#40;&#41;&#96; over it. However &#96;cos.&#40;a&#41;&#96; yields &#96;MethodError: no method matching cos&#40;::Array&#123;Float64,1&#125;&#41;&#96; . What am I missing?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_uaree2nmd_timestamp2020-10-22t174152324 ><a href="#user_uaree2nmd_timestamp2020-10-22t174152324">User: UAREE2NMD Timestamp:<em>2020-10-22T17:41:52.324</em>:</a></h3>
-<pre><code class="julia hljs">The following works fine:
-julia&gt; <span class=hljs-keyword >using</span> Dates
+<h3 id="user_uaree2nmd_timestamp2020-10-22t174152324"><a href="#user_uaree2nmd_timestamp2020-10-22t174152324">User: UAREE2NMD Timestamp:<em>2020-10-22T17:41:52.324</em>:</a></h3>
+<pre><code class="language-julia">The following works fine:
+julia&gt; using Dates
 
-julia&gt; Dates.<span class=hljs-built_in >DateTime</span>(<span class=hljs-string >&quot;2020-10-22T16:52:14.409Z&quot;</span>, <span class=hljs-string >dateformat&quot;yyyy-mm-dd\THH:MM:&lt;http://SS.sZ|SS.sZ&gt;&quot;</span>)
-<span class=hljs-number >2020</span>-<span class=hljs-number >10</span>-<span class=hljs-number >22</span>T16:<span class=hljs-number >52</span>:<span class=hljs-number >14.409</span>
-Now <span class=hljs-keyword >if</span> <span class=hljs-literal >I</span> add to it <span class=hljs-string >`using`</span> or even <span class=hljs-string >`import`</span> of <span class=hljs-string >`TimeZones`</span>, then now the same code fails:
-julia&gt; <span class=hljs-keyword >using</span> Dates
+julia&gt; Dates.DateTime("2020-10-22T16:52:14.409Z", dateformat"yyyy-mm-dd\THH:MM:<http://SS.sZ|SS.sZ>")
+2020-10-22T16:52:14.409
+Now if I add to it `using` or even `import` of `TimeZones`, then now the same code fails:
+julia&gt; using Dates
 
-julia&gt; <span class=hljs-keyword >import</span> TimeZones
+julia&gt; import TimeZones
 
-julia&gt; Dates.<span class=hljs-built_in >DateTime</span>(<span class=hljs-string >&quot;2020-10-22T16:52:14.409Z&quot;</span>, <span class=hljs-string >dateformat&quot;yyyy-mm-dd\THH:MM:&lt;http://SS.sZ|SS.sZ&gt;&quot;</span>)
-ERROR: <span class=hljs-built_in >ArgumentError</span>: Unable to parse date time. Expected directive DatePart(Z) at char <span class=hljs-number >22</span>
+julia&gt; Dates.DateTime("2020-10-22T16:52:14.409Z", dateformat"yyyy-mm-dd\THH:MM:<http://SS.sZ|SS.sZ>")
+ERROR: ArgumentError: Unable to parse date time. Expected directive DatePart(Z) at char 22
 Stacktrace:
- [<span class=hljs-number >1</span>] <span class=hljs-keyword >macro</span> expansion at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1<span class=hljs-number >.5</span>/Dates/src/parse.jl:<span class=hljs-number >104</span> [inlined]
- [<span class=hljs-number >2</span>] tryparsenext_core(::<span class=hljs-built_in >String</span>, ::<span class=hljs-built_in >Int64</span>, ::<span class=hljs-built_in >Int64</span>, ::<span class=hljs-built_in >DateFormat</span>{<span class=hljs-built_in >Symbol</span>(<span class=hljs-string >&quot;yyyy-mm-dd\\THH:MM:&lt;http://SS.sZ|SS.sZ&gt;&quot;</span>),<span class=hljs-built_in >Tuple</span>{Dates.DatePart{<span class=hljs-string >&#x27;y&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;m&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;d&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;H&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;M&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;S&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;s&#x27;</span>},Dates.DatePart{<span class=hljs-string >&#x27;Z&#x27;</span>}}}, ::<span class=hljs-built_in >Bool</span>) at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1<span class=hljs-number >.5</span>/Dates/src/parse.jl:<span class=hljs-number >38</span>
- [<span class=hljs-number >3</span>] <span class=hljs-keyword >macro</span> expansion at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1<span class=hljs-number >.5</span>/Dates/src/parse.jl:<span class=hljs-number >150</span> [inlined]
- [<span class=hljs-number >4</span>] tryparsenext_internal at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1<span class=hljs-number >.5</span>/Dates/src/parse.jl:<span class=hljs-number >125</span> [inlined]
- [<span class=hljs-number >5</span>] parse(::<span class=hljs-built_in >Type</span>{<span class=hljs-built_in >DateTime</span>}, ::<span class=hljs-built_in >String</span>, ::<span class=hljs-built_in >DateFormat</span>{<span class=hljs-built_in >Symbol</span>(<span class=hljs-string >&quot;yyyy-mm-dd\\THH:MM:&lt;http://SS.sZ|SS.sZ&gt;&quot;</span>),<span class=hljs-built_in >Tuple</span>{Dates.DatePart{<span class=hljs-string >&#x27;y&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;m&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;d&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;H&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;M&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;S&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;s&#x27;</span>},Dates.DatePart{<span class=hljs-string >&#x27;Z&#x27;</span>}}}) at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1<span class=hljs-number >.5</span>/Dates/src/parse.jl:<span class=hljs-number >282</span>
- [<span class=hljs-number >6</span>] <span class=hljs-built_in >DateTime</span>(::<span class=hljs-built_in >String</span>, ::<span class=hljs-built_in >DateFormat</span>{<span class=hljs-built_in >Symbol</span>(<span class=hljs-string >&quot;yyyy-mm-dd\\THH:MM:&lt;http://SS.sZ|SS.sZ&gt;&quot;</span>),<span class=hljs-built_in >Tuple</span>{Dates.DatePart{<span class=hljs-string >&#x27;y&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;m&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;d&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;H&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;M&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;S&#x27;</span>},Dates.Delim{<span class=hljs-built_in >Char</span>,<span class=hljs-number >1</span>},Dates.DatePart{<span class=hljs-string >&#x27;s&#x27;</span>},Dates.DatePart{<span class=hljs-string >&#x27;Z&#x27;</span>}}}) at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1<span class=hljs-number >.5</span>/Dates/src/io.jl:<span class=hljs-number >482</span>
- [<span class=hljs-number >7</span>] top-level scope at REPL[<span class=hljs-number >8</span>]:<span class=hljs-number >1</span>
-Looks like it is a bug and <span class=hljs-literal >I</span> reported it &lt;https://github.com/JuliaTime/TimeZones.jl/issues/<span class=hljs-number >303</span>|here&gt;. But <span class=hljs-keyword >in</span> the meantime, how can <span class=hljs-literal >I</span> work around this? (given that <span class=hljs-literal >I</span> <span class=hljs-keyword >do</span> need to use both <span class=hljs-string >`Dates`</span> and <span class=hljs-string >`TimeZones`</span>)</code></pre>
-<h3 id=user_u018pbpuqbd_timestamp_2020-10-22t173111321 ><a href="#user_u018pbpuqbd_timestamp_2020-10-22t173111321">User: U018PBPUQBD Timestamp: 2020-10-22T17:31:11.321:</a></h3>
-<pre><code class="julia hljs">Hello, <span class=hljs-keyword >for</span> this code
-<span class=hljs-comment >#lower power flow limit</span>
-        <span class=hljs-meta >@constraint</span>(wildfire_model,
-                -ref[:branch][l][<span class=hljs-string >&quot;rate_a&quot;</span>] &lt;=
-                sum(SF[l_index,j]*p[j] <span class=hljs-keyword >for</span> j <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:length(ref[:bus]))
-                    + sum(PSDF[l_index,j]*alpha[j] <span class=hljs-keyword >for</span> j <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:length(ref[:branch])))
+ [1] macro expansion at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1.5/Dates/src/parse.jl:104 [inlined]
+ [2] tryparsenext_core(::String, ::Int64, ::Int64, ::DateFormat{Symbol("yyyy-mm-dd\\THH:MM:<http://SS.sZ|SS.sZ>"),Tuple{Dates.DatePart{'y'},Dates.Delim{Char,1},Dates.DatePart{'m'},Dates.Delim{Char,1},Dates.DatePart{'d'},Dates.Delim{Char,1},Dates.DatePart{'H'},Dates.Delim{Char,1},Dates.DatePart{'M'},Dates.Delim{Char,1},Dates.DatePart{'S'},Dates.Delim{Char,1},Dates.DatePart{'s'},Dates.DatePart{'Z'}}}, ::Bool) at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1.5/Dates/src/parse.jl:38
+ [3] macro expansion at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1.5/Dates/src/parse.jl:150 [inlined]
+ [4] tryparsenext_internal at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1.5/Dates/src/parse.jl:125 [inlined]
+ [5] parse(::Type{DateTime}, ::String, ::DateFormat{Symbol("yyyy-mm-dd\\THH:MM:<http://SS.sZ|SS.sZ>"),Tuple{Dates.DatePart{'y'},Dates.Delim{Char,1},Dates.DatePart{'m'},Dates.Delim{Char,1},Dates.DatePart{'d'},Dates.Delim{Char,1},Dates.DatePart{'H'},Dates.Delim{Char,1},Dates.DatePart{'M'},Dates.Delim{Char,1},Dates.DatePart{'S'},Dates.Delim{Char,1},Dates.DatePart{'s'},Dates.DatePart{'Z'}}}) at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1.5/Dates/src/parse.jl:282
+ [6] DateTime(::String, ::DateFormat{Symbol("yyyy-mm-dd\\THH:MM:<http://SS.sZ|SS.sZ>"),Tuple{Dates.DatePart{'y'},Dates.Delim{Char,1},Dates.DatePart{'m'},Dates.Delim{Char,1},Dates.DatePart{'d'},Dates.Delim{Char,1},Dates.DatePart{'H'},Dates.Delim{Char,1},Dates.DatePart{'M'},Dates.Delim{Char,1},Dates.DatePart{'S'},Dates.Delim{Char,1},Dates.DatePart{'s'},Dates.DatePart{'Z'}}}) at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1.5/Dates/src/io.jl:482
+ [7] top-level scope at REPL[8]:1
+Looks like it is a bug and I reported it <https://github.com/JuliaTime/TimeZones.jl/issues/303|here>. But in the meantime, how can I work around this? (given that I do need to use both `Dates` and `TimeZones`)</code></pre>
+<h3 id="user_u018pbpuqbd_timestamp_2020-10-22t173111321"><a href="#user_u018pbpuqbd_timestamp_2020-10-22t173111321">User: U018PBPUQBD Timestamp: 2020-10-22T17:31:11.321:</a></h3>
+<pre><code class="language-julia">Hello, for this code
+#lower power flow limit
+        @constraint(wildfire_model,
+                -ref[:branch][l]["rate_a"] &lt;=
+                sum(SF[l_index,j]*p[j] for j in 1:length(ref[:bus]))
+                    + sum(PSDF[l_index,j]*alpha[j] for j in 1:length(ref[:branch])))
 
-        <span class=hljs-comment >#upper power flow limit</span>
-        <span class=hljs-meta >@constraint</span>(wildfire_model,
-                sum(SF[l_index,j]*p[j] <span class=hljs-keyword >for</span> j <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:length(ref[:bus]))
-                    + sum(PSDF[l_index,j]*alpha[j] <span class=hljs-keyword >for</span> j <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:length(ref[:branch])))
-                &lt;= ref[:branch][l][<span class=hljs-string >&quot;rate_a&quot;</span>])
-<span class=hljs-literal >I</span> am getting this error <span class=hljs-string >`syntax: &quot;&lt;=&quot; is not a unary operator`</span> . This is <span class=hljs-keyword >in</span> JuMP. <span class=hljs-literal >I</span> am not sure what <span class=hljs-literal >I</span> did wrong</code></pre>
+        #upper power flow limit
+        @constraint(wildfire_model,
+                sum(SF[l_index,j]*p[j] for j in 1:length(ref[:bus]))
+                    + sum(PSDF[l_index,j]*alpha[j] for j in 1:length(ref[:branch])))
+                &lt;= ref[:branch][l]["rate_a"])
+I am getting this error `syntax: "&lt;=" is not a unary operator` . This is in JuMP. I am not sure what I did wrong</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_us64j0npq_timestamp_2020-10-22t17004231 ><a href="#user_us64j0npq_timestamp_2020-10-22t17004231">User: US64J0NPQ Timestamp: 2020-10-22T17:00:42.31:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span> am struggling on a data structure dilemma. <span class=hljs-literal >I</span> have a time series data set spread out across five different file formats. File <span class=hljs-number >1</span> contains the time series, File <span class=hljs-number >2</span> and <span class=hljs-number >3</span> contains about how the data collection instrument was set up <span class=hljs-keyword >for</span> that particular time series, File <span class=hljs-number >4</span> contains additional time series information, and File <span class=hljs-number >5</span> contains further information on the data collection instrument. These files exist <span class=hljs-keyword >for</span> nearly <span class=hljs-number >30</span> separate data recording sessions and each file could contain differing information that would be important <span class=hljs-keyword >for</span> analysis. In total, this comes to about <span class=hljs-number >3</span> billion data entries spread across these files.
+<h3 id="user_us64j0npq_timestamp_2020-10-22t17004231"><a href="#user_us64j0npq_timestamp_2020-10-22t17004231">User: US64J0NPQ Timestamp: 2020-10-22T17:00:42.31:</a></h3>
+<pre><code class="language-julia">I am struggling on a data structure dilemma. I have a time series data set spread out across five different file formats. File 1 contains the time series, File 2 and 3 contains about how the data collection instrument was set up for that particular time series, File 4 contains additional time series information, and File 5 contains further information on the data collection instrument. These files exist for nearly 30 separate data recording sessions and each file could contain differing information that would be important for analysis. In total, this comes to about 3 billion data entries spread across these files.
 
-How best could <span class=hljs-literal >I</span> structure this data? <span class=hljs-literal >I</span> have looked at RecursiveArrayTools.jl and thought that waspromising, AxisArrays.jl may also work as it can get me away from dictionaries, and AxisIndices (which looks like it builds on top of AxisArrays and makes it even better). Does anyone have any suggestions on what <span class=hljs-literal >I</span> should <span class=hljs-keyword >do</span> here? Thanks <span class=hljs-keyword >for</span> the help everyone! :smile:</code></pre>
+How best could I structure this data? I have looked at RecursiveArrayTools.jl and thought that waspromising, AxisArrays.jl may also work as it can get me away from dictionaries, and AxisIndices &#40;which looks like it builds on top of AxisArrays and makes it even better&#41;. Does anyone have any suggestions on what I should do here? Thanks for the help everyone&#33; :smile:</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ulkhn71k3_timestamp_2020-10-22t164137305 ><a href="#user_ulkhn71k3_timestamp_2020-10-22t164137305">User: ULKHN71K3 Timestamp: 2020-10-22T16:41:37.305:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span> am discovering the joys and headaches of Named Tuples. How can <span class=hljs-literal >I</span> make this work?
+<h3 id="user_ulkhn71k3_timestamp_2020-10-22t164137305"><a href="#user_ulkhn71k3_timestamp_2020-10-22t164137305">User: ULKHN71K3 Timestamp: 2020-10-22T16:41:37.305:</a></h3>
+<pre><code class="language-julia">I am discovering the joys and headaches of Named Tuples. How can I make this work?
 
-<span class=hljs-string >`function nameparts(v)`</span>
-    <span class=hljs-string >`t = split(v,&#x27;:&#x27;)`</span>
-    <span class=hljs-string >`length(t) &lt; 2 ? (nothing,t[1]) : (t[1],t[2])`</span>
-<span class=hljs-string >`end`</span>
+`function nameparts(v)`
+    `t = split(v,':')`
+    `length(t) &lt; 2 ? (nothing,t[1]) : (t[1],t[2])`
+`end`
 
-<span class=hljs-string >`struct QName{T&lt;:AbstractString}`</span>
-    <span class=hljs-string >`pfx::Union{T,Nothing}`</span>
-    <span class=hljs-string >`nm::T`</span>
-<span class=hljs-string >`end`</span>
-<span class=hljs-string >`QName(nm::AbstractString) = QName(nameparts(nm)...)`</span>
+`struct QName{T&lt;:AbstractString}`
+    `pfx::Union{T,Nothing}`
+    `nm::T`
+`end`
+`QName(nm::AbstractString) = QName(nameparts(nm)...)`
 
-<span class=hljs-string >`struct ID{T&lt;:AbstractString}`</span>
-    <span class=hljs-string >`id::T`</span>
-<span class=hljs-string >`end`</span>
+`struct ID{T&lt;:AbstractString}`
+    `id::T`
+`end`
 
-<span class=hljs-string >`attr = Dict(&quot;base&quot;=&gt;&quot;xs:string&quot;)`</span>
-<span class=hljs-string >`atts = @NamedTuple{base::QName, id::Union{Nothing,ID}}`</span>
-<span class=hljs-string >`s = string.(fieldnames(atts))`</span>
-<span class=hljs-string >`vals = get.(Ref(attr), s, nothing) #vals will be strings or nothing`</span>
+`attr = Dict("base"=&gt;"xs:string")`
+`atts = @NamedTuple{base::QName, id::Union{Nothing,ID}}`
+`s = string.(fieldnames(atts))`
+`vals = get.(Ref(attr), s, nothing) #vals will be strings or nothing`
 
-Now <span class=hljs-literal >I</span> want to instantiate the types to create a result tuple that looks like
-<span class=hljs-string >`(QName{SubString{String}}(&quot;xs&quot;, &quot;string&quot;), nothing)`</span>
+Now I want to instantiate the types to create a result tuple that looks like
+`(QName{SubString{String}}("xs", "string"), nothing)`
 
 …but instantiating the NamedTuple gives an error
-<span class=hljs-string >`maybe = atts(vals)`</span>
+`maybe = atts(vals)`
 
-ERROR: <span class=hljs-built_in >MethodError</span>: Cannot <span class=hljs-string >`convert`</span> an object of <span class=hljs-keyword >type</span>
-  <span class=hljs-built_in >String</span> to an object of <span class=hljs-keyword >type</span>
+ERROR: MethodError: Cannot `convert` an object of type
+  String to an object of type
   QName
 Closest candidates are:
-  convert(::<span class=hljs-built_in >Type</span>{T}, ::T) <span class=hljs-keyword >where</span> T at essentials.jl:<span class=hljs-number >171</span>
-  QName(::<span class=hljs-built_in >AbstractString</span>) at /Users/doug/dev/XSDJ/src/ex.jl:<span class=hljs-number >10</span>
-  QName(::<span class=hljs-built_in >Union</span>{Nothing, T}, ::T) <span class=hljs-keyword >where</span> T&lt;:<span class=hljs-built_in >AbstractString</span> at /Users/doug/dev/XSDJ/src/ex.jl:<span class=hljs-number >7</span>
+  convert(::Type{T}, ::T) where T at essentials.jl:171
+  QName(::AbstractString) at /Users/doug/dev/XSDJ/src/ex.jl:10
+  QName(::Union{Nothing, T}, ::T) where T&lt;:AbstractString at /Users/doug/dev/XSDJ/src/ex.jl:7
 
-What am <span class=hljs-literal >I</span> missing? Do <span class=hljs-literal >I</span> need to implement new methods <span class=hljs-keyword >for</span> <span class=hljs-string >`convert`</span> ?</code></pre>
+What am I missing? Do I need to implement new methods for `convert` ?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u019zkq5yq6_timestamp_2020-10-22t160658297 ><a href="#user_u019zkq5yq6_timestamp_2020-10-22t160658297">User: U019ZKQ5YQ6 Timestamp: 2020-10-22T16:06:58.297:</a></h3>
-<pre><code class="julia hljs">What is going on :sob: <span class=hljs-literal >I</span> am pressing enter</code></pre>
+<h3 id="user_u019zkq5yq6_timestamp_2020-10-22t160658297"><a href="#user_u019zkq5yq6_timestamp_2020-10-22t160658297">User: U019ZKQ5YQ6 Timestamp: 2020-10-22T16:06:58.297:</a></h3>
+<pre><code class="language-julia">What is going on :sob: I am pressing enter</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u6c937enb_timestamp_2020-10-22t153153295 ><a href="#user_u6c937enb_timestamp_2020-10-22t153153295">User: U6C937ENB Timestamp: 2020-10-22T15:31:53.295:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span> have a <span class=hljs-string >`t=(;a=f, b=g)`</span> named tuple of functions and <span class=hljs-literal >I</span> want to transform this <span class=hljs-keyword >in</span> a named tuple of <span class=hljs-keyword >return</span> values, such  <span class=hljs-string >`ev(t, x)`</span>  gives <span class=hljs-string >`(;a=f(x), b=g(x))`</span>  The tricky part is reading the key names from the argument <span class=hljs-keyword >type</span> of <span class=hljs-string >`t`</span> of the <span class=hljs-keyword >function</span> <span class=hljs-string >`ev`</span> and use this somehow to create a new named tuple...</code></pre>
+<h3 id="user_u6c937enb_timestamp_2020-10-22t153153295"><a href="#user_u6c937enb_timestamp_2020-10-22t153153295">User: U6C937ENB Timestamp: 2020-10-22T15:31:53.295:</a></h3>
+<pre><code class="language-julia">I have a &#96;t&#61;&#40;;a&#61;f, b&#61;g&#41;&#96; named tuple of functions and I want to transform this in a named tuple of return values, such  &#96;ev&#40;t, x&#41;&#96;  gives &#96;&#40;;a&#61;f&#40;x&#41;, b&#61;g&#40;x&#41;&#41;&#96;  The tricky part is reading the key names from the argument type of &#96;t&#96; of the function &#96;ev&#96; and use this somehow to create a new named tuple...</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u018y8s0pk9_timestamp_2020-10-22t144957292 ><a href="#user_u018y8s0pk9_timestamp_2020-10-22t144957292">User: U018Y8S0PK9 Timestamp: 2020-10-22T14:49:57.292:</a></h3>
-<pre><code class="julia hljs">Is there a simple way to batch together a dataset of <span class=hljs-number >3</span>D images? <span class=hljs-literal >I</span> know flux has a flux.batch but I’m not sure <span class=hljs-keyword >if</span> that works <span class=hljs-keyword >for</span> <span class=hljs-number >3</span>D images</code></pre>
+<h3 id="user_u018y8s0pk9_timestamp_2020-10-22t144957292"><a href="#user_u018y8s0pk9_timestamp_2020-10-22t144957292">User: U018Y8S0PK9 Timestamp: 2020-10-22T14:49:57.292:</a></h3>
+<pre><code class="language-julia">Is there a simple way to batch together a dataset of 3D images? I know flux has a flux.batch but I’m not sure if that works for 3D images</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u7hayky9x_timestamp2020-10-22t14465829 ><a href="#user_u7hayky9x_timestamp2020-10-22t14465829">User: U7HAYKY9X Timestamp:<em>2020-10-22T14:46:58.29</em>:</a></h3>
-<pre><code class="julia hljs">Is there a neat way of figuring out <span class=hljs-keyword >if</span> a <span class=hljs-keyword >bitstype</span> has a specific bit layout? For example, right now <span class=hljs-literal >I</span> <span class=hljs-keyword >do</span>
-<span class=hljs-keyword >function</span> iszero(x::<span class=hljs-built_in >NTuple</span>{<span class=hljs-number >16</span>, <span class=hljs-built_in >UInt8</span>})
-    r = <span class=hljs-built_in >Ref</span>(x)
-    ptr = <span class=hljs-built_in >Ptr</span>{UIn128}(pointer_from_objref(r))
-    <span class=hljs-keyword >return</span> iszero(unsafe_load(ptr))
-<span class=hljs-keyword >end</span></code></pre>
-<h3 id=user_u013khu2xc1_timestamp_2020-10-22t125757285 ><a href="#user_u013khu2xc1_timestamp_2020-10-22t125757285">User: U013KHU2XC1 Timestamp: 2020-10-22T12:57:57.285:</a></h3>
-<pre><code class="julia hljs">Getting a stable error on Taro activation. <span class=hljs-built_in >Any</span> ideas on how to get more detailed description?
+<h3 id="user_u7hayky9x_timestamp2020-10-22t14465829"><a href="#user_u7hayky9x_timestamp2020-10-22t14465829">User: U7HAYKY9X Timestamp:<em>2020-10-22T14:46:58.29</em>:</a></h3>
+<pre><code class="language-julia">Is there a neat way of figuring out if a bitstype has a specific bit layout? For example, right now I do
+function iszero&#40;x::NTuple&#123;16, UInt8&#125;&#41;
+    r &#61; Ref&#40;x&#41;
+    ptr &#61; Ptr&#123;UIn128&#125;&#40;pointer_from_objref&#40;r&#41;&#41;
+    return iszero&#40;unsafe_load&#40;ptr&#41;&#41;
+end</code></pre>
+<h3 id="user_u013khu2xc1_timestamp_2020-10-22t125757285"><a href="#user_u013khu2xc1_timestamp_2020-10-22t125757285">User: U013KHU2XC1 Timestamp: 2020-10-22T12:57:57.285:</a></h3>
+<pre><code class="language-julia">Getting a stable error on Taro activation. Any ideas on how to get more detailed description?
 
-<span class=hljs-string >`export JULIA_COPY_STACKS=yes &amp;&amp; julia --project=.`</span>
-<span class=hljs-string >`julia&gt; using Taro`</span>
-<span class=hljs-string >`julia&gt; Taro.init()`</span>
+`export JULIA_COPY_STACKS=yes &amp;&amp; julia --project=.`
+`julia&gt; using Taro`
+`julia&gt; Taro.init()`
 
-<span class=hljs-string >`signal (11): Segmentation fault: 11`</span>
-<span class=hljs-string >`in expression starting at REPL[2]:1`</span>
-<span class=hljs-string >`unknown function (ip: 0x13452f62d)`</span>
-<span class=hljs-string >`Allocations: 4054721 (Pool: 4053324; Big: 1397); GC: 5`</span>
+`signal (11): Segmentation fault: 11`
+`in expression starting at REPL[2]:1`
+`unknown function (ip: 0x13452f62d)`
+`Allocations: 4054721 (Pool: 4053324; Big: 1397); GC: 5`
 
 julia&gt; versioninfo()
-Julia Version <span class=hljs-number >1.5</span><span class=hljs-number >.2</span>
-Commit <span class=hljs-number >539f3</span>ce943 (<span class=hljs-number >2020</span>-<span class=hljs-number >09</span>-<span class=hljs-number >23</span> <span class=hljs-number >23</span>:<span class=hljs-number >17</span> UTC)
+Julia Version 1.5.2
+Commit 539f3ce943 (2020-09-23 23:17 UTC)
 Platform Info:
-  OS: macOS (x86_64-apple-darwin18<span class=hljs-number >.7</span><span class=hljs-number >.0</span>)
-  CPU: Intel(R) Core(TM) i7-<span class=hljs-number >5557</span>U CPU @ <span class=hljs-number >3.10</span>GHz
-  WORD_SIZE: <span class=hljs-number >64</span>
+  OS: macOS (x86_64-apple-darwin18.7.0)
+  CPU: Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz
+  WORD_SIZE: 64
   LIBM: libopenlibm
-  LLVM: libLLVM-<span class=hljs-number >9.0</span><span class=hljs-number >.1</span> (ORCJIT, broadwell)
+  LLVM: libLLVM-9.0.1 (ORCJIT, broadwell)
 Environment:
   JULIA_COPY_STACKS = yes</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u0111s7rtml_timestamp_2020-10-22t123752283 ><a href="#user_u0111s7rtml_timestamp_2020-10-22t123752283">User: U0111S7RTML Timestamp: 2020-10-22T12:37:52.283:</a></h3>
-<pre><code class="julia hljs">Out of curiosity, is there an autodiff package that can mollify <span class=hljs-keyword >if</span> statements?</code></pre>
+<h3 id="user_u0111s7rtml_timestamp_2020-10-22t123752283"><a href="#user_u0111s7rtml_timestamp_2020-10-22t123752283">User: U0111S7RTML Timestamp: 2020-10-22T12:37:52.283:</a></h3>
+<pre><code class="language-julia">Out of curiosity, is there an autodiff package that can mollify if statements?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u01ayq4hqhf_timestamp_2020-10-22t104033282 ><a href="#user_u01ayq4hqhf_timestamp_2020-10-22t104033282">User: U01AYQ4HQHF Timestamp: 2020-10-22T10:40:33.282:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-built_in >Any</span> idea what is wrong?
-<span class=hljs-keyword >struct</span> StVenant_rakenne
+<h3 id="user_u01ayq4hqhf_timestamp_2020-10-22t104033282"><a href="#user_u01ayq4hqhf_timestamp_2020-10-22t104033282">User: U01AYQ4HQHF Timestamp: 2020-10-22T10:40:33.282:</a></h3>
+<pre><code class="language-julia">Any idea what is wrong?
+struct StVenant_rakenne
 
-	Parametrit::<span class=hljs-built_in >Dict</span>
-	Johdannaisparametrit::<span class=hljs-built_in >Dict</span>
-	Joki::<span class=hljs-built_in >SharedArray</span>
+	Parametrit::Dict
+	Johdannaisparametrit::Dict
+	Joki::SharedArray
 
-<span class=hljs-keyword >end</span>
+end
 
 ...
 
@@ -511,143 +567,151 @@ Johdannaisparametrit = Johdannaiset(s.Parametrit)
 
 ...
 
-<span class=hljs-keyword >function</span> Johdannaiset(Parametrit::<span class=hljs-built_in >Dict</span>)
+function Johdannaiset(Parametrit::Dict)
 
-	dX = Parametrit[<span class=hljs-string >&quot;Pituus&quot;</span>] / (Parametrit[<span class=hljs-string >&quot;Laskentapisteet&quot;</span>] - <span class=hljs-number >1</span>)
+	dX = Parametrit["Pituus"] / (Parametrit["Laskentapisteet"] - 1)
 
-	So = (Parametrit[<span class=hljs-string >&quot;Pohja_alkukorko&quot;</span>] - Parametrit[<span class=hljs-string >&quot;Pohja_loppukorko&quot;</span>]) / Parametrit[<span class=hljs-string >&quot;Pituus&quot;</span>]
+	So = (Parametrit["Pohja_alkukorko"] - Parametrit["Pohja_loppukorko"]) / Parametrit["Pituus"]
 
-	x = <span class=hljs-built_in >Dict</span>{<span class=hljs-built_in >String</span>,<span class=hljs-built_in >Float64</span>}(<span class=hljs-string >&quot;dX&quot;</span> =&gt; dX, <span class=hljs-string >&quot;So&quot;</span> =&gt; So)
+	x = Dict{String,Float64}("dX" =&gt; dX, "So" =&gt; So)
 
-	<span class=hljs-keyword >return</span> x
+	return x
 
-<span class=hljs-keyword >end</span>
-This gets <span class=hljs-string >&quot;ERROR: LoadError: MethodError: no method matching -(::String, ::Int64)
+end
+This gets "ERROR: LoadError: MethodError: no method matching -(::String, ::Int64)
 Closest candidates are:
   -(::Missing, ::Number) at missing.jl:115
   -(::BigInt, ::Union{Int16, Int32, Int64, Int8}) at gmp.jl:532
   -(::BigFloat, ::Union{Int16, Int32, Int64, Int8}) at mpfr.jl:425
-  ...&quot;</span></code></pre>
+  ..."</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_uhzuxbr2p_timestamp_2020-10-22t103226281 ><a href="#user_uhzuxbr2p_timestamp_2020-10-22t103226281">User: UHZUXBR2P Timestamp: 2020-10-22T10:32:26.281:</a></h3>
-<pre><code class="julia hljs">Is there a way to <span class=hljs-keyword >catch</span> a warning? <span class=hljs-literal >I</span> want to redefine some constants, but instead of triggering a whole list of warnings, <span class=hljs-literal >I</span> thought it might be better to <span class=hljs-keyword >catch</span> them and print a single one.</code></pre>
+<h3 id="user_uhzuxbr2p_timestamp_2020-10-22t103226281"><a href="#user_uhzuxbr2p_timestamp_2020-10-22t103226281">User: UHZUXBR2P Timestamp: 2020-10-22T10:32:26.281:</a></h3>
+<pre><code class="language-julia">Is there a way to catch a warning? I want to redefine some constants, but instead of triggering a whole list of warnings, I thought it might be better to catch them and print a single one.</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u8j1ket6k_timestamp_2020-10-22t092139275 ><a href="#user_u8j1ket6k_timestamp_2020-10-22t092139275">User: U8J1KET6K Timestamp: 2020-10-22T09:21:39.275:</a></h3>
-<pre><code class="julia hljs">Hi, <span class=hljs-literal >I</span> was just glancing at &lt;https://docs.julialang.org/en/v1/manual/integers-and-floating-point-numbers/&gt;  and <span class=hljs-keyword >in</span> the table <span class=hljs-literal >I</span> saw that the boolean has <span class=hljs-number >8</span> bits. Why does it have <span class=hljs-number >8</span> instead of <span class=hljs-number >1</span> ...?</code></pre>
+<h3 id="user_u8j1ket6k_timestamp_2020-10-22t092139275"><a href="#user_u8j1ket6k_timestamp_2020-10-22t092139275">User: U8J1KET6K Timestamp: 2020-10-22T09:21:39.275:</a></h3>
+<pre><code class="language-julia">Hi, I was just glancing at &lt;https://docs.julialang.org/en/v1/manual/integers-and-floating-point-numbers/&gt;  and in the table I saw that the boolean has 8 bits. Why does it have 8 instead of 1 ...?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u6g4m02n4_timestamp2020-10-22t091810274 ><a href="#user_u6g4m02n4_timestamp2020-10-22t091810274">User: U6G4M02N4 Timestamp:<em>2020-10-22T09:18:10.274</em>:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span>&#x27;m looking <span class=hljs-keyword >for</span> something that leverages some flavor of search trees to achieve intersections <span class=hljs-keyword >in</span> ~ O(log(N)) time</code></pre>
-<pre><code class="julia hljs">Anybody know of a package to (efficiently) find intersections of N-dimensional meshes with lines, planes, etc?</code></pre>
-<h3 id=user_u7jqgpgcq_timestamp_2020-10-22t082032272 ><a href="#user_u7jqgpgcq_timestamp_2020-10-22t082032272">User: U7JQGPGCQ Timestamp: 2020-10-22T08:20:32.272:</a></h3>
-<pre><code class="julia hljs">What&#x27;s the best way currently to get <span class=hljs-string >`Pkg`</span> to run <span class=hljs-keyword >in</span> a reasonable time on Windows and Julia <span class=hljs-number >1.5</span><span class=hljs-number >.2</span>? Updating the registry currently takes something like <span class=hljs-number >5</span> minutes <span class=hljs-keyword >for</span> me, part of which is probably my lovely corporate antivir which <span class=hljs-literal >I</span> can&#x27;t disable</code></pre>
+<h3 id="user_u6g4m02n4_timestamp2020-10-22t091810274"><a href="#user_u6g4m02n4_timestamp2020-10-22t091810274">User: U6G4M02N4 Timestamp:<em>2020-10-22T09:18:10.274</em>:</a></h3>
+<pre><code class="language-julia">I&#39;m looking for something that leverages some flavor of search trees to achieve intersections in ~ O&#40;log&#40;N&#41;&#41; time</code></pre>
+<pre><code class="language-julia">Anybody know of a package to &#40;efficiently&#41; find intersections of N-dimensional meshes with lines, planes, etc?</code></pre>
+<h3 id="user_u7jqgpgcq_timestamp_2020-10-22t082032272"><a href="#user_u7jqgpgcq_timestamp_2020-10-22t082032272">User: U7JQGPGCQ Timestamp: 2020-10-22T08:20:32.272:</a></h3>
+<pre><code class="language-julia">What&#39;s the best way currently to get &#96;Pkg&#96; to run in a reasonable time on Windows and Julia 1.5.2? Updating the registry currently takes something like 5 minutes for me, part of which is probably my lovely corporate antivir which I can&#39;t disable</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_um4tshkf1_timestamp2020-10-22t031224269 ><a href="#user_um4tshkf1_timestamp2020-10-22t031224269">User: UM4TSHKF1 Timestamp:<em>2020-10-22T03:12:24.269</em>:</a></h3>
-<pre><code class="julia hljs">Can verify that <span class=hljs-literal >I</span> reran a previously successful job to get this error</code></pre>
-<h3 id=user_um4tshkf1_timestamp_2020-10-22t030836269 ><a href="#user_um4tshkf1_timestamp_2020-10-22t030836269">User: UM4TSHKF1 Timestamp: 2020-10-22T03:08:36.269:</a></h3>
-<pre><code class="julia hljs">Is anyone familiar with this build error <span class=hljs-literal >I</span>&#x27;m getting that wasn&#x27;t an issue maybe an hour ago? Testing with Julia <span class=hljs-number >1.4</span> on Ubuntu-latest via GitHub Actions
-Run julia-actions/julia-buildpkg<span class=hljs-meta >@latest</span>
-    Cloning default registries into <span class=hljs-string >`~/.julia`</span>
-    Cloning registry from <span class=hljs-string >&quot;&lt;https://github.com/JuliaRegistries/General.git&gt;&quot;</span>
-<span class=hljs-number >25</span>l    Fetching: [&gt;                                        ]  <span class=hljs-number >0.0</span> %
-    Fetching: [=============&gt;                           ]  <span class=hljs-number >31.9</span> %
-    Fetching: [==================================&gt;      ]  <span class=hljs-number >83.0</span> %
-      Added registry <span class=hljs-string >`General`</span> to <span class=hljs-string >`~/.julia/registries/General`</span>
-   Updating registry at <span class=hljs-string >`~/.julia/registries/General`</span>
-   Updating git-repo <span class=hljs-string >`&lt;https://github.com/JuliaRegistries/General.git&gt;`</span>
-  Installed PooledArrays ───────────────── v0<span class=hljs-number >.5</span><span class=hljs-number >.3</span>
-  Installed ProgressMeter ──────────────── v1<span class=hljs-number >.4</span><span class=hljs-number >.0</span>
-  Installed MultipleTesting ────────────── v0<span class=hljs-number >.4</span><span class=hljs-number >.1</span>
-  Installed FileIO ─────────────────────── v1<span class=hljs-number >.4</span><span class=hljs-number >.3</span>
-  Installed StaticArrays ───────────────── v0<span class=hljs-number >.12</span><span class=hljs-number >.4</span>
-  Installed StatsBase ──────────────────── v0<span class=hljs-number >.33</span><span class=hljs-number >.2</span>
-  Installed Distributions ──────────────── v0<span class=hljs-number >.23</span><span class=hljs-number >.12</span>
-  Installed DataAPI ────────────────────── v1<span class=hljs-number >.3</span><span class=hljs-number >.0</span>
-  Installed Requires ───────────────────── v1<span class=hljs-number >.1</span><span class=hljs-number >.0</span>
-  Installed Artifacts ──────────────────── v1<span class=hljs-number >.3</span><span class=hljs-number >.0</span>
-  Installed OpenSpecFun_jll ────────────── v0<span class=hljs-number >.5</span><span class=hljs-number >.3</span>+<span class=hljs-number >4</span>
-  Installed JLD2 ───────────────────────── v0<span class=hljs-number >.2</span><span class=hljs-number >.4</span>
-  Installed CategoricalArrays ──────────── v0<span class=hljs-number >.8</span><span class=hljs-number >.3</span>
-  Installed TableTraits ────────────────── v1<span class=hljs-number >.0</span><span class=hljs-number >.0</span>
-  Installed DataFrames ─────────────────── v0<span class=hljs-number >.21</span><span class=hljs-number >.8</span>
-  Installed CodecZlib ──────────────────── v0<span class=hljs-number >.7</span><span class=hljs-number >.0</span>
-  Installed PDMats ─────────────────────── v0<span class=hljs-number >.10</span><span class=hljs-number >.1</span>
-  Installed Rmath_jll ──────────────────── v0<span class=hljs-number >.2</span><span class=hljs-number >.2</span>+<span class=hljs-number >1</span>
-  Installed IteratorInterfaceExtensions ── v1<span class=hljs-number >.0</span><span class=hljs-number >.0</span>
-  Installed Rmath ──────────────────────── v0<span class=hljs-number >.6</span><span class=hljs-number >.1</span>
-  Installed SortingAlgorithms ──────────── v0<span class=hljs-number >.3</span><span class=hljs-number >.1</span>
-  Installed MacroTools ─────────────────── v0<span class=hljs-number >.5</span><span class=hljs-number >.6</span>
-  Installed DataStructures ─────────────── v0<span class=hljs-number >.18</span><span class=hljs-number >.7</span>
-  Installed QuadGK ─────────────────────── v2<span class=hljs-number >.4</span><span class=hljs-number >.1</span>
-  Installed OrderedCollections ─────────── v1<span class=hljs-number >.3</span><span class=hljs-number >.1</span>
-  Installed StructTypes ────────────────── v1<span class=hljs-number >.1</span><span class=hljs-number >.0</span>
-  Installed Reexport ───────────────────── v0<span class=hljs-number >.2</span><span class=hljs-number >.0</span>
-  Installed JLLWrappers ────────────────── v1<span class=hljs-number >.1</span><span class=hljs-number >.2</span>
-  Installed SentinelArrays ─────────────── v1<span class=hljs-number >.2</span><span class=hljs-number >.16</span>
-  Installed DataValueInterfaces ────────── v1<span class=hljs-number >.0</span><span class=hljs-number >.0</span>
-  Installed FillArrays ─────────────────── v0<span class=hljs-number >.9</span><span class=hljs-number >.7</span>
-  Installed Tables ─────────────────────── v1<span class=hljs-number >.1</span><span class=hljs-number >.0</span>
-  Installed TranscodingStreams ─────────── v0<span class=hljs-number >.9</span><span class=hljs-number >.5</span>
-  Installed StatsFuns ──────────────────── v0<span class=hljs-number >.9</span><span class=hljs-number >.5</span>
-  Installed CompilerSupportLibraries_jll ─ v0<span class=hljs-number >.3</span><span class=hljs-number >.5</span>+<span class=hljs-number >0</span>
-  Installed Parsers ────────────────────── v1<span class=hljs-number >.0</span><span class=hljs-number >.11</span>
-  Installed InvertedIndices ────────────── v1<span class=hljs-number >.0</span><span class=hljs-number >.0</span>
-  Installed Missings ───────────────────── v0<span class=hljs-number >.4</span><span class=hljs-number >.4</span>
-  Installed JSON ───────────────────────── v0<span class=hljs-number >.21</span><span class=hljs-number >.1</span>
-  Installed Zlib_jll ───────────────────── v1<span class=hljs-number >.2</span><span class=hljs-number >.11</span>+<span class=hljs-number >18</span>
-  Installed Compat ─────────────────────── v3<span class=hljs-number >.21</span><span class=hljs-number >.0</span>
-  Installed SpecialFunctions ───────────── v0<span class=hljs-number >.10</span><span class=hljs-number >.3</span>
-  Installed CSV ────────────────────────── v0<span class=hljs-number >.7</span><span class=hljs-number >.7</span>
-ERROR: <span class=hljs-built_in >ArgumentError</span>: Unsupported architecture &#x27;aarch64&#x27; <span class=hljs-keyword >for</span> macOS
+<h3 id="user_um4tshkf1_timestamp2020-10-22t031224269"><a href="#user_um4tshkf1_timestamp2020-10-22t031224269">User: UM4TSHKF1 Timestamp:<em>2020-10-22T03:12:24.269</em>:</a></h3>
+<pre><code class="language-julia">Can verify that I reran a previously successful job to get this error</code></pre>
+<h3 id="user_um4tshkf1_timestamp_2020-10-22t030836269"><a href="#user_um4tshkf1_timestamp_2020-10-22t030836269">User: UM4TSHKF1 Timestamp: 2020-10-22T03:08:36.269:</a></h3>
+<pre><code class="language-julia">Is anyone familiar with this build error I'm getting that wasn't an issue maybe an hour ago? Testing with Julia 1.4 on Ubuntu-latest via GitHub Actions
+Run julia-actions/julia-buildpkg@latest
+    Cloning default registries into `~/.julia`
+    Cloning registry from "<https://github.com/JuliaRegistries/General.git>"
+25l    Fetching: [&gt;                                        ]  0.0 %
+    Fetching: [=============&gt;                           ]  31.9 %
+    Fetching: [==================================&gt;      ]  83.0 %
+      Added registry `General` to `~/.julia/registries/General`
+   Updating registry at `~/.julia/registries/General`
+   Updating git-repo `<https://github.com/JuliaRegistries/General.git>`
+  Installed PooledArrays ───────────────── v0.5.3
+  Installed ProgressMeter ──────────────── v1.4.0
+  Installed MultipleTesting ────────────── v0.4.1
+  Installed FileIO ─────────────────────── v1.4.3
+  Installed StaticArrays ───────────────── v0.12.4
+  Installed StatsBase ──────────────────── v0.33.2
+  Installed Distributions ──────────────── v0.23.12
+  Installed DataAPI ────────────────────── v1.3.0
+  Installed Requires ───────────────────── v1.1.0
+  Installed Artifacts ──────────────────── v1.3.0
+  Installed OpenSpecFun_jll ────────────── v0.5.3+4
+  Installed JLD2 ───────────────────────── v0.2.4
+  Installed CategoricalArrays ──────────── v0.8.3
+  Installed TableTraits ────────────────── v1.0.0
+  Installed DataFrames ─────────────────── v0.21.8
+  Installed CodecZlib ──────────────────── v0.7.0
+  Installed PDMats ─────────────────────── v0.10.1
+  Installed Rmath_jll ──────────────────── v0.2.2+1
+  Installed IteratorInterfaceExtensions ── v1.0.0
+  Installed Rmath ──────────────────────── v0.6.1
+  Installed SortingAlgorithms ──────────── v0.3.1
+  Installed MacroTools ─────────────────── v0.5.6
+  Installed DataStructures ─────────────── v0.18.7
+  Installed QuadGK ─────────────────────── v2.4.1
+  Installed OrderedCollections ─────────── v1.3.1
+  Installed StructTypes ────────────────── v1.1.0
+  Installed Reexport ───────────────────── v0.2.0
+  Installed JLLWrappers ────────────────── v1.1.2
+  Installed SentinelArrays ─────────────── v1.2.16
+  Installed DataValueInterfaces ────────── v1.0.0
+  Installed FillArrays ─────────────────── v0.9.7
+  Installed Tables ─────────────────────── v1.1.0
+  Installed TranscodingStreams ─────────── v0.9.5
+  Installed StatsFuns ──────────────────── v0.9.5
+  Installed CompilerSupportLibraries_jll ─ v0.3.5+0
+  Installed Parsers ────────────────────── v1.0.11
+  Installed InvertedIndices ────────────── v1.0.0
+  Installed Missings ───────────────────── v0.4.4
+  Installed JSON ───────────────────────── v0.21.1
+  Installed Zlib_jll ───────────────────── v1.2.11+18
+  Installed Compat ─────────────────────── v3.21.0
+  Installed SpecialFunctions ───────────── v0.10.3
+  Installed CSV ────────────────────────── v0.7.7
+ERROR: ArgumentError: Unsupported architecture 'aarch64' for macOS
 Stacktrace:
- [<span class=hljs-number >1</span>] MacOS at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1<span class=hljs-number >.4</span>/Pkg/src/BinaryPlatforms.jl:<span class=hljs-number >216</span> [inlined]
- [<span class=hljs-number >2</span>] unpack_platform(::<span class=hljs-built_in >Dict</span>{<span class=hljs-built_in >String</span>,<span class=hljs-built_in >Any</span>}, ::<span class=hljs-built_in >String</span>, ::<span class=hljs-built_in >String</span>) at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1<span class=hljs-number >.4</span>/Pkg/src/Artifacts.jl:<span class=hljs-number >429</span>
- [<span class=hljs-number >3</span>] (::Pkg.Artifacts.<span class=hljs-string >var&quot;#21#22&quot;</span>{<span class=hljs-built_in >String</span>,<span class=hljs-built_in >String</span>})(::<span class=hljs-built_in >Dict</span>{<span class=hljs-built_in >String</span>,<span class=hljs-built_in >Any</span>}) at ./none:<span class=hljs-number >0</span>
- [<span class=hljs-number >4</span>] iterate at ./generator.jl:<span class=hljs-number >47</span> [inlined]</code></pre>
+ [1] MacOS at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.4/Pkg/src/BinaryPlatforms.jl:216 [inlined]
+ [2] unpack_platform(::Dict{String,Any}, ::String, ::String) at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.4/Pkg/src/Artifacts.jl:429
+ [3] (::Pkg.Artifacts.var"#21#22"{String,String})(::Dict{String,Any}) at ./none:0
+ [4] iterate at ./generator.jl:47 [inlined]</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_ulzq4dcsu_timestamp_2020-10-22t024547267 ><a href="#user_ulzq4dcsu_timestamp_2020-10-22t024547267">User: ULZQ4DCSU Timestamp: 2020-10-22T02:45:47.267:</a></h3>
-<pre><code class="julia hljs">Could anyone point out why the following is happening?  If <span class=hljs-string >`t0 ≤ t &lt; t1 == true`</span>, <span class=hljs-string >`ExcitatoryConductance`</span> gives <span class=hljs-string >`ge  =   Ne*gbar*(finf+(f0-finf)`</span> and ignores <span class=hljs-string >`exp(-t/tau)`</span>.  Does this have something to <span class=hljs-keyword >do</span> with my usage of constants?</code></pre>
+<h3 id="user_ulzq4dcsu_timestamp_2020-10-22t024547267"><a href="#user_ulzq4dcsu_timestamp_2020-10-22t024547267">User: ULZQ4DCSU Timestamp: 2020-10-22T02:45:47.267:</a></h3>
+<pre><code class="language-julia">Could anyone point out why the following is happening?  If &#96;t0 ≤ t &lt; t1 &#61;&#61; true&#96;, &#96;ExcitatoryConductance&#96; gives &#96;ge  &#61;   Ne*gbar*&#40;finf&#43;&#40;f0-finf&#41;&#96; and ignores &#96;exp&#40;-t/tau&#41;&#96;.  Does this have something to do with my usage of constants?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u8d9768q6_timestamp_2020-10-22t021217261 ><a href="#user_u8d9768q6_timestamp_2020-10-22t021217261">User: U8D9768Q6 Timestamp: 2020-10-22T02:12:17.261:</a></h3>
-<pre><code class="julia hljs">Sorry, <span class=hljs-literal >I</span> don&#x27;t understand why your <span class=hljs-string >`deepsym`</span> <span class=hljs-keyword >function</span> doesn&#x27;t solve the issue. It does exactly what you say you want.</code></pre>
+<h3 id="user_u8d9768q6_timestamp_2020-10-22t021217261"><a href="#user_u8d9768q6_timestamp_2020-10-22t021217261">User: U8D9768Q6 Timestamp: 2020-10-22T02:12:17.261:</a></h3>
+<pre><code class="language-julia">Sorry, I don&#39;t understand why your &#96;deepsym&#96; function doesn&#39;t solve the issue. It does exactly what you say you want.</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u014lrljxrp_timestamp2020-10-22t02040826 ><a href="#user_u014lrljxrp_timestamp2020-10-22t02040826">User: U014LRLJXRP Timestamp:<em>2020-10-22T02:04:08.26</em>:</a></h3>
-<pre><code class="julia hljs">Sorry <span class=hljs-keyword >if</span> <span class=hljs-literal >I</span> am cluttering up the channel, but <span class=hljs-literal >I</span> also can’t figure out how to get a <span class=hljs-keyword >function</span> to act on the innermost element of an <span class=hljs-keyword >abstract</span> array?  <span class=hljs-literal >I</span> want:
-julia deepsymbol([[<span class=hljs-number >1</span> <span class=hljs-number >2</span> <span class=hljs-number >3</span>], [<span class=hljs-number >4</span> <span class=hljs-number >5</span> <span class=hljs-number >6</span>]])
-<span class=hljs-number >2</span>-element <span class=hljs-built_in >Array</span>{<span class=hljs-built_in >Symbol</span>,<span class=hljs-number >1</span>}:
- [<span class=hljs-built_in >Symbol</span>(\<span class=hljs-string >&quot;1\&quot;) Symbol(\&quot;2\&quot;) Symbol(\&quot;3\&quot;)]
- [Symbol(\&quot;4\&quot;) Symbol(\&quot;5\&quot;) Symbol(\&quot;6\&quot;)]
+<h3 id="user_u014lrljxrp_timestamp2020-10-22t02040826"><a href="#user_u014lrljxrp_timestamp2020-10-22t02040826">User: U014LRLJXRP Timestamp:<em>2020-10-22T02:04:08.26</em>:</a></h3>
+<pre><code class="language-julia">Sorry if I am cluttering up the channel, but I also can’t figure out how to get a function to act on the innermost element of an abstract array?  I want:
+julia deepsymbol([[1 2 3], [4 5 6]])
+2-element Array{Symbol,1}:
+ [Symbol(\"1\") Symbol(\"2\") Symbol(\"3\")]
+ [Symbol(\"4\") Symbol(\"5\") Symbol(\"6\")]
 Broadcastring `Symbol` makes the outer-most elements in the array `Symbol`s, and I have tried defining
 julia&gt; deepsym(a::Number) = a
 deepsym (generic function with 1 method)
 
 julia&gt; deepsym(a) = Symbol.(deepsym.(a))
 deepsym (generic function with 2 methods)
-But that makes _everything_ symbols.  Any ideas? :slightly_smiling_face:</span></code></pre>
-<h3 id=user_u014lrljxrp_timestamp_2020-10-22t013842252 ><a href="#user_u014lrljxrp_timestamp_2020-10-22t013842252">User: U014LRLJXRP Timestamp: 2020-10-22T01:38:42.252:</a></h3>
-<pre><code class="julia hljs">How can <span class=hljs-literal >I</span> use <span class=hljs-string >`where T`</span> with a <span class=hljs-keyword >return</span> <span class=hljs-keyword >type</span> <span class=hljs-keyword >in</span> a one-line <span class=hljs-keyword >function</span>?
-julia&gt; <span class=hljs-keyword >function</span> myfunc(x::T)::T <span class=hljs-keyword >where</span> T
-    <span class=hljs-keyword >return</span> x^<span class=hljs-number >2</span>
-    <span class=hljs-keyword >end</span>
-myfunc (generic <span class=hljs-keyword >function</span> with <span class=hljs-number >1</span> method)
+But that makes _everything_ symbols.  Any ideas? :slightly_smiling_face:</code></pre>
+<h3 id="user_u014lrljxrp_timestamp_2020-10-22t013842252"><a href="#user_u014lrljxrp_timestamp_2020-10-22t013842252">User: U014LRLJXRP Timestamp: 2020-10-22T01:38:42.252:</a></h3>
+<pre><code class="language-julia">How can I use `where T` with a return type in a one-line function?
+julia&gt; function myfunc(x::T)::T where T
+    return x^2
+    end
+myfunc (generic function with 1 method)
 
-julia&gt; myfunc(x::T)::T <span class=hljs-keyword >where</span> T = x^<span class=hljs-number >2</span>
-ERROR: <span class=hljs-built_in >UndefVarError</span>: T not defined
+julia&gt; myfunc(x::T)::T where T = x^2
+ERROR: UndefVarError: T not defined
 
-julia&gt; myfunc(x::T) <span class=hljs-keyword >where</span> T = x^<span class=hljs-number >2</span>
-myfunc (generic <span class=hljs-keyword >function</span> with <span class=hljs-number >1</span> method)</code></pre>
+julia&gt; myfunc(x::T) where T = x^2
+myfunc (generic function with 1 method)</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_u018pbpuqbd_timestamp_2020-10-22t011340246 ><a href="#user_u018pbpuqbd_timestamp_2020-10-22t011340246">User: U018PBPUQBD Timestamp: 2020-10-22T01:13:40.246:</a></h3>
-<pre><code class="julia hljs">Can <span class=hljs-literal >I</span> make values of a matrix into a <span class=hljs-built_in >Dict</span>()?</code></pre>
+<h3 id="user_u018pbpuqbd_timestamp_2020-10-22t011340246"><a href="#user_u018pbpuqbd_timestamp_2020-10-22t011340246">User: U018PBPUQBD Timestamp: 2020-10-22T01:13:40.246:</a></h3>
+<pre><code class="language-julia">Can I make values of a matrix into a Dict&#40;&#41;?</code></pre>
 <p><a href="">View Thread</a></p>
-<h3 id=user_uhdqq4gn6_timestamp_2020-10-22t003720244 ><a href="#user_uhdqq4gn6_timestamp_2020-10-22t003720244">User: UHDQQ4GN6 Timestamp: 2020-10-22T00:37:20.244:</a></h3>
-<pre><code class="julia hljs"><span class=hljs-literal >I</span> have a package with Python dependencies that uses <span class=hljs-string >`Base.prompt`</span> to ask users <span class=hljs-keyword >if</span> it should <span class=hljs-keyword >try</span> auto-installing the dependnecy <span class=hljs-keyword >using</span> either conda or pip. We need the Python package when precompiling to build docstrings. But it looks like <span class=hljs-string >`Base.prompt`</span> never prompts the user during precompilation, so it fails. <span class=hljs-built_in >Any</span> suggestions?</code></pre>
+<h3 id="user_uhdqq4gn6_timestamp_2020-10-22t003720244"><a href="#user_uhdqq4gn6_timestamp_2020-10-22t003720244">User: UHDQQ4GN6 Timestamp: 2020-10-22T00:37:20.244:</a></h3>
+<pre><code class="language-julia">I have a package with Python dependencies that uses &#96;Base.prompt&#96; to ask users if it should try auto-installing the dependnecy using either conda or pip. We need the Python package when precompiling to build docstrings. But it looks like &#96;Base.prompt&#96; never prompts the user during precompilation, so it fails. Any suggestions?</code></pre>
 <p><a href="">View Thread</a></p>
-<div class=page-foot >
-  <div class=copyright >
+<div class="page-foot">
+  <div class="copyright">
     &copy; The Julia Community. Last modified: October 25, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
-</div>
-  </main> 
+</div><!-- CONTENT ENDS HERE -->
+  </main> <!-- end of id=main -->
   <script src="/SlackArchive/libs/vela/metisMenu.min.js"></script>
   <script src="/SlackArchive/libs/vela/slideout.min.js"></script>
+  
+  
+    <script src="/SlackArchive/libs/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+
+  
+</body>
+</html>
