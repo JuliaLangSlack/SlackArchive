@@ -38,7 +38,7 @@ jobs:
               Pkg.add(PackageSpec(name="Franklin",version="0.10"));
               using NodeJS; run(`$(npm_cmd()) install highlight.js`);
               using Franklin;
-              optimize();'
+              optimize(prerender=false, minify=false);'
       - name: Deploy (main)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: JamesIves/github-pages-deploy-action@releases/v3
